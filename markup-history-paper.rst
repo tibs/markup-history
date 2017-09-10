@@ -7,6 +7,13 @@ By Tibs / Tony Ibbs, for PyConUK 2017
 .. note:: This is the "paper" that is equivalent to the slideshow. It may or
    may not remaing a separate document.
 
+.. For the moment, we represent TeX and LaTeX as simple text, but I might
+   change that in the future
+
+.. |TeX| replace:: TeX
+
+.. |LaTeX| replace:: LaTeX
+
 Introduction
 ============
 
@@ -51,37 +58,68 @@ write a text without regard to the mechanism by which it will actually be
 represented to the reader - so, for instance, in creating man pages, articles
 like this, or books of mathematics.
 
-Different sorts of markup languages
-===================================
-.. note:: Hmm, actually the following is not necessarily particularly helpful,
-   and may not reflect the history at all. Some more research is required.
-   However, it does cover the topics I want to talk about, especially with
-   regard to the slideshow/talk.
+How I'm going to split the world
+================================
 
-1. Historical markup
+There are different sorts of markup, with different purposes, but I am going
+to concentrate on three main types, which I shall categorise as:
 
-   .. note:: This is a bad name for this - I must try to think of something
-      better. Originally I had "output to teletype", which is historically
-      accurate, but of course troff can do much more, and the notation is the
-      same as for nroff.
+1. Presentational markup
 
-2. Sophisticated markup: |TeX|/|LaTeX|
+   This uses markup to direct the presentation of the text, for instance as a
+   man page, on a screen, or on a typeset page.
 
-   .. note:: Originally this was just called TeX/LaTeX.
+   Traditional examples are the ``*roff`` family (roff, nroff, troff, groff
+   and the various sorts of RUNOFF) and the |TeX| family (|TeX|, |LaTeX|, etc.)
 
-3. Semantic markup
+2. Semantic markup
 
-4. Readable plaintext
+   This uses markup to add meaning to the text, typically by annotating
+   textual elements to say what they are (e.g., part number, book title,
+   address).
 
-.. For the moment, we represent TeX and LaTeX as simple text, but I might
-   change that in the future
+   Traditional examples are the markups described by SGML (or, lighter weight,
+   XML), including Docbook.
 
-.. |TeX| replace:: TeX
+3. Readable plaintext
 
-.. |LaTeX| replace:: LaTeX
+   This attempts to get some of the benefits of one of the other types
+   (typically concentrating on presentation) whilst preserving the readability
+   of the original text. Interestingly, these have been around about as long
+   as the other forms, but are less talked about.
 
-Simple markup
-=============
+   The ur-language for this form is probably setext, but obvious examples
+   include StructuredText, reStructuredText and markdown.
+
+   The art of design of these markups is judging what capabilities are wanted
+   - the more things the markup can represent, the more complex the
+   restrictions on what may be typed as free text, and what has accidental
+   meaning.
+
+   .. note:: The classic aim is to be "close to what one would write in an
+      email" - a stricture that meant more when emails could only contain
+      ASCII text.
+
+   .. note:: I think this is why some people object to reStructuredText but
+      are happy with markdown. reStructuredText aims to provide a lot of
+      capability (such that one rarely needs to stray into something like
+      |TeX| or Docbook), whereas markdown puts that balance a lot closer to
+      plain text.
+
+.. note:: I think that means it is also sensible to separate out the three
+   timelines. There will obviously have been cross-fertilisation, but it's
+   probably much simpler not to mix them up, because that can lead to an
+   artificial expectation of causation across the timelines, which I am
+   suspicious of.
+
+   (I'm not convinced the roffs and the SGMLs were well related in the early
+   days, for instance. And that's irrespective of whether the different
+   developers knew of each others work.)
+
+Presentational markup
+=====================
+The early days
+--------------
 This started with output to teletype (underlining, bolding, and otherwise
 overstruct characters) and to line printers. Eventually, output to
 monotype/linotype/etc. got added in.
@@ -102,7 +140,7 @@ Needs:
   devices.
 
 |TeX|/|LaTeX|
-=============
+-------------
 
 Control of typesetting so the author gets properly formatted text, and,
 particularly, equations. Also, the first decent paragraphing and pagination
