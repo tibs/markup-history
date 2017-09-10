@@ -18,13 +18,47 @@ Perhaps calling this a history is a mistake, and it should more accurately be
 called an opinionated overview. Yet the intent is to give an overview that
 explains a rationale for how markup languages are.
 
+Why we markup
+=============
+We've always added markup to text.
+
+When writing by hand, we underline to indicate emphasis.
+
+Typewritten manuscripts would similarly use underlining (of various sorts) to
+indicate titles, emphasis, and so on.
+
+Scripts use various abbreviations and conventions to distinguish dialogue,
+effects and stage arrangements.
+
+We mark text up in two, overlapping, manners.
+
+The first is to annotate semantics - to give more information about the thing
+being marked up. For instance, there are strong conventions on how book titles
+are shown in bibliographies, in contrast to articles or shorter works.
+Similarly, early computer languages would mark keywords by using upper case,
+or by surrounding them by quotes.
+
+Semantic markup techniques are used when one wants to be able to analyse the
+text, to mine its information. These have had much success in big industry and
+in the military.
+
+The second is in many ways a simpler derivative, and is primarily marking up
+to determine presentation - although that presentation may be as high level as
+"this is a title" or "this is emphasised".
+
+Such presentational markup techniques are much more about letting the author
+write a text without regard to the mechanism by which it will actually be
+represented to the reader - so, for instance, in creating man pages, articles
+like this, or books of mathematics.
+
 Different sorts of markup languages
 ===================================
+.. note:: Hmm, actually the following is not necessarily particularly helpful,
+   and may not reflect the history at all. Some more research is required.
+   However, it does cover the topics I want to talk about, especially with
+   regard to the slideshow/talk.
 
-I propose to think of there being four types of markup languages, althouh
-clearly there are both other types, and also overlap between the types.
-
-1. Simple markup
+1. Historical markup
 
    .. note:: This is a bad name for this - I must try to think of something
       better. Originally I had "output to teletype", which is historically
@@ -36,6 +70,7 @@ clearly there are both other types, and also overlap between the types.
    .. note:: Originally this was just called TeX/LaTeX.
 
 3. Semantic markup
+
 4. Readable plaintext
 
 .. For the moment, we represent TeX and LaTeX as simple text, but I might
@@ -136,5 +171,34 @@ Driving forces:
 - I want good (but controllable) typesetting
 - I want to mark up the meaning of the elements of my text, for analysis
 - I want readable source
+
+Initial links
+=============
+The results of a quick link trawl:
+
+* https://en.wikipedia.org/wiki/Markup_language - see the taxonomy of (three) types therein, and the history section
+ 
+* https://en.wikipedia.org/wiki/List_of_document_markup_languages
+ 
+* https://alistapart.com/article/a-brief-history-of-markup - 2010, HTML and its friends
+* http://taxodiary.com/2012/12/a-brief-history-of-markup-languages/ - 2012
+* http://digitalhumanities.org/answers/topic/history-of-markup-and-markup-languages - 6 years ago
+* https://www.ukessays.com/essays/information-technology/the-history-of-markup-languages-information-technology-essay.php - 2015, XML/HTML/SGML/TeX
+* https://www.xml.com/pub/a/w3j/s3.connolly.html - 1997 - The Evolution of Web Documents: The Ascent of XML
+* http://www.cs.cornell.edu/courses/cs431/2008sp/Lectures/public/lecture_2_11_08.pdf - 2008, SGML/HTML/XML/XHTML, slides
+* http://www.adkinsuhs.com/uploads/7/6/9/4/76943899/markup_languages.pdf - somewhat ditto, slides
+* https://www.timetoast.com/timelines/markup-languages-evolution - timeline, weirdly restrictive in what it covers
+* https://chnm.gmu.edu/digitalhistory/links/pdf/chapter3/3.19a.pdf - 1992, Brief History of Document Markup
+* http://pustakalaya.org/wiki/wp/m/Markup_language.htm - 2008 (?)
+ 
+ 
+* http://history-computer.com/Internet/Birth/Goldfarb.html - Charles Goldfarb—the Godfather of Markup Languages
+ 
+* https://www.w3.org/TR/REC-MathML/chapter1.html - mathematics notation
+ 
+* https://en.wikipedia.org/wiki/ReStructuredText and https://en.wikipedia.org/wiki/ReStructuredText#History
+* https://en.wikipedia.org/wiki/Setext
+* http://docutils.sourceforge.net/mirror/setext.html - setext mirror
+* https://www.w3.org/MarkUp/html-test/setext/setext+sgml_01.html - SGML vs setext, etc
 
 .. vim: set filetype=rst tabstop=8  softtabstop=2 shiftwidth=2 expandtab:
