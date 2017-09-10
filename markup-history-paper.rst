@@ -216,6 +216,26 @@ The results of a quick link trawl:
 
 Timeline?
 =========
+need to put in setext, markdown, nroff/troff/groff, RUNOFF
+
+* 1964 RUNOFF https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
+
+  - also, the RUNOFF program https://en.wikipedia.org/wiki/Runoff_(program)
+
+* 1969 roff
+* nroff (newer roff) https://en.wikipedia.org/wiki/Nroff
+* troff (typesetter roff) https://en.wikipedia.org/wiki/Troff
+
+  - in various versions, and with increasing capabilities. nroff basically
+    ignores what it doesn't understand when reading the same input.
+
+* 1990s groff (GNU roff)
+
+http://h20565.www2.hpe.com/hpsc/doc/public/display?docId=emr_na-c04623260 is
+the OpenVMS Digital Standard Runoff Reference Manual from May 1993.
+
+and
+
 * 1967 - GenCode, William W. Tunnicliffe ("generic coding") - publishing industry.
 * 1969 - GML, Charles Goldfarb
 * 1974 (is that date right?) - SGML
