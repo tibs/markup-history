@@ -189,7 +189,8 @@ The results of a quick link trawl:
 * http://www.adkinsuhs.com/uploads/7/6/9/4/76943899/markup_languages.pdf - somewhat ditto, slides
 * https://www.timetoast.com/timelines/markup-languages-evolution - timeline, weirdly restrictive in what it covers
 * https://chnm.gmu.edu/digitalhistory/links/pdf/chapter3/3.19a.pdf - 1992, Brief History of Document Markup
-* http://pustakalaya.org/wiki/wp/m/Markup_language.htm - 2008 (?)
+* http://pustakalaya.org/wiki/wp/m/Markup_language.htm - 2008 (?) but *very*
+  useful
  
  
 * http://history-computer.com/Internet/Birth/Goldfarb.html - Charles Goldfarb—the Godfather of Markup Languages
@@ -200,5 +201,33 @@ The results of a quick link trawl:
 * https://en.wikipedia.org/wiki/Setext
 * http://docutils.sourceforge.net/mirror/setext.html - setext mirror
 * https://www.w3.org/MarkUp/html-test/setext/setext+sgml_01.html - SGML vs setext, etc
+
+* http://www.sgmlsource.com/history/index.htm - The SGML History Niche - six
+  papers, looks like they may be by Goldfarb
+
+* http://www.tei-c.org/Vault/ - TEI (Text Encoding Initiative) Archive,
+  1988-1999, with link to another part for 1987-1988
+
+* http://www.tbray.org/ongoing/When/200x/2008/02/10/XML-People - Tim Bray,
+  originally writing in 1998, on XML People.
+
+* http://www.tei-c.org/Support/Learn/tei_bibliography.xml - A bibliography of
+  publications related to the text encoding initiative
+
+Timeline?
+=========
+* 1967 - GenCode, William W. Tunnicliffe ("generic coding") - publishing industry.
+* 1969 - GML, Charles Goldfarb
+* 1974 (is that date right?) - SGML
+* 1978 ?? - TeX
+* 1980 - Scribe, Brian Reid, doctoral thesis
+* 1984 ?? - LaTeX
+* 1986 - SGML ISO Standard ISO 8879
+* 1989 ?? - HTML
+* setext - introduced 1991
+* 1996 - XML
+* StructuredText - introduced through Zope
+* reStructuredText - 
+* MathML - 
 
 .. vim: set filetype=rst tabstop=8  softtabstop=2 shiftwidth=2 expandtab:
