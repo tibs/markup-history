@@ -139,12 +139,25 @@ Needs:
   as they're not necessarily going to be the same codes for different output
   devices.
 
-|TeX|/|LaTeX|
--------------
+Programmable markup
+-------------------
+There is an important subset of presentation markup, which is actually a
+progamming language that privides markup. The obvious examples are |TeX| and
+Postscript (and to a lesser extent, PDF).
 
-Control of typesetting so the author gets properly formatted text, and,
-particularly, equations. Also, the first decent paragraphing and pagination
-algorithms. 
+|TeX| is essentially a macro expansion language, and this means that the
+(perhaps more familiar) |LaTeX| is written in |TeX| itself.
+
+Postscript is perhaps not normally thought of as a markup lanugage,
+but is essentially a Forth derivative that works on text to produce a
+printable output.
+
+As such, both of these languages can be used to do non-text processing as well,
+although perhaps not in a manner that feels natural (to their intent).
+
+PDF incorporates a subset of Postscript, but is much more page oriented (pages are
+independent) and less general in its applicability, so is arguably not quite
+in our area of interest.
 
 Semantic markup
 ===============
@@ -252,6 +265,60 @@ The results of a quick link trawl:
 * http://www.tei-c.org/Support/Learn/tei_bibliography.xml - A bibliography of
   publications related to the text encoding initiative
 
+* https://quod.lib.umich.edu/j/jep/3336451.0003.406?view=text;rgn=main - 1998
+  SGML and PDF -- why we need both
+
+* http://www.math.utah.edu/~beebe/talks/2003/tug2003/tug2003-keynote.pdf -
+  2003 25 years of |TeX| and METAFONT: Looking back and looking forward:
+  TUG'2003 Keynote Address
+
+* https://is.muni.cz/el/1433/jaro2016/PB138/um/printable/01_intro_markup.html?lang=en - 2016 
+  Introduction to Markup Languages
+
+* https://en.wikipedia.org/wiki/Portable_Document_Format
+* https://en.wikipedia.org/wiki/PostScript
+
+* https://linux.die.net/man/7/roff - roff - concepts and history of roff typesetting 
+* https://www.revolvy.com/topic/Roff%20(computer%20program), whose content is
+  from https://en.wikipedia.org/wiki/Roff_(computer_program) on wikipedia, but
+  the pages on this site seem to be good at leading one into a veritable
+  labyrinth of links (also all derived from wikipedia?) - e.g.:
+
+  * https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
+  * https://en.wikipedia.org/wiki/TJ-2
+
+    TJ-2 (Type Justifying Program) was published by Peter Samson in May 1963
+    and is thought to be the first page layout program. ...  TJ-2 was
+    succeeded by TYPSET and RUNOFF, a pair of complementary programs written
+    in 1964 for the CTSS operating system. TYPSET and RUNOFF soon evolved
+    into runoff for Multics, which was in turn ported to Unix in the 1970s as
+    roff.
+
+  * https://en.wikipedia.org/wiki/Txt2tags
+  * https://en.wikipedia.org/wiki/Runoff_(program)
+  * https://en.wikipedia.org/wiki/Troff
+  * https://en.wikipedia.org/wiki/Pic_language
+  * https://en.wikipedia.org/wiki/Groff_(software)
+  * https://en.wikipedia.org/wiki/Nroff
+  * https://en.wikipedia.org/wiki/Markup_language
+  * https://en.wikipedia.org/wiki/TeX
+  * 
+
+* Let's not forget https://en.wikipedia.org/wiki/AsciiDoc (and
+  http://asciidoctor.org/) although I don't want to dwell on them
+
+
+* https://www.livinginternet.com/i/iw_unix_dev.htm ::
+
+    In the spring of 1971, the interest in Unix began to grow, so instead of
+    writing a new text-processing system as originally proposed, Thompson and
+    Ritchie translated the existing "roff" text formatter from the PDP-7 to the
+    PDP-11 and made it available to the Patent department on their new Unix
+    system. This practical success helped convince Bell Labs of the value of
+    Unix, and shortly thereafter they bought the team one of the first, powerful
+    PDP-11/45 minicomputers to continue their development. A series of
+    progressively better "editions" of Unix were then released.
+
 Timeline?
 =========
 need to put in setext, markdown, nroff/troff/groff, RUNOFF
@@ -287,5 +354,98 @@ and
 * StructuredText - introduced through Zope
 * reStructuredText - 
 * MathML - 
+
+Found things
+============
+http://minnie.tuhs.org/pipermail/tuhs/2017-April/009638.html ::
+
+  [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
+  Toby Thain toby at telegraphics.com.au
+  Sun Apr 16 01:09:15 AEST 2017
+
+      Previous message (by thread): [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
+      Next message (by thread): [TUHS] TeX/troff/typesetting markups - SunOS 4 documentation
+      Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+  On 2017-04-15 10:23 AM, Michael Kerpan wrote:
+  > Comparing documents produced by Heirloom troff and modern versions of
+  > LaTeX, I just can't see a huge difference. The main thing TeX has going
+  > for it is LyX, which makes composing documents a whole lot more
+  > comfortable for folks raised on WYSIWYG. If a tool like that was
+  > available for troff...
+
+  I'm not only talking about the _output_. But my intention isn't to 
+  denigrate troff but to show that they are completely different animals. 
+  A glance through the TeXbook would confirm.
+
+  TeX is a complete domain-specific language, page model, and runtime 
+  environment (without even discussing its layered frameworks like LaTeX). 
+  I admit it took me a few weeks or months of study back in the late 1980s 
+  to understand this distinction; previously I had been using a 
+  troff-level markup (perhaps even troff-inspired) on Mac called 
+  "JustText", which generated PostScript of course.
+
+  One _can_ typeset books in both troff and TeX, but that doesn't make 
+  them at all equivalent. The process and possibilities are different. For 
+  example, that simple task of producing two different output formats from 
+  the same manuscript, that I mentioned upthread, is made possible by TeX 
+  macros. But the sophistication of its page model is also required for 
+  any nontrivial layout, table, diagram, math, or just typographic 
+  refinement.
+
+  Some projects _have_ tried to replace TeX. 
+  https://tex.stackexchange.com/questions/120271/alternatives-to-latex
+
+  --------
+
+  Clem Cole clemc at ccc.com
+  Sun Apr 16 01:27:49 AEST 2017
+
+      Previous message (by thread): [TUHS] TeX/troff/typesetting markups - SunOS 4 documentation
+      Next message (by thread): [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
+      Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+  On Fri, Apr 14, 2017 at 6:24 PM, Toby Thain <toby at telegraphics.com.au>
+  wrote:
+  >
+  >
+  > No matter how far you tart up the former, Troff and TeX just aren't
+  > playing the same ballgame.
+
+
+  Toby - that's a tad inflammatory - at least to my American sensibilities.
+  Saying one or the other has been "dressed up" (using a derogatory term or
+  not) is to me the same as the vi/emacs wars or rugby/American Football
+  argument.   Some people like the taste of one, others do not, and thank
+  goodness we have choices.   I've used the afore mentioned systems (and
+  played the games too at a fairly high level in my day); and frankly it is a
+  matter if taste.  They all have their place.
+
+  If you grew up with an affinity for one, you are more likely to find it
+  more comfortable for your needs.  I find a TeX just as ugly and unreadable
+  as  the runoff family with troff is a member.   It's just a different view
+  of beauty.  Frankly, Brian Reid's Scribe on the "Twinex" and VMS was the
+  "best" document product system I ever really used (for those that do not
+  know, LaTex was an attempt to bring Scribe-like functions into TeX).    But
+  as Brian Kernighan points out in his "Page Makeup" paper, even Scribe had
+  some flaws (it's too bad Scribe seems to have been lost to IP and source
+  issues - I've often wonder how it would have played out in the modern
+  world).
+
+  Anyway - it fine to say you don't like troff - please feel free to suggest
+  that you don't think that it can be made to your style/preferences.   But
+  please don't sling to many insults as the truth is, that troff is still
+  useful to many people and a lot people do still like it.
+
+  In my own case, I'll use TeX if a colleague wants too, but I'm a fair bit
+  faster with troff than almost any other doc prep system for any document of
+  almost any size; but particularly when the documents get large such as
+  book.   But that's me; although I note it is also a lot of other people.
+  As Brian points out, many of the Pearson and Wiley texts use troff; and of
+  course you have to note that my old deskmate, Tim O'Reilly founded his
+  empire on it 😂 (I still have a copy of the his original style manual they
+  wrote for the Masscomp engineers and doc writers in the mid 80s).
+  Clem
+
 
 .. vim: set filetype=rst tabstop=8  softtabstop=2 shiftwidth=2 expandtab:
