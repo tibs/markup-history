@@ -58,6 +58,16 @@ write a text without regard to the mechanism by which it will actually be
 represented to the reader - so, for instance, in creating man pages, articles
 like this, or books of mathematics.
 
+Things I'm ignoring
+===================
+* Music
+* Mathematics
+* Pictures/diagrams/graphs
+* Bibliographies and indices
+* All sorts of other things
+
+Basically anything that isn't just a text document.
+
 How I'm going to split the world
 ================================
 
@@ -141,6 +151,9 @@ Needs:
 
 Programmable markup
 -------------------
+
+.. note:: Wikipedia calls this "Procedural markup"
+
 There is an important subset of presentation markup, which is actually a
 progamming language that privides markup. The obvious examples are |TeX| and
 Postscript (and to a lesser extent, PDF).
@@ -162,6 +175,8 @@ in our area of interest.
 Semantic markup
 ===============
 
+.. note:: Wikipedia calls this Descriptive markup
+
 * SGML (and DTDS)
 
   leading to:
@@ -177,6 +192,11 @@ Semantic markup
 
 Readable plaintext
 ==================
+
+.. note:: Wikipedia seems to put these together with such things as wiki
+   markup as Lightweight markup. I'd argue there's a difference between
+   lightweight markup and the subset therein which is readable, and it's that
+   latter subset I'm most interested in.
 
 .. note:: It would be nice to get an actual timeline from setext to structured
    text to reStructuredText and any other intermediaries.
@@ -447,5 +467,572 @@ http://minnie.tuhs.org/pipermail/tuhs/2017-April/009638.html ::
   wrote for the Masscomp engineers and doc writers in the mid 80s).
   Clem
 
+
+Links and timelines
+===================
+
+http://www.math.utah.edu/~beebe/talks/2003/tug2003/tug2003-keynote.pdf has a
+very nice timeline. Items marked [T] are from it.
+
+* 1964 TYPSET and RUNOFF https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
+* 1967 William Tuncliffe: the separation of the information content of
+  documents from their format
+* 1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM
+* [T] "1970s" roff, script, runoff, document
+* [T] 1976 nroff and troff (J. Ossanna)
+* [T] 1978 bib and refer
+* [T] 1977/1978 |TeX| and Metafont ("classic" version, written in SAIL)
+* [T] 1978-1980 Scribe (B. Reid) https://en.wikipedia.org/wiki/Scribe_(markup_language)
+* [T] 1982 |TeX| and Metafont in Pascal
+* [T] 1983-1985 |LaTeX| (L. Lamport)
+* 1984 Postscript (https://en.wikipedia.org/wiki/PostScript has 1982-1984)
+* 1986 ISO standard SGML (although the first working draft was in 1980)
+* 1991 Time Berners-Lee wrote "HTML Tags" document, proposing what was
+  essentially HTML, built on SGML
+* [T] 1989-1991 HTML and HTTP (T. Berners-Lee)
+* [T] 1993 PDF (Adobe Systems)
+* 1991 setext Ian Feldman, for use in the TidBITS electronic newsletter
+* 1994/1995 WikiWikiWeb, the first wiki Ward Cunningham
+* 1994 Perl 5.000 introduces pod (http://history.perl.org/PerlTimeline.html)
+* 1995 Java appears, and thus its use of (some parts of) HTML in its javadoc
+  (https://en.wikipedia.org/wiki/Javadoc)
+* 1996 StructuredText (Jim Fulton, Zope Corporation / Digital Creations)
+* 1997 XML
+* 2000 Digital Creations began development of StructuredTextNG
+* 2000 First draft of reStructuredText spec posted to Doc-Utils SIG
+* 2001-2002 reStructuredText and Docutils developed fully
+* 2002 PEP 287 "reStructuredText Standard Docstring Format"
+* 2002 AsciiDoc
+* 2004 markdown John Gruber and Aaron Swartz
+* 2013 Asciidoctor
+
+Mumblings
+=========
+
+General links
+-------------
+* `Wikipedia - Markup Language`_
+* `Wikipedia - List of document markup languages`_
+* `Charles Goldfarb — the Godfather of Markup Languages`_, Georgi Dalako.
+* 2016 `An informal look into the history of digital typography`_, David Walden
+
+.. _`Wikipedia - Markup Language`: https://en.wikipedia.org/wiki/Markup_language
+.. _`Wikipedia - List of document markup languages`: https://en.wikipedia.org/wiki/List_of_document_markup_languages
+.. _`Charles Goldfarb — the Godfather of Markup Languages`: http://history-computer.com/Internet/Birth/Goldfarb.html
+.. _`An informal look into the history of digital typography`: http://www.tug.org/tug2016/walden-digital.pdf
+
+HTML/XML/XHTML specific links
+-----------------------------
+These may get removed - I'm not particularly interested in this part of the
+history, and it's really a specialism of its own, with its own consideration
+and politics.
+
+* 1997 `The Evolution of Web Documents`_, Dan Connolly, Rohit Khare, and Adam
+  Rifkin. HTML, SML, SGML.
+* 1998 (republished 2008) `XML People`_, Tim Bray. A look at the people who
+  influenced development of XML
+*  2010 `A brief history of markup`_, Jeremy Keith. From HTML 2.0 through XHTML to HTML5.
+* https://www.ukessays.com/essays/information-technology/the-history-of-markup-languages-information-technology-essay.php
+
+.. _`The Evolution of Web Documents`: https://www.xml.com/pub/a/w3j/s3.connolly.html
+.. _`XML People`: http://www.tbray.org/ongoing/When/200x/2008/02/10/XML-People
+.. _`A brief history of markup`: https://alistapart.com/article/a-brief-history-of-markup
+
+Collections of information
+--------------------------
+* 1988-1999 Text Encoding Initiative `The TEI Archive`_
+* ????-2013`A Bibliography of Publications Related to the Text Encoding Initiative`_
+  which are not just related to TEI itself
+* 2002/2003 `The SGML History Niche`_, Charles F. Goldfarb. Some personal
+  recollections.
+
+.. _`The TEI Archive`: http://www.tei-c.org/Vault/
+.. _`A Bibliography of Publications Related to the Text Encoding Initiative`: http://www.tei-c.org/Support/Learn/tei_bibliography.xml
+.. _`The SGML History Niche`: http://www.sgmlsource.com/history/index.htm
+
+Miscellaneous links
+-------------------
+* `Wikipedia - scribe`_. Scribe was another influential early markup language,
+  from around 1908.
+* `Wikipedia - PostScript`_
+* `Wikipedia - Wiki`_ talks about wiki pages themselves.
+* `Wikipedia - WikiWikiWeb`_ talks about the first wiki. I don't particularly
+  propose to talk about the (many) ways of marking up wiki text here. However,
+  `Text Formatting Rules`_ is the page on wikiwikiweb about the markup it
+  supported. It really did use differing numbers of single quotes to mean
+  different sorts of markup. And inline meaningful tabs. Which is why I don't
+  want to talk about it.
+* `A Brief History of the Development of SMDL and HyTime`_. OK, just one link
+  to an article about marking up music. 
+
+.. _`Wikipedia - PostScript`: https://en.wikipedia.org/wiki/PostScript
+.. _`Wikipedia - scribe`: https://en.wikipedia.org/wiki/Scribe_(markup_language)
+.. _`Wikipedia - Wiki`: https://en.wikipedia.org/wiki/Wiki
+.. _`Wikipedia - WikiWikiWeb`: https://en.wikipedia.org/wiki/WikiWikiWeb.
+.. _`Text formatting rules`: http://wiki.c2.com/?TextFormattingRules
+.. _`A Brief History of the Development of SMDL and HyTime`: http://www.sgmlsource.com/history/hthist.htm
+
+RUNOFF
+------
+Simple text layout and pagination, including right justification.
+
+An example::
+
+   .center
+   AN EXAMPLE
+
+
+* https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
+
+roff and friends
+----------------
+
+An example::
+
+   ...
+
+
+* https://en.wikipedia.org/wiki/Troff
+* https://www.freebsd.org/cgi/man.cgi?query=roff&apropos=0&sektion=7&format=ascii
+
+SGML
+----
+
+An example::
+
+   ...
+
+HTML
+----
+
+An example::
+
+   ...
+
+POD
+---
+Perl's POD (or Plain Old Documentation) is clearly influenced by 
+
+An example::
+
+   ...
+
+Links:
+
+* `The Timeline of Perl and its Culture`_ explains that POD was introduced in
+  1995 at the same time as Perl 5.001. This is a very nice brief history of
+  the significant events in Perl, from the 1960s to 2002, with links at the
+  end.
+
+.. _`The Timeline of Perl and its Culture`: http://history.perl.org/PerlTimeline.html
+
+|TeX|
+-----
+
+An example::
+
+   ...
+
+Links:
+
+* 2003 `25 Years of TEX and METAFONT`_: Looking Back and Looking Forward:
+  TUG’2003 Keynote Address`, Nelson H. F. Beebe. Including sections on "What
+  did |TeX| do right" and "What did |TeX| do wrong".
+
+.. _`25 Years of TEX and METAFONT`: http://www.math.utah.edu/~beebe/talks/2003/tug2003/tug2003-keynote.pdf
+
+
+Python's Doc-SIG
+----------------
+Python's Doc-SIG was started to look at documentation matters for Python, and
+in particular had two main interests - how to write the text in docstrings,
+and how to write "external" documentation.
+
+For docstrings, it was a perceived wisdom that one had to be able to mark up
+the names of function arguments, variable names and so on, so that tools could
+use this information for some unspecified purpose. And in fact, there were
+systems that *did* do exactly that - Zope being an example, where typing
+information was taken from the docstring.
+
+.. note:: It's not clear when docstrings_ were invented. I believe that Python
+   took the idea from Lisp, and specifically from Emacs Lisp. Of course, the
+   nice thing about docstrings is that they are part of the program data, so
+   they can be inspected and manipulated like the rest of Python code.
+
+   `This article`_ from 2013 is an interesting comparison of how to write Python
+   vs Emacs Lisp docstrings.
+
+.. _docstrings: https://en.wikipedia.org/wiki/Docstring
+.. _`this article`: http://xahlee.info/comp/python_vs_elisp_docstring_convention.html
+
+There was also a feeling that this was a generally good thing to do -
+contrasting the relaxed way one might write::
+
+    The arguments are:
+    - 'first' which must give the person's "first" name
+    - 'last' which must give their "last" name
+    'first' and 'last' should be interpreted when possible as if they were
+    "christian" and "surname" (or family name) respectively.
+
+    A hash made from those two components will be returned.
+
+rather than a more formal (and invented - not an actual markup language)
+approach like::
+
+    @param[string] first: the person's "first" name
+    @param[string] last: the person's "last" name
+    @return[integer] a hash made from those two components
+
+    'first' and 'last' should be interpreted when possible as if they were
+    "christian" and "surname" (or family name) respectively.
+
+.. note:: Interestingly, later on the requirement to formally document one's
+   arguments in a docstring has tended to go away, replaced by informal
+   documentation, and, if one must, use of the 'mypy' style annotation in the
+   code itself. I think there are interesting cultural reasons for this, and
+   in part it allows one to not bother documenting function arguments whose
+   intent is entirely obvious from their use and name.
+
+setext
+------
+setext was invented by Ian Feldman as an alternative to RTF and SGML. He used
+it to format the online magazine TidBITS from issue 100 - before that the
+magazine was distributed as a HyperCard_ stack. 
+
+An example::
+
+   This is the title. There can be only one.
+   =========================================
+     Body text must be indented by two spaces.
+
+   A subheading
+   ------------
+     **Bold words** and ~italic~ are supported (although ~multiword~italics~
+     seems to have been an extension). _Underlined_words_ are also supported.
+     `Backquoted words` are not touched.
+
+   > This text will be represented using a monospaced font.
+
+   * This text will have a bullet mark before it.
+
+   .. Two dots introduce text that can be ignored, and two dots alone mean
+   .. the logical end of text
+   ..
+
+Links:
+
+* `Wikipedia - setext`_ 
+* The `docutils`_ site holds a `Setext Documents Mirror`_ which preserves copies
+  of some of the setext documentation.
+* The `wayback machine`_ also has some `setext documents`_
+
+.. _HyperCard: https://en.wikipedia.org/wiki/HyperCard
+.. _`Wikipedia - setext`: https://en.wikipedia.org/wiki/Setext
+.. _`docutils`: http://docutils.sourceforge.net/
+.. _`wayback machine`: https://web.archive.org
+.. _`Setext Documents Mirror`: http://docutils.sourceforge.net/mirror/setext.html
+.. _`setext documents`: https://web.archive.org/web/20010424104701/http://www.bsdi.com/setext/
+
+StructuredText
+--------------
+StructuredText was used extensively in the Zope world, in part to convey type
+information [citation needed]. However there were various problems with it,
+[give examples]. A start was made on a replacement format, StructuredTextNG
+(for "Next Generation"), but that never really got finished, and to an
+outsider it appeared to still have some of the same problems.
+
+Some attempts were made on the Doc-SIG to start to come up with a replacement
+that could be officially accepted, but Guido was not very receptive to the
+idea - he disliked StructuredText, mainly, I think, because of its use of
+indentation and its poor specification. He was also insistent that things
+programmers might commonly want to type (like __init__ and <variable>)[1] should
+not require any escaping.
+
+An example::
+
+   ...
+
+StructuredTextNG
+----------------
+
+An example::
+
+   ...
+
+reStructuredText
+----------------
+
+An example::
+
+   ...
+
+The various forms of inline markup (``*..*``, ``**..``, etc.) cannot be nested
+- this has been a known limitation for the life of reStructuredText, but no
+final solution has been proposed yet.
+
+Links:
+
+* `Wikipedia - reStructuredText`_
+* 2012 `An Introduction to reStructuredText`_, David Goodger. This also
+  includes David's recounting of its history, which I'd say is accurate if a
+  little too modest.
+
+.. _`Wikipedia - reStructuredText`: https://en.wikipedia.org/wiki/ReStructuredText
+.. _`An Introduction to reStructuredText`: http://docutils.sourceforge.net/docs/ref/rst/introduction.html
+
+
+markdown
+--------
+
+The `original article on markdown's syntax`_ said:
+
+  Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
+
+  Readability, however, is emphasized above all else. A Markdown-formatted
+  document should be publishable as-is, as plain text, without looking like
+  it’s been marked up with tags or formatting instructions. While Markdown’s
+  syntax has been influenced by several existing text-to-HTML filters —
+  including Setext, atx, Textile, reStructuredText, Grutatext, and EtText —
+  the single biggest source of inspiration for Markdown’s syntax is the format
+  of plain text email.
+
+Personally, I think that aim is compromised by allowing HTML within markdown
+documents, and especially the consequent need to treat "<" and "&" (but not
+(">") specially in some cases (there are rules as to when).
+
+Whilst markdown does support using underlines for headings (it specifies what
+sort of underlining for each level), it also supports the use of multiple "#"
+characters instead, and this seems to be the more colloquial usage.
+
+An example::
+
+   # A first-level header
+
+   * Lists work as you might expect.
+   * This is an unnumbered list.
+
+     Multiple paragraphs are allowed per list item, which is good.
+   Although the indentation doesn't need to be kept consistent after
+   the first line.
+
+   ## A sub heading
+
+   > A blockquote.
+   >
+   > 1. The first line of a blockquoted list.
+
+   Blocks of code must be indented by four spaces:
+
+       so this is code
+
+   and `inline code` can be done as well.
+
+It's not well defined whether a blank line is needed before a list - that is,
+whether::
+
+  This paragraph has a hyphen starting its next line
+  - does that constitute the start of a list item?
+
+and it is specified that::
+
+  1986. What a great season.
+
+does start a numbered list item, so would need to be written as::
+
+  1986\. What a great season.
+
+It's worth reading the document as a whole. Unfortunately, it is *not* a
+precise description of markdown, which has led to differences in
+interpretation. Equally unfortunately, John Gruber has refused to update the
+specification beyond that first document, so the problems may be expected to
+remain.
+
+Regardles, markdown has appeared to hit a "sweet spot" between readbility
+versus capability, which has led to its use as a default markup language for
+many purposes. I *think* that github-flavoured markdown may be the dominant
+version at the moment.
+
+Links:
+
+* `Wikipedia - markdown`_
+* CommonMark_ is an attempt to provide a well-specified successor form of
+  markdown. The page explains the problem they're trying to solve well. It was
+  initially to be called "Standard Markdown", but that led to problems, as
+  documented at `Standard Markdown is now Common Markdown`_, and hence the
+  name change.
+
+.. _`Wikipedia - markdown`: https://en.wikipedia.org/wiki/Markdown
+.. _`original article on markdown's syntax`: https://daringfireball.net/projects/markdown/syntax
+.. _CommonMark: http://commonmark.org/
+.. _`Standard Markdown is now Common Markdown`: https://blog.codinghorror.com/standard-markdown-is-now-common-markdown/
+
+
+Asciidoc
+--------
+The tradeoffs made for a particular form of lightweight markup are always very
+personal - one person's just-simple-enough is another person's step too far.
+This means that developers keep trying to come up with a form of markup that
+suits *their* sweet spot. Markup to fit their individual needs and wants.
+
+So it shouldn't be a surprise that when I gave a lightning talk on "which
+should I use, reStructuredText or Markdown?"[2] I got a couple of people
+asking why I hadn't talked about asciidoc. The answer was, in fact, mostly
+ignorance on my part. There are many lightweight markup formats, and I just
+hadn't realised how much use is made of asciidoc, and in particular of the
+asciidoctor system.
+
+The AsciiDoc user guide says:
+
+  AsciiDoc is a plain text human readable/writable document format that can be
+  translated to DocBook or HTML using the asciidoc(1) command. You can then
+  either use asciidoc(1) generated HTML directly or run asciidoc(1) DocBook
+  output through your favorite DocBook toolchain or use the AsciiDoc a2x(1)
+  toolchain wrapper to produce PDF, EPUB, DVI, LaTeX, PostScript, man page,
+  HTML and text formats.
+
+An example::
+
+   Top level heading
+   =================
+   Or, alternatively, that could have been += Top level heading =+.
+   Sub-heading
+   -----------
+   Like |TeX|, open and closing quote marks don't match, so instead one uses
+   `single' or ``double'' quoting. This means that both 'this' and _that_ can
+   be used to emphasize text. *strong* text and +monospaced+ text are also
+   available.
+
+   Listing blocks are one type of DelimitedBlock - there are several more:
+   ---------------------------
+   #include <stdio.h>
+   ---------------------------
+
+   * List items
+   +
+   can continue into another paragraph, but it must be explicitly joined on.
+
+The `AsciiDoc User Guide`_ seems comprehensive and to define the markup well.
+It is clear that its ambitions are much more complex than those of
+reStructuredText - it clearly aims to support a substantial portion of
+docbook, whilst remaining (more) readable.
+
+I'd say it's definitely further away from "looking like an email", but this
+makes sense as its ambitions are greater.
+
+Links:
+
+* `Wikipedia - AsciiDoc`_
+* AsciiDoc_ homepage
+* AsciiDoctor_ - "Asciidoctor is a fast text processor and publishing toolchain
+  for converting AsciiDoc content to HTML5, DocBook 5 (or 4.5) and other
+  formats."
+
+.. _`Wikipedia - AsciiDoc`: https://en.wikipedia.org/wiki/AsciiDoc
+.. _AsciiDoc: http://asciidoc.org/
+.. _AsciiDoctor: http://asciidoctor.org/
+.. _`AsciiDoc User Guide`: http://asciidoc.org/userguide.html
+
+Readability versus writeability
+-------------------------------
+There is an obvious tradeoff to be made between how readable a format is, and
+how simple it is to write. For instance, delimiting headers by leading
+characters::
+
+  # Header 1
+  ## Header 2
+
+is much simpler than having to type underlines::
+
+  Header 1
+  ========
+
+  Header 2
+  --------
+
+Also, having a pre-defined set of underlines (e.g., ``===`` always means title,
+``---`` means subtitle, etc.) is easier to learn and easier to use than
+allowing any underlining choice (provided it is consistent within a document),
+but may be considered to remove the author's choice on which form of
+underlining reads best *in this particular document*.
+
+As in so many things, the Zen of Python still has applicability - it is then
+left up to the reader how well it has been followed.
+
+The advantages of having a competent specification
+--------------------------------------------------
+It is normally regarded as a good thing to have multiple implementations of a
+specification - not least because it helps to iron out misunderstandings of
+what that specification means. Standardisation can help to mediate that
+understanding (although not always as much as one might hope), and Python gets
+by quite well by just having people communicate a lot and having a reasonable
+test suite for the language.
+
+It's not always an obviously good thing, though.
+
+There are many forms of markdown, but the original implementation of markdown
+is essentially frozen, as is the original documentation, and that "definition"
+of markdown is both ambiguous, and does not address various tasks that people
+want to do. Nor is the original author willing to help with this situation[3].
+This means that different markdown implementations provide their
+own decisions on the ambiguous parts, and provide their own extensions.
+Unfortunately this means that markdown text is not necessarily portable
+between implementations. In practice, however, this probably doesn't matter
+much, as the use of markdown is often for documentation that belongs to a
+particular site or user environment, and interoperability within that
+site/environment is enough.
+
+In contrast, reStructuredText is quite well specified (David Goodger having a
+background in SGML systems, after all). This means that the various
+implementations of reStructuredText can be specific about what they do or
+don't support, and in general interoperability should be better, or at least
+more predictable.
+
+Incidentally, it probably also makes it possible to produce a general linter for
+reStructuredText - i.e., a program to inspect the text for errors before
+running it through docutils to produce output - which is harder to do in a
+portable manner for markdown, because there are so many markdowns.
+
+.. [1] both not escaped in this text, of course
+.. [2] the answer is, of course, "whichever is suitable" / "whichever you
+   choose", although I would suggest that for a large public project (gov.uk,
+   documentation for the RaspberryPi) markdown should be adopted, as it is
+   simpler, whilst for more challenging uses (or people who prefer more
+   challenging markup), reStructuredText is good. And as reStructuredText
+   suggests that "if you need to do things it doesn't support, use something
+   else", then I think the same can apply to markdown and (perhaps) moving on
+   to reStructuredText.
+.. [3] whilst I personally find that hard to understand, it's not as if we're
+   *paying* anything for the privilege of using markdown, we're using
+   something given freely as it is/was.
+
+
+Comparisons
+-----------
+Comparing markdown, reStructuredText and AsciiDoc (to pick three).
+
+*Is this section worth anything? I'm not actually convinced.*
+
+NB: check whether AsciiDoctor also always goes through docbook
+
+
+Concept                  markdown      reStructuredText     AsciiDoc
+-------                  --------      ----------------     --------
+readability              a main aim    the main aim         a main aim
+closely specified        no            yes                  yes
+output to                various       various              docbook and then various
+inline HTML              yes           delimited[a]         delimited[b]
+nested inline markup     ?             no                   yes
+non-trivial list items   no            yes                  yes
+extensible               no            directives           macros
+conditional text         no            no                   no
+executable text          no            no[c]                yes
+tables                   not standard  yes                  yes
+
+
+.. [a] reStructuredText allows the writer to add HTML via a directive,
+   but it will only be used if the output is to HTML.
+.. [b] AsciiDoc produces HTML via Docbook, and Docbook provides a way of
+   including a file of raw HTML into the HTML output.
+.. [c] this is a very conscious decision by reStructuredText
 
 .. vim: set filetype=rst tabstop=8  softtabstop=2 shiftwidth=2 expandtab:
