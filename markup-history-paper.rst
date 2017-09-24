@@ -58,6 +58,9 @@ write a text without regard to the mechanism by which it will actually be
 represented to the reader - so, for instance, in creating man pages, articles
 like this, or books of mathematics.
 
+.. note:: Interestingly, almost all of the markup formats I'm going to discuss
+   are still in use today.
+
 Things I'm ignoring
 ===================
 * Music
@@ -492,6 +495,7 @@ very nice timeline. Items marked [T] are from it.
 * [T] 1989-1991 HTML and HTTP (T. Berners-Lee)
 * [T] 1993 PDF (Adobe Systems)
 * 1991 setext Ian Feldman, for use in the TidBITS electronic newsletter
+* 1991 Docbook
 * 1994/1995 WikiWikiWeb, the first wiki Ward Cunningham
 * 1994 Perl 5.000 introduces pod (http://history.perl.org/PerlTimeline.html)
 * 1995 Java appears, and thus its use of (some parts of) HTML in its javadoc
@@ -564,6 +568,10 @@ Miscellaneous links
   want to talk about it.
 * `A Brief History of the Development of SMDL and HyTime`_. OK, just one link
   to an article about marking up music. 
+* `Why Markdown is not my favourite language`_ (from 2012) shares many of my
+  grumbles about markdown, gives a reasoned look at reStructuredText, and
+  decides that actually the best hope is actually Creole_. Unfortunately, I
+  don't think there's been much adoption of Creole.
 
 .. _`Wikipedia - PostScript`: https://en.wikipedia.org/wiki/PostScript
 .. _`Wikipedia - scribe`: https://en.wikipedia.org/wiki/Scribe_(markup_language)
@@ -571,6 +579,8 @@ Miscellaneous links
 .. _`Wikipedia - WikiWikiWeb`: https://en.wikipedia.org/wiki/WikiWikiWeb.
 .. _`Text formatting rules`: http://wiki.c2.com/?TextFormattingRules
 .. _`A Brief History of the Development of SMDL and HyTime`: http://www.sgmlsource.com/history/hthist.htm
+.. _`Why Markdown is not my favourite language`: http://www.wilfred.me.uk/blog/2012/07/30/why-markdown-is-not-my-favourite-language/
+.. _Creole: http://www.wikicreole.org/
 
 RUNOFF
 ------
@@ -608,6 +618,31 @@ HTML
 An example::
 
    ...
+
+Docbook
+-------
+
+An example::
+
+    ...
+
+DocBook before 4.1 - SGML with a DTD
+DocBook from 4.1 but before 5 - SGML/XML with a DTD
+2005 DocBook 5 and later - XML with a RELAX NG schema, with rule-based
+validation for some constraints using Schematron
+
+Links:
+
+* `Wikipedia - DocBook`_
+* `The DocBook Project`_ on Sourceforge
+* `DocBook.org`_ - the official site for the book "DocBook 5: The
+  Definitive Guide", 2004-2006 Norman Walsh. The book itself is online at
+  http://tdg.docbook.org/
+* https://workaround.org/docbook/ is a quick introduction to DocBook
+
+.. _`Wikipedia - DocBook`: https://en.wikipedia.org/wiki/DocBook
+.. _`The DocBook Project`: http://docbook.sourceforge.net/
+.. _`DocBook.org`: http://docbook.org/
 
 POD
 ---
@@ -770,6 +805,46 @@ The various forms of inline markup (``*..*``, ``**..``, etc.) cannot be nested
 - this has been a known limitation for the life of reStructuredText, but no
 final solution has been proposed yet.
 
+The primary aims of reStructuredText are (a) readbility and (b)
+predicatability. The first makes sense for a markup language designed for use
+with Python, whose first aim is also to be readable. The second is natural
+when the developer comes from a professional structured markup background -
+David Goodger had worked on SGML-based documentation systems.
+
+As you will have noticed, the earlier lightweight markup systems tended to be
+informally specified, with ambiguities in their implementation. This means
+that it was not always possible to predict the resultant output from a
+document just by looking at it, and also that even if a second implementation
+were made, it could only be consistent with the first by essentially
+duplicating all of the minutiae of its source code.
+
+So reStructuredText aims to be readble first, even if that means some
+constructs are somewhat harder to write (for example, titles needing to be
+underlined, or over and underlined, which is clearly harder to do than just
+prepending N characters per title level). The original document is meant to
+have equal standing with those produced by processing it.
+
+Secondly, having a detailed specification (although I'd argue it is still very
+readable) means one can know what an author meant by the document structure
+they typed. This means that one can tell them when they got it wrong
+(something some people appear not to like). It also makes it much easier to
+produce alternate implementations, which either behave identically in their
+understanding of the input text, or can be specific about where they are going
+to differ. And this last has definitely benefited use of reStructuredText.
+
+.. note:: I'm particularly fond of the implementation in VimL, the programming
+   language within the Vim editor.
+
+A much subtler, but I'd argue equally important aim, was to be entirely
+agnostic about output format. Most lightweight markup formats, even today,
+clearly favour one output format over another - for instance, markdown looks
+like a simpler way of creating HTML, and asciidoc targets docbooks. That's not
+necessarily a bad thing, partiuclarly when one output format can often be
+turned into another with reasonable ease, but I like the purity of regarding
+the actual final presentation as a detail. It has also allowed
+reStructuredText to adopt forms that are related to the final form wanted,
+rather than how it might be obtained - for instance, footnotes.
+
 Links:
 
 * `Wikipedia - reStructuredText`_
@@ -781,7 +856,7 @@ Links:
 .. _`An Introduction to reStructuredText`: http://docutils.sourceforge.net/docs/ref/rst/introduction.html
 
 
-markdown
+Markdown
 --------
 
 The `original article on markdown's syntax`_ said:
