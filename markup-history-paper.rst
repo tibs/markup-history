@@ -1,11 +1,11 @@
 =============================
-A hsitory of markup languages
+A history of markup languages
 =============================
 
 By Tibs / Tony Ibbs, for PyConUK 2017
 
 .. note:: This is the "paper" that is equivalent to the slideshow. It may or
-   may not remaing a separate document.
+   may not remainng a separate document.
 
 .. For the moment, we represent TeX and LaTeX as simple text, but I might
    change that in the future
@@ -572,6 +572,8 @@ Miscellaneous links
   grumbles about markdown, gives a reasoned look at reStructuredText, and
   decides that actually the best hope is actually Creole_. Unfortunately, I
   don't think there's been much adoption of Creole.
+* http://karl-voit.at/2017/09/23/orgmode-as-markup-only/ - orgmore (in Emacs)
+  considered as markup
 
 .. _`Wikipedia - PostScript`: https://en.wikipedia.org/wiki/PostScript
 .. _`Wikipedia - scribe`: https://en.wikipedia.org/wiki/Scribe_(markup_language)
