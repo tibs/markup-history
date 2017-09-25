@@ -66,21 +66,49 @@ Categories of markup
 RUNOFF
 ------
 
+Presentational. 1964 and descendants on into the 1980s (and perhaps beyond)
+
+One of the first markups - not very capable (by modern standards) in its first
+incarnation, but clearly the ancestor of later forms of RUNOFF, and I used DSR
+(Digital Standard Runoff) in the 1980s.
+
+Commands starting with a dot in the first column, and able to be abbreviated
+right from the beginning.
+
+This makes good sense, as one doesn't normally start any English sequence with
+a dot.
 
 ----
 
 GML and SGML
 ------------
 
+Semantic. Meta-description. 1969 (GML), 1986 (SGML)
+
+A mechanism for *describing* markup languages. Use of the DTD.
+
 ----
 
 roff, nroff, troff
 ------------------
 
+Presentation. 1970s and onwards, and still going strong today.
+
+Again, keywords starting with a dot in the first column, but the abbreviation
+as the original (I think?).
+
 ----
 
 |TeX|
 -----
+
+Presentation, and programmable. 1977 and onwards, and still going strong
+today.
+
+Driven by the need to guarantee accurate typesetting of mathematics, but led
+to new mechanisms for paragraph layout, and an important landmark in literate
+programming.
+
 
 
 ----
@@ -88,11 +116,17 @@ roff, nroff, troff
 Postscript
 ----------
 
+Presentation, and programmable. Not really intended to be written by people.
+1984 and onwards, and still in use today (and, of course, also used in PDF)
+
 
 ----
 
 HTML
 ----
+
+Presentaton, still going strong today (although rather altered). 1991 and
+onwards.
 
 
 ----
@@ -100,16 +134,26 @@ HTML
 setext
 ------
 
+Presentation. Lightweight. Partly a reaction to SGML. Clearly influential on
+all of the succeeding lightweight markups. 1991
+
 ----
 
 Docbook
 -------
 
+Semantic. 1991 and onwards. Still going today.
 
 ----
 
 POD
 ---
+
+Perl's "Plain Old Documentation". Clearly influenced by ... and ...
+
+1994
+
+An example of markup to a specific purpose, and clearly very successful.
 
 
 ----
@@ -117,26 +161,32 @@ POD
 StructuredText
 --------------
 
+Presentation. Lightweight. 1996. Ancestral to...
 
 ----
 
 reStructuredText
 ----------------
 
+Presentation. Lightweight. 2000 and beyond.
 
-
-----
-
-markdown
---------
-
-
+Now used for Python documentation, Linux, and others.
 
 -----
 
 Asciidoc
 --------
 
+Presentation. Lightweight. 2002. Aimed specifically as a lightweight way of
+producing docbook.
+
+----
+
+markdown
+--------
+
+Presentation. Lightweight. 200Presentation. Lightweight. 2002. Aimed
+specifically as a lightweight way of producing docbook.4
 
 ----
 

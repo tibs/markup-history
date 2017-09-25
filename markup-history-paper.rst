@@ -494,9 +494,9 @@ very nice timeline. Items marked [T] are from it.
   essentially HTML, built on SGML
 * [T] 1989-1991 HTML and HTTP (T. Berners-Lee)
 * [T] 1993 PDF (Adobe Systems)
-* 1991 setext Ian Feldman, for use in the TidBITS electronic newsletter
+* 1991 setext, Ian Feldman, for use in the TidBITS electronic newsletter
 * 1991 Docbook
-* 1994/1995 WikiWikiWeb, the first wiki Ward Cunningham
+* 1994/1995 WikiWikiWeb, the first wiki, Ward Cunningham
 * 1994 Perl 5.000 introduces pod (http://history.perl.org/PerlTimeline.html)
 * 1995 Java appears, and thus its use of (some parts of) HTML in its javadoc
   (https://en.wikipedia.org/wiki/Javadoc)
@@ -857,9 +857,80 @@ Links:
 .. _`Wikipedia - reStructuredText`: https://en.wikipedia.org/wiki/ReStructuredText
 .. _`An Introduction to reStructuredText`: http://docutils.sourceforge.net/docs/ref/rst/introduction.html
 
+Asciidoc
+--------
+The tradeoffs made for a particular form of lightweight markup are always very
+personal - one person's just-simple-enough is another person's step too far.
+This means that developers keep trying to come up with a form of markup that
+suits *their* sweet spot. Markup to fit their individual needs and wants.
+
+So it shouldn't be a surprise that when I gave a lightning talk on "which
+should I use, reStructuredText or Markdown?"[2] I got a couple of people
+asking why I hadn't talked about asciidoc. The answer was, in fact, mostly
+ignorance on my part. There are many lightweight markup formats, and I just
+hadn't realised how much use is made of asciidoc, and in particular of the
+asciidoctor system.
+
+The AsciiDoc user guide says:
+
+  AsciiDoc is a plain text human readable/writable document format that can be
+  translated to DocBook or HTML using the asciidoc(1) command. You can then
+  either use asciidoc(1) generated HTML directly or run asciidoc(1) DocBook
+  output through your favorite DocBook toolchain or use the AsciiDoc a2x(1)
+  toolchain wrapper to produce PDF, EPUB, DVI, LaTeX, PostScript, man page,
+  HTML and text formats.
+
+An example::
+
+   Top level heading
+   =================
+   Or, alternatively, that could have been += Top level heading =+.
+   Sub-heading
+   -----------
+   Like |TeX|, open and closing quote marks don't match, so instead one uses
+   `single' or ``double'' quoting. This means that both 'this' and _that_ can
+   be used to emphasize text. *strong* text and +monospaced+ text are also
+   available.
+
+   Listing blocks are one type of DelimitedBlock - there are several more:
+   ---------------------------
+   #include <stdio.h>
+   ---------------------------
+
+   * List items
+   +
+   can continue into another paragraph, but it must be explicitly joined on.
+
+The `AsciiDoc User Guide`_ seems comprehensive and to define the markup well.
+It is clear that its ambitions are much more complex than those of
+reStructuredText - it clearly aims to support a substantial portion of
+docbook, whilst remaining (more) readable.
+
+I'd say it's definitely further away from "looking like an email", but this
+makes sense as its ambitions are greater.
+
+Links:
+
+* `Wikipedia - AsciiDoc`_
+* AsciiDoc_ homepage
+* AsciiDoctor_ - "Asciidoctor is a fast text processor and publishing toolchain
+  for converting AsciiDoc content to HTML5, DocBook 5 (or 4.5) and other
+  formats."
+
+.. _`Wikipedia - AsciiDoc`: https://en.wikipedia.org/wiki/AsciiDoc
+.. _AsciiDoc: http://asciidoc.org/
+.. _AsciiDoctor: http://asciidoctor.org/
+.. _`AsciiDoc User Guide`: http://asciidoc.org/userguide.html
+
 
 Markdown
 --------
+
+The `original introduction to markdown`_ said:
+
+  Markdown is a text-to-HTML conversion tool for web writers. Markdown allows
+  you to write using an easy-to-read, easy-to-write plain text format, then
+  convert it to structurally valid XHTML (or HTML).
 
 The `original article on markdown's syntax`_ said:
 
@@ -939,75 +1010,27 @@ Links:
   name change.
 
 .. _`Wikipedia - markdown`: https://en.wikipedia.org/wiki/Markdown
+.. _`original introduction to markdown`: https://daringfireball.net/projects/markdown/a
 .. _`original article on markdown's syntax`: https://daringfireball.net/projects/markdown/syntax
 .. _CommonMark: http://commonmark.org/
 .. _`Standard Markdown is now Common Markdown`: https://blog.codinghorror.com/standard-markdown-is-now-common-markdown/
 
+Other links - to the influences markdown references:
 
-Asciidoc
---------
-The tradeoffs made for a particular form of lightweight markup are always very
-personal - one person's just-simple-enough is another person's step too far.
-This means that developers keep trying to come up with a form of markup that
-suits *their* sweet spot. Markup to fit their individual needs and wants.
+* setext: http://docutils.sourceforge.net/mirror/setext.html
+* atx: http://www.aaronsw.com/2002/atx/ - appears very simple, not very
+  sophisticated
+* Textile: http://www.booked.net/textism.html - shortcuts for HTML
+* reStructuredText: http://docutils.sourceforge.net/rst.html
+* Grutatxt: http://triptico.com/software/grutatxt.html - appears to date from
+  2000 onwards. Simple but ambiguous documentation.
+* EtText: http://ettext.taint.org/doc/ - explicitly influenced by setext,
+  wikiwikiweb, txt2html, Userland's Frontier, and StructuredText.
 
-So it shouldn't be a surprise that when I gave a lightning talk on "which
-should I use, reStructuredText or Markdown?"[2] I got a couple of people
-asking why I hadn't talked about asciidoc. The answer was, in fact, mostly
-ignorance on my part. There are many lightweight markup formats, and I just
-hadn't realised how much use is made of asciidoc, and in particular of the
-asciidoctor system.
+Of those, I think only reStructuredText has a decent definition. Also,
+compared with the others, I think markdown looks not too bad.
 
-The AsciiDoc user guide says:
-
-  AsciiDoc is a plain text human readable/writable document format that can be
-  translated to DocBook or HTML using the asciidoc(1) command. You can then
-  either use asciidoc(1) generated HTML directly or run asciidoc(1) DocBook
-  output through your favorite DocBook toolchain or use the AsciiDoc a2x(1)
-  toolchain wrapper to produce PDF, EPUB, DVI, LaTeX, PostScript, man page,
-  HTML and text formats.
-
-An example::
-
-   Top level heading
-   =================
-   Or, alternatively, that could have been += Top level heading =+.
-   Sub-heading
-   -----------
-   Like |TeX|, open and closing quote marks don't match, so instead one uses
-   `single' or ``double'' quoting. This means that both 'this' and _that_ can
-   be used to emphasize text. *strong* text and +monospaced+ text are also
-   available.
-
-   Listing blocks are one type of DelimitedBlock - there are several more:
-   ---------------------------
-   #include <stdio.h>
-   ---------------------------
-
-   * List items
-   +
-   can continue into another paragraph, but it must be explicitly joined on.
-
-The `AsciiDoc User Guide`_ seems comprehensive and to define the markup well.
-It is clear that its ambitions are much more complex than those of
-reStructuredText - it clearly aims to support a substantial portion of
-docbook, whilst remaining (more) readable.
-
-I'd say it's definitely further away from "looking like an email", but this
-makes sense as its ambitions are greater.
-
-Links:
-
-* `Wikipedia - AsciiDoc`_
-* AsciiDoc_ homepage
-* AsciiDoctor_ - "Asciidoctor is a fast text processor and publishing toolchain
-  for converting AsciiDoc content to HTML5, DocBook 5 (or 4.5) and other
-  formats."
-
-.. _`Wikipedia - AsciiDoc`: https://en.wikipedia.org/wiki/AsciiDoc
-.. _AsciiDoc: http://asciidoc.org/
-.. _AsciiDoctor: http://asciidoctor.org/
-.. _`AsciiDoc User Guide`: http://asciidoc.org/userguide.html
+Although it's interesting that AsciiDoc isn't mentioned in the influences.
 
 Readability versus writeability
 -------------------------------
@@ -1111,5 +1134,23 @@ tables                   not standard  yes                  yes
 .. [b] AsciiDoc produces HTML via Docbook, and Docbook provides a way of
    including a file of raw HTML into the HTML output.
 .. [c] this is a very conscious decision by reStructuredText
+
+-----------------
+
+Maybe there should be an entry for wikiwikiweb after all.
+
+.. note:: Why do so many markup creators believe that lists are just made up
+   of list items with no internal structure? Do they really never want to
+   put code into list items, or have more than one paragraph per item? Given
+   the experience of the lengths people will go to in those wiki formats that
+   are similarly crippled to make it *look* as if one can do these things,
+   this would appear always to be a mistake. Back in the origianl wikiwikiweb,
+   I think that it was quite deliberate - if one looks at the types of page
+   being written in that wiki, there was no intent to have anything beyond a
+   sort of "notation" page - it wasn't intended for writing whole documents.
+   For other wikis, I suspect many have copied that limitation without
+   thinking about the implications. For actual markup formats, though
+   (expecially those targetting HTML, which is many of them), it's rather
+   harder to understand the limitation.
 
 .. vim: set filetype=rst tabstop=8  softtabstop=2 shiftwidth=2 expandtab:
