@@ -490,6 +490,7 @@ very nice timeline. Items marked [T] are from it.
 * [T] 1983-1985 |LaTeX| (L. Lamport)
 * 1984 Postscript (https://en.wikipedia.org/wiki/PostScript has 1982-1984)
 * 1986 ISO standard SGML (although the first working draft was in 1980)
+* 1987 TEI 
 * 1991 Time Berners-Lee wrote "HTML Tags" document, proposing what was
   essentially HTML, built on SGML
 * [T] 1989-1991 HTML and HTTP (T. Berners-Lee)
@@ -567,7 +568,8 @@ Miscellaneous links
   different sorts of markup. And inline meaningful tabs. Which is why I don't
   want to talk about it.
 * `A Brief History of the Development of SMDL and HyTime`_. OK, just one link
-  to an article about marking up music. 
+  to an article about marking up music. Although I actually find Lilypond_
+  (1996 and later) more interesting.
 * `Why Markdown is not my favourite language`_ (from 2012) shares many of my
   grumbles about markdown, gives a reasoned look at reStructuredText, and
   decides that actually the best hope is actually Creole_. Unfortunately, I
@@ -583,6 +585,7 @@ Miscellaneous links
 .. _`A Brief History of the Development of SMDL and HyTime`: http://www.sgmlsource.com/history/hthist.htm
 .. _`Why Markdown is not my favourite language`: http://www.wilfred.me.uk/blog/2012/07/30/why-markdown-is-not-my-favourite-language/
 .. _Creole: http://www.wikicreole.org/
+.. _Lilypond: http://lilypond.org/
 
 RUNOFF
 ------
@@ -613,6 +616,26 @@ SGML
 An example::
 
    ...
+
+TEI
+---
+
+"""The mission of the Text Encoding Initiative is to develop and maintain a
+set of high-quality guidelines for the encoding of humanities texts, and to
+support their use by a wide community of projects, institutions, and
+individuals"""
+
+This alone looks like a whole field of study I haven't even started - I don't
+expect to be able to do it justice here.
+
+An example::
+
+   ...
+
+Links:
+
+* https://en.wikipedia.org/wiki/Text_Encoding_Initiative
+* http://www.tei-c.org/index.xml
 
 HTML
 ----

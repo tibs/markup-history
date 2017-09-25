@@ -35,6 +35,7 @@ Timeline
 * [T] 1983-1985 |LaTeX| (L. Lamport)
 * 1984 Postscript (https://en.wikipedia.org/wiki/PostScript has 1982-1984)
 * 1986 ISO standard SGML (although the first working draft was in 1980)
+* 1987 TEI
 * 1991 Time Berners-Lee wrote "HTML Tags" document, proposing what was
   essentially HTML, built on SGML
 * [T] 1989-1991 HTML and HTTP (T. Berners-Lee)
@@ -119,6 +120,12 @@ Postscript
 Presentation, and programmable. Not really intended to be written by people.
 1984 and onwards, and still in use today (and, of course, also used in PDF)
 
+----
+
+TEI
+---
+
+Semantic. 1987. Still going strong and in use today.
 
 ----
 
