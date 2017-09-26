@@ -25,6 +25,15 @@ Perhaps calling this a history is a mistake, and it should more accurately be
 called an opinionated overview. Yet the intent is to give an overview that
 explains a rationale for how markup languages are.
 
+.. note:: Indeed, this is a summary of some of the more obvious bits of the
+   history of document markup. It's the sort of stuff that one can find with a
+   little bit of memory and some googling. That means that there is doubtless
+   interesting stuff I've missed, and there is also bound to be *exciting*
+   work going on **right now** that is not mentioned anywhere here - for
+   instance, I think Pollen_ looks quite interesting.
+
+.. _Pollen: http://docs.racket-lang.org/pollen/
+
 Why we markup
 =============
 We've always added markup to text.
@@ -683,6 +692,8 @@ Links:
   1995 at the same time as Perl 5.001. This is a very nice brief history of
   the significant events in Perl, from the 1960s to 2002, with links at the
   end.
+* https://perldoc.perl.org/perlpodspec.html
+
 
 .. _`The Timeline of Perl and its Culture`: http://history.perl.org/PerlTimeline.html
 
@@ -691,7 +702,23 @@ Links:
 
 An example::
 
-   ...
+   \beginsection
+   A new section
+
+   Paragraphs are separated by blank lines. `Quotation marks' differ. {\it
+   Italics are done so}. Equations are important, and can be inline:
+   $$|y - z| < \epsilon$$. Hyphen (-), ranges (1--4) and dashes (---) are all
+   distinct.
+
+   However, more people use systems {\it written} in \TeX, such as \LaTeX,
+   because they provide ready-made support for most document elements.
+
+   \bye
+
+   
+.. note:: I used to write plain |TeX|, but most people actually use |LaTeX|,
+   which dates from about 1983/1984, or one of the other systems written in
+   |TeX|.
 
 Links:
 
@@ -700,6 +727,8 @@ Links:
   did |TeX| do right" and "What did |TeX| do wrong".
 
 .. _`25 Years of TEX and METAFONT`: http://www.math.utah.edu/~beebe/talks/2003/tug2003/tug2003-keynote.pdf
+
+----
 
 
 Python's Doc-SIG
@@ -805,8 +834,8 @@ Some attempts were made on the Doc-SIG to start to come up with a replacement
 that could be officially accepted, but Guido was not very receptive to the
 idea - he disliked StructuredText, mainly, I think, because of its use of
 indentation and its poor specification. He was also insistent that things
-programmers might commonly want to type (like __init__ and <variable>)[1] should
-not require any escaping.
+programmers might commonly want to type (like __init__ and <variable>) [1]_
+should not require any escaping.
 
 An example::
 
@@ -888,7 +917,7 @@ This means that developers keep trying to come up with a form of markup that
 suits *their* sweet spot. Markup to fit their individual needs and wants.
 
 So it shouldn't be a surprise that when I gave a lightning talk on "which
-should I use, reStructuredText or Markdown?"[2] I got a couple of people
+should I use, reStructuredText or Markdown?" [2]_ I got a couple of people
 asking why I hadn't talked about asciidoc. The answer was, in fact, mostly
 ignorance on my part. There are many lightweight markup formats, and I just
 hadn't realised how much use is made of asciidoc, and in particular of the
@@ -1095,7 +1124,7 @@ It's not always an obviously good thing, though.
 There are many forms of markdown, but the original implementation of markdown
 is essentially frozen, as is the original documentation, and that "definition"
 of markdown is both ambiguous, and does not address various tasks that people
-want to do. Nor is the original author willing to help with this situation[3].
+want to do. Nor is the original author willing to help with this situation [3]_.
 This means that different markdown implementations provide their
 own decisions on the ambiguous parts, and provide their own extensions.
 Unfortunately this means that markdown text is not necessarily portable
@@ -1137,26 +1166,27 @@ Comparing markdown, reStructuredText and AsciiDoc (to pick three).
 
 NB: check whether AsciiDoctor also always goes through docbook
 
+  ======================   ============  ====================     ========================
+  **Concept**              **markdown**  **reStructuredText**     **AsciiDoc**
+  ----------------------   ------------  --------------------     ------------------------
+  readability              a main aim    the main aim             a main aim
+  closely specified        no            yes                      yes
+  output to                various       various                  docbook and then various
+  inline HTML              yes           delimited [#a]_          delimited [#b]_
+  nested inline markup     ?             no                       yes
+  non-trivial list items   no            yes                      yes
+  extensible               no            directives               macros
+  conditional text         no            no                       no
+  executable text          no            no [#c]_                 yes
+  tables                   not standard  yes                      yes
+  ======================   ============  ====================     ========================
 
-Concept                  markdown      reStructuredText     AsciiDoc
--------                  --------      ----------------     --------
-readability              a main aim    the main aim         a main aim
-closely specified        no            yes                  yes
-output to                various       various              docbook and then various
-inline HTML              yes           delimited[a]         delimited[b]
-nested inline markup     ?             no                   yes
-non-trivial list items   no            yes                  yes
-extensible               no            directives           macros
-conditional text         no            no                   no
-executable text          no            no[c]                yes
-tables                   not standard  yes                  yes
 
-
-.. [a] reStructuredText allows the writer to add HTML via a directive,
+.. [#a] reStructuredText allows the writer to add HTML via a directive,
    but it will only be used if the output is to HTML.
-.. [b] AsciiDoc produces HTML via Docbook, and Docbook provides a way of
+.. [#b] AsciiDoc produces HTML via Docbook, and Docbook provides a way of
    including a file of raw HTML into the HTML output.
-.. [c] this is a very conscious decision by reStructuredText
+.. [#c] this is a very conscious decision by reStructuredText
 
 -----------------
 

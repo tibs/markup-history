@@ -61,6 +61,7 @@ Timeline
 Categories of markup
 --------------------
 
+...
 
 ----
 
@@ -69,15 +70,31 @@ RUNOFF
 
 Presentational. 1964 and descendants on into the 1980s (and perhaps beyond)
 
-One of the first markups - not very capable (by modern standards) in its first
-incarnation, but clearly the ancestor of later forms of RUNOFF, and I used DSR
-(Digital Standard Runoff) in the 1980s.
+::
 
-Commands starting with a dot in the first column, and able to be abbreviated
-right from the beginning.
+  .LINE LENGTH 60
+  .LEFT MARGIN 0
+  .PARAGRAPH 5
+  Call us on our toll free number
 
-This makes good sense, as one doesn't normally start any English sequence with
-a dot.
+  .CENTER
+  1-800-555-5555
+
+  and we will respond as soon as convenient.
+
+.. note:: One of the first markups - not very capable (by modern standards) in
+   its first incarnation, but clearly the ancestor of later forms of RUNOFF,
+   and I used DSR (Digital Standard Runoff) in the 1980s.
+
+   The original documentation suggests the original had the basics for doing
+   right-justification, centering and single/double spacing, and perhaps not
+   much more - although, of course, what it provided was doubtless useful.
+
+   Commands starting with a dot in the first column, and able to be
+   abbreviated right from the beginning.
+
+   This makes good sense, as one doesn't normally start any English sequence
+   with a dot.
 
 ----
 
@@ -160,7 +177,32 @@ Perl's "Plain Old Documentation". Clearly influenced by ... and ...
 
 1994
 
-An example of markup to a specific purpose, and clearly very successful.
+::
+
+  =pod
+
+  =head1 DESCRIPTION
+
+  This is not I<really> representative of POD usage.
+
+  =over 2
+
+  =item This is a list item.
+
+  =item This is another list item.
+
+  =back
+
+  =cut
+
+.. note:: An example of markup to a specific purpose, and clearly very
+   successful.
+
+   Note that the blank lines are required around the POD commands.
+
+   I don't think you can do multi-paragraph list items. And, of course, the
+   POD definitions contains ambuguities, although how to handle some of them
+   is explained.
 
 
 ----
