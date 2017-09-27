@@ -98,6 +98,20 @@ Presentational. 1964 and descendants on into the 1980s (and perhaps beyond)
 
 ----
 
+Digital Standard Runnoff, using abbreviated forms
+
+::
+
+    .hl1This is a title
+
+    This is the first paragraph.
+    .ls
+    .le; This is a list element.
+    .le; This is another list element.
+    .els
+
+----
+
 GML and SGML
 ------------
 
@@ -107,13 +121,39 @@ A mechanism for *describing* markup languages. Use of the DTD.
 
 ----
 
-roff, nroff, troff
-------------------
+roff, nroff, troff, groff
+-------------------------
 
 Presentation. 1970s and onwards, and still going strong today.
 
-Again, keywords starting with a dot in the first column, but the abbreviation
-as the original (I think?).
+Part of a:w
+n example (fake) man page::
+
+  .TH CORRUPT 1
+  .SH NAME
+  corrupt \- modify files by randomly changing bits
+  .SH SYNOPSIS
+  .B corrupt
+  [\fB\-n\fR \fIBITS\fR]
+  [\fB\-\-bits\fR \fIBITS\fR]
+  .IR file ...
+  .SH DESCRIPTION
+  .B corrupt
+  modifies files by toggling a randomly chosen bit.
+  .SH OPTIONS
+  .TP
+  .BR \-n ", " \-\-bits =\fIBITS\fR
+  Set the number of bits to modify.  Default is one bit.
+
+.. note:: Again, keywords starting with a dot in the first column, but the
+   abbreviation as the original (I think?).
+
+   Example taken from Lars Wirzenius' `Writing manual pages`_
+
+   .TH = title, .SH = sub-heading, .B = bold, other font usages (e.g., normal
+   font and underlining) are indicated by the \\f sequences.
+
+.. _`Writing manual pages`: https://liw.fi/manpages/,
 
 ----
 
@@ -127,7 +167,54 @@ Driven by the need to guarantee accurate typesetting of mathematics, but led
 to new mechanisms for paragraph layout, and an important landmark in literate
 programming.
 
+::
 
+  \name{Name Redacted} wrote:
+
+  \beginletter
+  Thoughts on ``Why I like children's books'':
+
+  \beginlist
+
+  \item{\blob} They aren't afraid to show a sense of wonder.
+
+  \item{\blob} They aren't `duty bound' to include love interest for the sake of
+  it.
+
+  \item{\blob} They are rarely cynical, rarely bitter---but the best do not avoid
+  tragedy and truth.
+
+  \item{\blob} They are willing to teach the simple lessons of being human---which
+  adult books so often scorn, but which we all need to learn and relearn.
+
+  \endlist
+
+.. note:: In serious use of |TeX|, one starts by defining lots of useful
+   commands - although `the TeXbook`_ has many useful ideas one can copy.
+
+.. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
+
+----
+
+|LaTeX|
+-------
+
+::
+
+  \begin{center}
+  \rule{5in}{0.1mm}
+  \end{center}
+
+  \section*{Captain Competent strikes again}
+
+  The superhero is a familiar concept in comics, science fiction and many other
+  fields. However, I am more interested in what might be called `the competent
+  hero'. This is a subtler form of protagonist---a person who has attained
+  {\em competence} in their daily life.
+
+.. note:: I used to write plain |TeX|, but most people actually use |LaTeX|,
+   which dates from about 1983/1984, or one of the other systems written in
+   |TeX|.
 
 ----
 
