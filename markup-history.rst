@@ -119,6 +119,42 @@ Semantic. Meta-description. 1969 (GML), 1986 (SGML)
 
 A mechanism for *describing* markup languages. Use of the DTD.
 
+Here is the start of a paper I have a photocopy of (from Figure 3 therein)::
+
+  <td> The Implication of SGML for the Preparation of Scientific Publications
+  <au> Joan M. Smith
+  <ad>
+  <al> National Computing Centre, Oxford Road, Manchester M1 7ED
+  <ab> The &SGML (SGML) is a draft international standard for publishing.
+  ...
+  <h1>Introduction
+  <p> The official title of SGML, currently, is ISO/DIS 8879,
+  <ci> Information Processing &end Text and Office Systems &end &SGML (SGML)
+  </ci>. <ref> ISO/DIS 8879 <ci> Information Processing &end Text and Office
+  Systems &end &SGML (SGML). ISO, Geneva (1985). </ref>
+  ...
+  <p>There are several points worthy of note here:
+  <ul>
+  <li> the normal publishing delay with ISO standards...
+  ...
+  </ul>
+
+
+.. note:: Sensibly, SGML came with a "starter set" drafted by Joan Smith and
+  Janet Vandore.
+
+  In the example, the ellipses are my own. Note how SGML allowed the
+  definition of elements that were implicitly closed by another element -
+  e.g., <li> and <p>
+
+  - <td> is the document title
+  - <ad> is an address, <al> an address line
+  - <ab> is the abstract
+  - <ci> indicates a citation, which rendered as italics in the resulting paper.
+  - <ref> marks up a Reference, collected for the section at the end of the document.
+  - &SGML is an "entity reference" that expands to 'Standard Generalized
+    Markup Language' - we're familiar with things like &eacute; from HTML.
+
 ----
 
 roff, nroff, troff, groff

@@ -626,6 +626,16 @@ An example::
 
    ...
 
+
+Links:
+
+* `The Implications of SGML for the Preparation of Scientific Publications`_,
+  Joan Smith, *The Computer Journal*, Volume 29, Issue 3, 1 January 1986,
+  Pages 193-200
+
+.. _`The Implications of SGML for the Preparation of Scientific Publications`: https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/29.3.193
+
+
 TEI
 ---
 
