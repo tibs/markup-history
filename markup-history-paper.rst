@@ -487,8 +487,11 @@ http://www.math.utah.edu/~beebe/talks/2003/tug2003/tug2003-keynote.pdf has a
 very nice timeline. Items marked [T] are from it.
 
 * 1964 TYPSET and RUNOFF https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
-* 1967 William Tuncliffe: the separation of the information content of
-  documents from their format
+* 1967 William Tunincliffe: the separation of the information content of
+  documents from their format - Goldfarb credits him with starting the generic
+  coding movement (i.e., the idea of using descriptive tags like
+  "heading" rather than "format-17") with this presentation given at a meeting of the
+  Canadian Government Printing Office in September 1967
 * 1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM
 * [T] "1970s" roff, script, runoff, document
 * [T] 1976 nroff and troff (J. Ossanna)
@@ -655,6 +658,46 @@ Links:
 
 * https://en.wikipedia.org/wiki/Text_Encoding_Initiative
 * http://www.tei-c.org/index.xml
+
+Scribe
+------
+
+An example::
+
+    @Heading(The Beginning)
+    @Begin(Quotation)
+        Let's start at the very beginning, a @i(very good place) to start
+    @End(Quotation)
+
+but that can also be written::
+
+    @Heading(The Beginning)
+    @(Quotation
+        Let's start at the very beginning, a @i(very good place) to start
+    )
+
+Links:
+
+* https://en.wikipedia.org/wiki/Scribe_(markup_language)
+* http://reports-archive.adm.cs.cmu.edu/anon/scan/CMU-CS-81-100.pdf - Brian Reid's
+  1980 doctoral dissertation at Carnegie Mellon University describes it. My
+  first quick scan suggests that this is very worth reading. NB: It mentions
+  |TeX| and EQN (the roff-related tool for equations).
+* http://bitsavers.informatik.uni-stuttgart.de/pdf/cmu/scribe/Scribe_Introductory_Users_Manual_Jul78.pdf
+
+Scriba_ is "a markup format similar to Scribe". It references Skribilo_ and
+scribble_ as being similar.
+
+.. _Scriba: https://github.com/CommonDoc/scriba
+.. _Skribilo: http://www.nongnu.org/skribilo/
+.. _scribble: http://quickdocs.org/scribble/
+
+.. note:: Is the Scribe described at
+
+      http://www-sop.inria.fr/members/Manuel.Serrano/scribe/doc/scribe.html
+
+   the same thing? It appears to be a Scheme-based programming language for
+   authoring documentation.
 
 HTML
 ----
