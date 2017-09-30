@@ -955,7 +955,6 @@ An example::
 
 Links:
 
-* 
 * http://old.zope.org/Documentation/Articles/STX/ - but all of the actual
   StructuredText has just been rendered as HTML, rendering the page fairly
   useless
@@ -1351,6 +1350,8 @@ NB: check whether AsciiDoctor also always goes through docbook
 -----------------
 
 Maybe there should be an entry for wikiwikiweb after all.
+
+* http://wiki.c2.com/?TextFormattingRules
 
 .. note:: Why do so many markup creators believe that lists are just made up
    of list items with no internal structure? Do they really never want to

@@ -474,12 +474,79 @@ Docbook
 
 Semantic. 1991 and onwards. Still going today.
 
+Example of Docbook 4.3 from http://www.informatik.tu-cottbus.de/~giurca/tutorials/DocBook/index.htm::
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
+  "http://www.oasis-open.org/docbook/xml/simple/1.0/sdocbook.dtd">
+  <article>
+    <title>DocBook Tutorial</title>
+    <articleinfo>
+      <author>
+        <firstname>Adrian</firstname>
+        <surname>Giurca</surname>
+      </author>
+      <date>April 5, 2005</date>
+    </articleinfo>
+    <section>
+      <title>What is DocBook ?</title>
+      <para>DocBook is an SGML dialect developed by O'Reilly and HaL Computer
+      Systems in 1991. It is currently maintained by the Organization for the
+      Advancement of Structured Information Standards (OASIS). DocBook describes
+      the content of articles, books, technical manuals, and other documents.
+      Although DocBook is focused on technical writing styles, it is general
+      enough to describe most prose writing. In this article, I'll discuss an
+      XML variant of the DocBook DTD that is also available.
+      </para>
+    </section>
+  </article>
+
+----
+
+Example from wikipedia (for Docbook 5, which is relatively recent)::
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
+     <title>Very simple book</title>
+     <chapter xml:id="chapter_1">
+       <title>Chapter 1</title>
+       <para>Hello world!</para>
+       <para>I hope that your day is proceeding <emphasis>splendidly</emphasis>!</para>
+     </chapter>
+     <chapter xml:id="chapter_2">
+       <title>Chapter 2</title>
+       <para>Hello again, world!</para>
+     </chapter>
+   </book>
+
 ----
 
 wikiwikiweb
 -----------
 
+::
+
+  Paragraphs are not indented.
+
+  * This is a list item
+  ** This is a sub-list item
+
+    Indented text is monospaced.
+
+  We have ''emphasis'', '''bold''', '''''bold italic''''', and a LinkToAnotherPage.
+
+  But we can A''''''voidMakingAWikiLink.
+
+  No HTML, tables, headers, maths, scripts. No links within a page.
+
+"This wiki is quite bare bones, and intentionally so. Less formatting means
+you have to concentrate on saying things carefully and clearly. Content over
+form."
+
 .. note:: Maybe ignore for now
+
+   I think that newlines within a paragraph are ignored, but it's hard  to
+   tell.
 
 ----
 
@@ -523,7 +590,24 @@ Perl's "Plain Old Documentation". Clearly influenced by ... and ...
 Javadoc
 -------
 
-Essentially uninteresting, ignore.
+Essentially uninteresting, maybe ignore.
+
+::
+
+  /**
+   * Short one line description.
+   * <p>
+   * Longer description. If there were any, it would be here.
+   * <p>
+   * And even more explanations to follow in consecutive
+   * paragraphs separated by HTML paragraph breaks.
+   *
+   * @param  variable Description text text text.
+   * @return Description text text text.
+   */
+  public int methodName (...) {
+      // ...
+  }
 
 ----
 
