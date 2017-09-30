@@ -599,6 +599,10 @@ Miscellaneous links
 .. _Creole: http://www.wikicreole.org/
 .. _Lilypond: http://lilypond.org/
 
+* http://manpages.bsd.lv/history.html - history of UNIX manpages, which also
+  traces the naming of programs RUNOFF through roff, SCRIPT, compose, roff
+  (a different thing), nroff and so on.
+
 RUNOFF
 ------
 Simple text layout and pagination, including right justification.
@@ -622,6 +626,11 @@ An example::
 * https://en.wikipedia.org/wiki/Troff
 * https://www.freebsd.org/cgi/man.cgi?query=roff&apropos=0&sektion=7&format=ascii
 
+* Nowadays, people are probably using groff: http://www.gnu.org/software/groff/
+  (GNU troff)
+* http://www.gnu.org/software/groff/groff-and-mom.pdf "Groff and mom: an
+  overview" Peter Schaffer
+
 SGML
 ----
 
@@ -637,6 +646,10 @@ Links:
   Pages 193-200
 
 .. _`The Implications of SGML for the Preparation of Scientific Publications`: https://academic.oup.com/comjnl/article-lookup/doi/10.1093/comjnl/29.3.193
+
+* https://www.w3.org/TR/html4/intro/sgmltut.html - "3 On SGML and HTML"
+* http://www.tei-c.org/Vault/ML/mlw01.htm - "Guidelines for Writing SGML DTDs (Draft)" 1989
+* https://en.wikipedia.org/wiki/Document_type_definition
 
 
 TEI
@@ -658,6 +671,8 @@ Links:
 
 * https://en.wikipedia.org/wiki/Text_Encoding_Initiative
 * http://www.tei-c.org/index.xml
+* http://books.openedition.org/oep/680 - The TEI and XML
+* http://teibyexample.org/ - TEI By Example
 
 Scribe
 ------
@@ -705,6 +720,10 @@ HTML
 An example::
 
    ...
+
+Links:
+
+* https://en.wikipedia.org/wiki/HTML
 
 Docbook
 -------
@@ -780,6 +799,24 @@ Links:
   did |TeX| do right" and "What did |TeX| do wrong".
 
 .. _`25 Years of TEX and METAFONT`: http://www.math.utah.edu/~beebe/talks/2003/tug2003/tug2003-keynote.pdf
+
+.. note:: |TeX| (and Metafont) were originally written in SAIL:
+
+   * https://en.wikipedia.org/wiki/SAIL_(programming_language)
+   * http://i.stanford.edu/pub/cstr/reports/cs/tr/76/575/CS-TR-76-575.pdf
+
+   A later version was re-written in Pascal, using the WEB literate
+   programming system
+
+
+   * https://en.wikipedia.org/wiki/TeX
+   * https://en.wikipedia.org/wiki/WEB
+   * https://en.wikipedia.org/wiki/Literate_programming
+   * https://en.wikipedia.org/wiki/Donald_Knuth
+   * http://www-cs-faculty.stanford.edu/~knuth/
+
+   If you don't know about Knuth, it's worth following him up - he has done
+   amazing things.
 
 ----
 
@@ -899,14 +936,56 @@ StructuredTextNG
 
 An example::
 
-   ...
+   This is a heading
+
+     This is a paragraph. Body text is indented.
+
+     - This is a list item. Words can be *emphasized*, _underlined_,
+     **strong** or 'inline' - yes, that's using single quotes [1].
+
+     o This is a list item as well. Each list item must be separated by a
+     blank line from other entities.
+
+     This is a sub-heading
+
+       Sub-section body text is indented even further. We know the sub-header
+       is such because it is followed by this indented text.
+
+   .. [1] Or we could use ``backquotes``.
+
+Links:
+
+* 
+* http://old.zope.org/Documentation/Articles/STX/ - but all of the actual
+  StructuredText has just been rendered as HTML, rendering the page fairly
+  useless
+* https://github.com/zopefoundation/zope.structuredtext is an implementation
+  of a StructuredText parser, and appears to be the best source of examples.
+
+* https://faculty.math.illinois.edu/~gfrancis/illimath/windows/aszgard_mini/movpy-2.0.0-py2.4.4/manuals/docutils/dev/rst/problems.html - Problems with StructuredText (David Goodger, 2005-10-29)
 
 reStructuredText
 ----------------
 
-An example::
+An example. Rather sadly, the same(ish) text as from the StructuredText slide::
 
-   ...
+   This is a heading
+   =================
+
+   This is a paragraph. Body text is not indented.
+
+     - This is a list item. Words can be *emphasized*, **strong** or
+       ``inline`` - yes, that's paired backquotes [1]_.
+     - This is a list item as well. We can't use "o" as a list delimiter,
+       as it is too ambiguous. We don't need blank lines between list items.
+
+   This is a sub-heading
+   ---------------------
+
+   Sub-section body text is not indented either. What makes sense for
+   programming languages is irritating for text.
+
+   .. [1] Lines after the first line of a list item must be indented appropriately.
 
 The various forms of inline markup (``*..*``, ``**..``, etc.) cannot be nested
 - this has been a known limitation for the life of reStructuredText, but no
@@ -961,6 +1040,20 @@ Links:
 
 .. _`Wikipedia - reStructuredText`: https://en.wikipedia.org/wiki/ReStructuredText
 .. _`An Introduction to reStructuredText`: http://docutils.sourceforge.net/docs/ref/rst/introduction.html
+
+* https://lwn.net/Articles/692704/ - Kernel documentation now using
+  reStructuredText and Sphinx
+* https://cmake.org/cmake/help/v3.0/release/3.0.0.html CMake has also moved to
+  reStructuredText and Sphinx
+
+It's worth considering the existence of:
+
+* http://docutils.sourceforge.net/docs/dev/rst/alternatives.html - A record of
+  reStructuredText Syntax Alternative - i.e.. the roads not taken, and why
+  not.
+* http://docutils.sourceforge.net/docs/dev/rst/problems.html - Problems with
+  reStructured Text - yes, the project acknowledges various known
+  shortcomings.
 
 Asciidoc
 --------
@@ -1026,6 +1119,20 @@ Links:
 .. _AsciiDoc: http://asciidoc.org/
 .. _AsciiDoctor: http://asciidoctor.org/
 .. _`AsciiDoc User Guide`: http://asciidoc.org/userguide.html
+
+.. note:: Jonathan Corbet did look at using AsciiDoc for the kernel
+  documentaion, but Sphinx appears to have been a main contributor to the
+  decision to use reStructuredText instead. However, the article at
+  https://lwn.net/Articles/692704/ explaining the decision does have a decent
+  summary of AsciiDoc
+
+    The AsciiDoc format, ... is semantically equivalent to DocBook XML, with
+    the DocBook constructs expressed in terms of lightweight markup. AsciiDoc
+    is easier for humans to read and write than XML, but since it is designed
+    to translate to DocBook, it fits nicely in front of an existing DocBook
+    toolchain. The original Python AsciiDoc tool has been around for a long
+    time, but has been superseded by a Ruby reimplementation called
+    Asciidoctor in recent years. 
 
 
 Markdown

@@ -24,7 +24,7 @@ Timeline
 
 * 1964 TYPSET and RUNOFF
 * 1969 GML
-* 1970s roff, script, runoff, document
+* 1970s roff, runoff
 * 1976 nroff and troff
 * 1977/1978 |TeX| and Metafont in SAIL
 * 1980 Scribe
@@ -51,7 +51,7 @@ Timeline compressed
 -------------------
 
 * 1960s TYPSET and RUNOFF, GML
-* 1970s roff, script, runoff, document, nroff/troff, |TeX| and Metafont in SAIL
+* 1970s roff, runoff, nroff/troff, |TeX| and Metafont in SAIL
 * 1980s Scribe, |TeX| and Metafont in Pascal, |LaTeX|, Postscript, SGML, TEI
 * 1990s HTML, setext, Docbook, WikiWikiWeb, POD, javadoc, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
@@ -122,6 +122,10 @@ Digital Standard Runnoff, using abbreviated forms
 GML and SGML
 ------------
 
+.. note:: Should this be placed later, as SGML, and GML ignored?
+
+   How different was GML from SGML?
+
 Semantic. Meta-description. 1969 (GML), 1986 (SGML)
 
 A mechanism for *describing* markup languages. Use of the DTD.
@@ -164,13 +168,52 @@ Here is the start of a paper I have a photocopy of (from Figure 3 therein)::
 
 ----
 
+SGML: DTDs
+----------
+
+Here is a fragment of DTD - this describes a simple list::
+
+  <!--      ELEMENT MIN CONTENT             >
+  <!ELEMENT list    - - (item)+             >
+  <!ELEMENT item    O O (#PCDATA, (list)*)  >
+
+such as::
+
+  <list>
+  <item>First item</item>
+  <item>Second item</item>
+  <item>Last item</item>
+  </list>
+
+.. note:: SGML uses DTDs (Document Type Definitions) to describe the set of
+  markup declarations that form a *document type* (e.g., SGML itself, XML,
+  HTML).
+
+----
+
+A document can use a DOCTYPE to say what DTD it is conforming to. For
+instance::
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>This is a title</title>
+    </head>
+    <body>
+      <p>Hello world!</p>
+    </body>
+  </html>
+
+.. note:: DOCTYPE = Documentation Type Declaration
+
+----
+
 roff, nroff, troff, groff
 -------------------------
 
 Presentation. 1970s and onwards, and still going strong today.
 
-Part of a:w
-n example (fake) man page::
+Part of an example (fake) man page::
 
   .TH CORRUPT 1
   .SH NAME
@@ -197,6 +240,30 @@ n example (fake) man page::
    font and underlining) are indicated by the \\f sequences.
 
 .. _`Writing manual pages`: https://liw.fi/manpages/,
+
+----
+
+Some example groff (GNU troff) code::
+
+  ..INCLUDE  mission-statement-strings.mom
+  .TITLE    "\*[Groff-Mission-Statement]
+  .SUBTITLE "\*[2014]
+  .INCLUDE  mission-statement-style.mom
+  .PP
+  As the most widely deployed implementation of troff in use today,
+  groff holds an important place in the Unix universe.  Frequently
+  and erroneously dismissed as a legacy program for formatting
+  Unix manuals (manpages), groff is in fact a sophisticated system
+  for producing high-quality typeset material, from business
+  correspondence to complex, technical reports and plate-ready books.
+  \*[BU3]With an impressive record for backward compatibility, it
+  continues to evolve and play a leading role in the development of
+  free typesetting software.
+
+.. note:: Whilst the roff family are not strictly speaking programmable as
+  such, their use of macros (originally m4?) mean that in practice they are as
+  capable as systems such as |TeX| (although I don't think that DSLs like
+  |LaTeX| exist as-such).
 
 ----
 
@@ -255,9 +322,33 @@ programming.
   hero'. This is a subtler form of protagonist---a person who has attained
   {\em competence} in their daily life.
 
-.. note:: I used to write plain |TeX|, but most people actually use |LaTeX|,
+.. note:: |LaTeX| is essentially a DSL written in |TeX|. It's probably still
+   the best known, but certainly not the only one.
+
+   I used to write plain |TeX|, but most people actually use |LaTeX|,
    which dates from about 1983/1984, or one of the other systems written in
    |TeX|.
+
+----
+
+Scribe
+------
+Presentation, and (I think) programmable. 1980
+
+::
+
+    @Heading(The Beginning)
+    @Begin(Quotation)
+        Let's start at the very beginning, a @i(very good place) to start
+    @End(Quotation)
+
+which can also be written::
+
+    @Heading(The Beginning)
+    @(Quotation
+        Let's start at the very beginning, a @i(very good place) to start
+    )
+
 
 ----
 
@@ -267,12 +358,42 @@ Postscript
 Presentation, and programmable. Not really intended to be written by people.
 1984 and onwards, and still in use today (and, of course, also used in PDF)
 
+This is the example on the Wikipedia page::
+
+   %!PS
+   /Courier             % name the desired font
+   20 selectfont        % choose the size in points and establish 
+                        % the font as the current one
+   72 500 moveto        % position the current point at 
+                        % coordinates 72, 500 (the origin is at the 
+                        % lower-left corner of the page)
+   (Hello world!) show  % stroke the text in parentheses
+   showpage             % print all on the page
+
 ----
 
 TEI
 ---
 
 Semantic. 1987. Still going strong and in use today.
+
+With no particular explanation, here is some mark up of the start of
+Swinburne's Sestina::
+
+  <lg type="sestina">
+  <lg type="sestet" rhyme="ababab">
+  <l>I saw my soul at rest upon a <rhyme label="a" xml:id="A">day</rhyme></l>
+  <l>As a bird sleeping in the nest of <rhyme label="b" xml:id="B">night</rhyme>,</l>
+  <l>Among soft leaves that give the starlight <rhyme label="a" xml:id="C">way</rhyme></l>
+  <l>To touch its wings but not its eyes with <rhyme label="b" xml:id="D">light</rhyme>;</l>
+  <l>So that it knew as one in visions <rhyme label="a" xml:id="E">may</rhyme>,</l>
+  <l>And knew not as men waking, of <rhyme label="b" xml:id="F">delight</rhyme>.</l>
+  </lg>
+
+showing the working of the ryhming scheme.
+
+.. note:: Taken from http://teibyexample.org/examples/TBED04v00.htm,
+   "TEI By Example" poetry examples.
 
 ----
 
@@ -282,6 +403,20 @@ HTML
 Presentaton, still going strong today (although rather altered). 1991 and
 onwards.
 
+::
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>This is a title</title>
+    </head>
+    <body>
+      <p>Hello world!</p>
+    </body>
+  </html>
+
+.. note:: Yes, that is the same example as from the "using a DTD" page.
+  Of course, HTML (in each of its various forms) is an SGML document type.
 
 ----
 
@@ -291,12 +426,60 @@ setext
 Presentation. Lightweight. Partly a reaction to SGML. Clearly influential on
 all of the succeeding lightweight markups. 1991
 
+Excerpted from a document called "Why setext"::
+
+  Why setext?
+  -----------
+
+    I agree that FAQ's would best be written in something like setext_.
+    Why?  Because this document is written in setext and it includes
+    the ability to embed HTML hypertext links without being obnoxious.
+
+    As you can see it's easy to write setext documents, and as Edward
+    pointed out, it uses existing text conventions for **bold** and _italic_
+    words and titles.
+
+  .. _setext http://www.bsdi.com/setext/
+  ..
+
+----
+
+Another example::
+
+   This is the title. There can be only one.
+   =========================================
+     Body text must be indented by two spaces.
+
+   A subheading
+   ------------
+     **Bold words** and ~italic~ are supported (although ~multiword~italics~
+     seems to have been an extension). _Underlined_words_ are also supported.
+     `Backquoted words` are not touched.
+
+   > This text will be represented using a monospaced font.
+
+   * This text will have a bullet mark before it.
+
+   .. Two dots introduce text that can be ignored, and two dots alone mean
+   .. the logical end of text
+   ..
+
+
+
+
 ----
 
 Docbook
 -------
 
 Semantic. 1991 and onwards. Still going today.
+
+----
+
+wikiwikiweb
+-----------
+
+.. note:: Maybe ignore for now
 
 ----
 
@@ -337,10 +520,38 @@ Perl's "Plain Old Documentation". Clearly influenced by ... and ...
 
 ----
 
+Javadoc
+-------
+
+Essentially uninteresting, ignore.
+
+----
+
 StructuredText
 --------------
 
-Presentation. Lightweight. 1996. Ancestral to...
+Presentation. Lightweight. 1996. Ancestral to reStructuredText.
+
+::
+
+   This is a heading
+
+     This is a paragraph. Body text is indented.
+
+     - This is a list item. Words can be *emphasized*, _underlined_,
+     **strong** or 'inline' - yes, that's using single quotes [1].
+
+     o This is a list item as well. Each list item must be separated by a
+     blank line from other entities.
+
+     This is a sub-heading
+
+       Sub-section body text is indented even further. We know the sub-header
+       is such because it is followed by this indented text.
+
+   .. [1] Or we could use ``backquotes``.
+
+
 
 ----
 
@@ -351,6 +562,28 @@ Presentation. Lightweight. 2000 and beyond.
 
 Now used for Python documentation, Linux, and others.
 
+::
+
+   This is a heading
+   =================
+
+   This is a paragraph. Body text is not indented.
+
+     - This is a list item. Words can be *emphasized*, **strong** or
+       ``teletype`` - yes, that's paired backquotes [1]_.
+     - This is a list item as well. We can't use "o" as a list delimiter,
+       as it is too ambiguous. We don't need blank lines between list items.
+
+       This is more of the second list item. It is indented appropriately.
+
+   This is a sub-heading
+   ---------------------
+
+   Sub-section body text is not indented either. What makes sense for
+   programming languages is irritating for text.
+
+   .. [1] Lines after the first line of a list item must be indented appropriately.
+
 -----
 
 Asciidoc
@@ -358,6 +591,26 @@ Asciidoc
 
 Presentation. Lightweight. 2002. Aimed specifically as a lightweight way of
 producing docbook.
+
+::
+
+  This is a heading
+  -----------------
+
+  This is a paragraph. Body text is not indented.
+
+  - This is a list item. Words can be _italic_, *bold* or
+   +mono+ - yes, that's paired plus-signs.
+  - This is a list item as well. We don't need blank lines between list items.
+  +
+  This is more of the second list item. It is "`joined on`" by the
+  `+`.footnote:[Note the quotation marks around _joined on_.]
+
+  This is a sub-heading
+  ~~~~~~~~~~~~~~~~~~~~~
+
+  Sub-section body text is not indented either. What makes sense for
+  programming languages is irritating for text.
 
 ----
 
@@ -367,10 +620,39 @@ markdown
 Presentation. Lightweight. 200Presentation. Lightweight. 2002. Aimed
 specifically as a lightweight way of producing docbook.4
 
+::
+
+   # This is a heading
+
+   This is a paragraph. Body text is not indented.
+
+   - This is a list item. Words can be *emphasized*, **strong** or
+   `inline` - that's single backquotes.
+   - This is a list item as well. We don't need blank lines between list items.
+
+       This is more of the second list item. It's first line must be indented
+     by 4 spaces or a tab.
+
+   ## This is a sub-heading
+
+   Sub-section body text is not indented either. What makes sense for
+   programming languages is irritating for text.
+
+   (We don't do footnotes, but you can include <tt>HTML</tt>.)
+
+.. note:: Yes, I know headings can be underline as well, but I've never seen
+  anyone actually doing that.
+
 ----
 
 Fin
 ---
+
+* 1960s TYPSET and RUNOFF, GML
+* 1970s roff, runoff, nroff/troff, |TeX| and Metafont in SAIL
+* 1980s Scribe, |TeX| and Metafont in Pascal, |LaTeX|, Postscript, SGML, TEI
+* 1990s HTML, setext, Docbook, WikiWikiWeb, POD, javadoc, StructuredText, XML
+* 2000s reStructuredText, AsciiDoc, markdown
 
 Written using reStructuredText_.  Presented using hovercraft_.
 
