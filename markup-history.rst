@@ -105,17 +105,20 @@ Presentational. 1964 and descendants on into the 1980s (and perhaps beyond)
 
 ----
 
-Digital Standard Runnoff, using abbreviated forms
+Digital Standard Runnoff::
 
-::
-
-    .hl1This is a title
+    .TITLE A simpler DSR example
+    .CHAPTER This is a chapter
 
     This is the first paragraph.
-    .ls
-    .le; This is a list element.
-    .le; This is another list element.
-    .els
+    .LIST
+    .LIST ELEMENT;This is a list element. We have *bold\* and &underline\&.
+    .LIST ELEMENT;This is another list element. I like interrobangs ?%!
+    .END LIST
+
+.. note:: Abbreviated forms are also available, e.g., ``.ls`` instead of
+  ``.list``, and ``.le;`` instead of ``list element;``.
+
 
 ----
 
@@ -213,7 +216,7 @@ roff, nroff, troff, groff
 
 Presentation. 1970s and onwards, and still going strong today.
 
-Part of an example (fake) man page::
+Part of an example (fake) man page, using the ``man`` macro package::
 
   .TH CORRUPT 1
   .SH NAME
