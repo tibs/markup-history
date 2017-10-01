@@ -1,4 +1,5 @@
-.. title: A history of markup languages
+:title: A history of markup languages
+:slide-numbers: true
 
 ----
 
