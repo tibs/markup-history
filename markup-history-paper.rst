@@ -184,6 +184,10 @@ PDF incorporates a subset of Postscript, but is much more page oriented (pages a
 independent) and less general in its applicability, so is arguably not quite
 in our area of interest.
 
+http://wiki.c2.com/?ForthPostscriptRelationship discusses whether Postscript
+*is a* Forth, or is just similar to Forth (basically, the latter seems more
+sensible).
+
 Semantic markup
 ===============
 
@@ -334,7 +338,6 @@ The results of a quick link trawl:
   * https://en.wikipedia.org/wiki/Nroff
   * https://en.wikipedia.org/wiki/Markup_language
   * https://en.wikipedia.org/wiki/TeX
-  * 
 
 * Let's not forget https://en.wikipedia.org/wiki/AsciiDoc (and
   http://asciidoctor.org/) although I don't want to dwell on them
@@ -357,7 +360,7 @@ need to put in setext, markdown, nroff/troff/groff, RUNOFF
 
 * 1964 RUNOFF https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
 
-  - also, the RUNOFF program https://en.wikipedia.org/wiki/Runoff_(program)
+  - also, the RUNOFF program (`wikipedia - Runoff`_)
 
 * 1969 roff
 * nroff (newer roff) https://en.wikipedia.org/wiki/Nroff
@@ -386,6 +389,8 @@ and
 * StructuredText - introduced through Zope
 * reStructuredText - 
 * MathML - 
+
+.. _`wikipedia - Runoff`: https://en.wikipedia.org/wiki/Runoff_(program)
 
 Found things
 ============
@@ -498,7 +503,7 @@ very nice timeline. Items marked [T] are from it.
 * [T] 1978 bib and refer
 * [T] 1977/1978 |TeX| and Metafont ("classic" version, written in SAIL)
 * [T] 1978-1980 Scribe (B. Reid) https://en.wikipedia.org/wiki/Scribe_(markup_language)
-* [T] 1982 |TeX| and Metafont in Pascal
+* [T] 1982 |TeX| and Metafont in WEB/Pascal
 * [T] 1983-1985 |LaTeX| (L. Lamport)
 * 1984 Postscript (https://en.wikipedia.org/wiki/PostScript has 1982-1984)
 * 1986 ISO standard SGML (although the first working draft was in 1980)
@@ -615,6 +620,11 @@ An example::
 
 * https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
 
+Jerome H. Saltzer for CTSS_ (Compatible Time Sharing System)
+
+.. _CTSS: https://en.wikipedia.org/wiki/Compatible_Time-Sharing_System
+
+
 roff and friends
 ----------------
 
@@ -631,8 +641,8 @@ An example::
 * http://www.gnu.org/software/groff/groff-and-mom.pdf "Groff and mom: an
   overview" Peter Schaffer
 
-SGML
-----
+GML and SGML
+------------
 
 An example::
 
@@ -640,6 +650,11 @@ An example::
 
 
 Links:
+
+* https://en.wikipedia.org/wiki/IBM_Generalized_Markup_Language - originally a
+  GML starter set was provided as a set of macros for IBM Script
+* https://en.wikipedia.org/wiki/SCRIPT_(markup)
+
 
 * `The Implications of SGML for the Preparation of Scientific Publications`_,
   Joan Smith, *The Computer Journal*, Volume 29, Issue 3, 1 January 1986,
@@ -650,6 +665,10 @@ Links:
 * https://www.w3.org/TR/html4/intro/sgmltut.html - "3 On SGML and HTML"
 * http://www.tei-c.org/Vault/ML/mlw01.htm - "Guidelines for Writing SGML DTDs (Draft)" 1989
 * https://en.wikipedia.org/wiki/Document_type_definition
+
+GML: 1969 onwards, Charles Goldfarb, Edward Mosher and Raymond Lorie
+
+SGML: 
 
 
 TEI
@@ -805,7 +824,7 @@ Links:
    * https://en.wikipedia.org/wiki/SAIL_(programming_language)
    * http://i.stanford.edu/pub/cstr/reports/cs/tr/76/575/CS-TR-76-575.pdf
 
-   A later version was re-written in Pascal, using the WEB literate
+   A later version (1982) was re-written in Pascal, using the WEB literate
    programming system
 
 
@@ -817,6 +836,11 @@ Links:
 
    If you don't know about Knuth, it's worth following him up - he has done
    amazing things.
+
+   * https://github.com/alt/tex-overview "An overview of |TeX|, its children
+     and their friends...", Arno Trautman
+   * https://tex.stackexchange.com/questions/42594/tex-family-tree-with-timeline
+   
 
 ----
 
@@ -931,6 +955,33 @@ An example::
 
    ...
 
+
+* http://docutils.sourceforge.net/docs/ref/rst/introduction.html describes its
+  influence on reStructuredText
+* it wasn't very formally defined (although no worse than many other similar
+  markups)
+* https://moinmo.in/StructuredText is a short summary of StructuredText
+* http://jimfulton.info/site/older-projects.html has a section on his
+  StructuredText work:
+
+    In 1996, I created StructuredText as a light weight text markup for
+    generating various forms of documentation, especially HTML documents. It
+    was inspired by Setext. Like Python, it used indentation to provide
+    document structure.
+
+    StructuredText was widely used in the Python, and especially in the Zope
+    community for a few years. The extensive use of indentation was eventually
+    recognized as a mistake.
+
+    StructuredText was ultimately replaced by the superior ReStructuredText.
+
+Whilst StructuredText was not perfect, it was very influential in the Python
+world, and I think that the dissatisfaction with it showed how close it came
+to being the right system. It is significant that reStructuredText uses that
+name.
+
+
+
 StructuredTextNG
 ----------------
 
@@ -962,6 +1013,23 @@ Links:
   of a StructuredText parser, and appears to be the best source of examples.
 
 * https://faculty.math.illinois.edu/~gfrancis/illimath/windows/aszgard_mini/movpy-2.0.0-py2.4.4/manuals/docutils/dev/rst/problems.html - Problems with StructuredText (David Goodger, 2005-10-29)
+
+XML
+---
+
+1997
+
+Not itself of direct interest as a markup language, but important because it
+is a subset of SGML. In particular, it is a simpler subset of SGML, which
+makes parsers easier to write. Other SGML based tools (TEI, Docbook, HTML
+itself) have generally moved towards using XML rather than SGML in their
+specification.
+
+* https://www.ncbi.nlm.nih.gov/staff/beck/xml/index.html "XML Information" - a
+  series of pages: What is Markup?, Schemas, Special Characters and Unicode
+* https://www.ncbi.nlm.nih.gov/staff/beck/xml/schemas/II-C.html "Re: Is there
+  a difference between SGML DTDs and XML DTDs" from the Schemas section of the
+  above.
 
 reStructuredText
 ----------------
@@ -1113,11 +1181,20 @@ Links:
 * AsciiDoctor_ - "Asciidoctor is a fast text processor and publishing toolchain
   for converting AsciiDoc content to HTML5, DocBook 5 (or 4.5) and other
   formats."
+* `What is AsciiDoc? Why do we need it?`_, which also includes a list of
+  organisations using it.
+* `AsciiDoc Syntax Quick Reference`_
+* `AsciiDoc Writer's Guide`_
+
 
 .. _`Wikipedia - AsciiDoc`: https://en.wikipedia.org/wiki/AsciiDoc
 .. _AsciiDoc: http://asciidoc.org/
 .. _AsciiDoctor: http://asciidoctor.org/
 .. _`AsciiDoc User Guide`: http://asciidoc.org/userguide.html
+.. _`What is AsciiDoc? Why do we need it?`: http://asciidoctor.org/docs/what-is-asciidoc/
+.. _`AsciiDoc Syntax Quick Reference`: http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+.. _`AsciiDoc Writer's Guide`: http://asciidoctor.org/docs/asciidoc-writers-guide/
+
 
 .. note:: Jonathan Corbet did look at using AsciiDoc for the kernel
   documentaion, but Sphinx appears to have been a main contributor to the
@@ -1211,6 +1288,10 @@ versus capability, which has led to its use as a default markup language for
 many purposes. I *think* that github-flavoured markdown may be the dominant
 version at the moment.
 
+    There's clearly a space for something very like markdown - something
+    simpler than reStructuredText or Asciidoc, but still readable. However,
+    whilst markdown has some of that, it still isn't really *it*.
+
 Links:
 
 * `Wikipedia - markdown`_
@@ -1241,7 +1322,29 @@ Other links - to the influences markdown references:
 Of those, I think only reStructuredText has a decent definition. Also,
 compared with the others, I think markdown looks not too bad.
 
-Although it's interesting that AsciiDoc isn't mentioned in the influences.
+Although it's interesting that AsciiDoc isn't mentioned in the influences,
+which *is* well documented/defined.
+
+* https://tools.ietf.org/html/rfc7763 "The text/markdown Media Type" 2016
+
+  Note the statement:
+ 
+      [MDSYNTAX] explicitly rejects the notion of validity: there is no such
+      thing as "invalid" Markdown.
+
+  in section 1.1
+
+* http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/
+  "Why You Shouldn’t Use “Markdown” for Documentation" Eric Holscher, 2016
+
+* https://medium.com/the-bower/markdown-considered-harmful-495ccfe24a52
+  "markdown considered harmful (or perhaps just a loved but irritating old uncle)",
+  bowerbird intelligentleman, 2013 (although he still likes markdown, despite
+  the problems). This is also an interesting history of why markdown is where
+  it is today (or, anyway, when the author was writing). He goes on to propose
+  "Zen markup language" - see https://medium.com/the-bower/beyond-markdown-part-1-2300665659f7
+  "beyond markdown - part 1", 2014 - although I don't know if it has ever
+  materialised beyond the articles.
 
 Readability versus writeability
 -------------------------------
