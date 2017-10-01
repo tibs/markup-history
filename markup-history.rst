@@ -36,34 +36,8 @@ Written using reStructuredText_.  Presented using hovercraft_.
 
 ----
 
-.. Timeline
-.. --------
-.. 
-.. * 1964 TYPSET and RUNOFF
-.. * 1969 GML
-.. * 1970s roff, runoff
-.. * 1976 nroff and troff
-.. * 1977/1978 |TeX| and Metafont
-.. * 1980 Scribe
-.. * 1983-1985 |LaTeX|
-.. * 1984 Postscript
-.. * 1986 SGML
-.. * 1987 TEI
-.. * 1989-1991 HTML
-.. * 1991 setext
-.. * 1991 Docbook
-.. * 1994/1995 WikiWikiWeb
-.. * 1994 Perl 5.000 and pod
-.. * 1996 StructuredText
-.. * 1997 XML
-.. * 2000-2002 reStructuredText
-.. * 2002 AsciiDoc
-.. * 2004 markdown
-.. 
-.. ----
-
-Compressed Timeline
--------------------
+Timeline
+--------
 
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| and Metafont in SAIL
@@ -124,11 +98,11 @@ Categories of markup
 
   and we will respond as soon as convenient.
 
-.. note:: Presentational
+.. note:: 1964 RUNOFF *Presentational*
 
    Jerome H. Saltzer for CTSS (Compatible Time Sharing System)
 
-   RUNOFF is clearly ancestral to all of the roff formats.
+   Ported to BCPL and then Multics. Ancestor to roff.
 
    This example is (more or less) from the original TYPSET/RUNOFF documentation.
 
@@ -150,7 +124,7 @@ Digital Standard Runoff
     .LIST ELEMENT;This is another list element. I like interrobangs ?%!
     .END LIST
 
-.. note:: **skippable**
+.. note:: **skippable** DSR
 
   This is an example using Digital Standard Runoff (DSR), which I
   used to use in the 1980s/90s on VMS.
@@ -184,14 +158,14 @@ Digital Standard Runoff
   </ul>
 
 
-.. note:: Semantic and "meta" (DTDs)
+.. note:: 1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
+
+  GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM. 
 
   [Standard] Generalised Markup Language.
 
   The example is actually SGML. It is transcribed from Figure 3 of the
   paper named. The ellipses are mine.
-
-  GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM. 
 
   The GML starter set was a set of macros for IBM Script.
 
@@ -231,7 +205,7 @@ SGML: DTD for a list
   <item>Last item</item>
   </list>
 
-.. note:: **skippable**
+.. note:: **skippable** DTD for a list
 
   SGML uses DTDs (Document Type Definitions) to describe the set of
   markup declarations that form a *document type* (e.g., SGML itself, XML,
@@ -257,7 +231,7 @@ SGML: document declares its DOCTYPE
     </body>
   </html>
 
-.. note:: **skippable**
+.. note:: **skippable** Using a DTD
 
   DOCTYPE = Documentation Type Declaration
 
@@ -286,9 +260,12 @@ SGML: document declares its DOCTYPE
   .BR \-n ", " \-\-bits =\fIBITS\fR
   Set the number of bits to modify.  Default is one bit.
 
-.. note:: Presentational. Still in use (as groff)
+.. note:: 1970s \*roff *Presentational*. Still in use (as groff)
 
-  Part of an example (fake) man page, using the ``man`` macro package from
+  Started as a transliteration of the BCPL version of runoff, for UNIX,
+  around 1970.
+
+  The example is a (fake) man page, using the ``man`` macro package from
   Lars Wirzenius' `Writing manual pages`_
 
   .TH = title, .SH = sub-heading, .B = bold, other font usages (e.g., normal
@@ -318,7 +295,9 @@ SGML: document declares its DOCTYPE
   continues to evolve and play a leading role in the development of
   free typesetting software.
 
-.. note:: **skippable**
+.. note:: **skippable** groff
+
+  1990 groff
 
   Some example groff (GNU troff) code.
 
@@ -354,8 +333,11 @@ SGML: document declares its DOCTYPE
 
   \endlist
 
-.. note::
-  Presentational with semantic leanings. Programmable. Still in use.
+.. note:: 1997/1998 |TeX|
+
+  *Presentational with semantic leanings*. Programmable. Still in use.
+
+  Designed and mostly written by Donald Knuth.
  
   Driven by the need to guarantee accurate typesetting of mathematics.
 
@@ -366,7 +348,7 @@ SGML: document declares its DOCTYPE
 
 ----
 
-1993: |LaTeX|
+1983: |LaTeX|
 -------------
 
 ::
@@ -389,7 +371,9 @@ SGML: document declares its DOCTYPE
    which dates from about 1983/1984, or one of the other systems written in
    |TeX|.
 
-.. note:: Presentational. Still in use.
+.. note:: 1983 |LaTeX| *Presentational*. Still in use.
+
+  Leslie Lamport.
 
   Most people use |LaTeX| (or one of the equivalents) instead of directly
   using |TeX|.
@@ -413,7 +397,7 @@ SGML: document declares its DOCTYPE
         Let's start at the very beginning, a @i(very good place) to start
     )
 
-.. note:: Presentational, and maybe also programmable
+.. note:: 1980 Scribe *Presentational*, and maybe also programmable
 
   Described in Brian Reid's 1980 doctoral dissertation at Carnegie Mellon
   University. Lisp based.
@@ -437,7 +421,10 @@ SGML: document declares its DOCTYPE
    (Hello world!) show  % stroke the text in parentheses
    showpage             % print all on the page
 
-.. note:: Presentational, and programmable. Still in use.
+.. note:: 1984 Postscript *Presentational*, and programmable. Still in use.
+
+  Created at Adobe Systems by John Warnock, Charles Geschke, Doug Brotz, Ed
+  Taft and Bill Paxton from 1982 to 1984.
 
   Not really intended to be written by people.
 
@@ -463,7 +450,7 @@ SGML: document declares its DOCTYPE
   </lg>
 
 
-.. note:: Semantic. Still in use today.
+.. note:: 1987 TEI *Semantic*. Still in use today.
 
   "The mission of the Text Encoding Initiative is to develop and maintain a
   set of high-quality guidelines for the encoding of humanities texts, and to
@@ -494,7 +481,13 @@ SGML: document declares its DOCTYPE
     </body>
   </html>
 
-.. note:: Presentatonal. Still in use today (although rather altered).
+.. note:: 1991 HTML *Presentational*. Still in use today (although rather altered).
+
+  Tim Berners-Lee, at CERN, specified HTML and wrote browser and server
+  software in late 1990. The "HTML Tags" document was first mentioned on the
+  internet in 1991.
+
+  HTML 2.0 was published as IETF RFC 1866 in 1995
 
   Yes, that is the same example as from the "using a DTD" page.
 
@@ -521,14 +514,14 @@ SGML: document declares its DOCTYPE
   .. _setext http://www.bsdi.com/setext/
   ..
 
-.. note:: Presentational. Lightweight.
+.. note:: 1991 setext *Presentational*. Lightweight.
+
+  Ian Feldman, for use in writing the TidBITs electronic newsletter.
 
   Excerpted from a document called "Why setext".
 
   Partly a reaction to SGML. Clearly influential on
   all of the succeeding lightweight markups.
-
-  Used to write the on-line magazine TidBits (about Apple Mac).
 
   Same year as HTML
 
@@ -557,7 +550,7 @@ More setext
    .. the logical end of text
    ..
 
-.. note:: **skippable**
+.. note:: **skippable** More setext
 
 ----
 
@@ -586,7 +579,7 @@ More setext
     </section>
   </article>
 
-.. note:: Semantic. Still in use today.
+.. note:: 1991 Docbook *Semantic*. Still in use today.
 
   "A semantic markup language for technical documentation"
 
@@ -619,7 +612,7 @@ More setext
      </chapter>
    </book>
 
-.. note:: **skippable**
+.. note:: **skippable** Docbook 5
 
   Example from wikipedia (for Docbook 5, which is relatively recent).
 
@@ -646,9 +639,11 @@ More setext
 
   No HTML, tables, headers, maths, scripts. No links within a page.
 
-.. note:: **skippable**
+.. note:: **skippable** wikiwikiweb
 
-   The first wiki
+  1994/1995 wikiwikiweb *Presentational*
+
+   The first wiki, invented by Ward Cunningham
 
    I think that newlines within a paragraph are ignored, but it's hard  to
    tell.
@@ -683,7 +678,7 @@ More setext
 
   =cut
 
-.. note:: Presentational. Still in use today.
+.. note:: 1994 POD *Presentational*. Still in use today.
 
   Perl's "Plain Old Documentation".
 
@@ -719,9 +714,9 @@ More setext
       // ...
   }
 
-.. note:: **skippable**
+.. note::  **skippable** javadoc
 
-  Presentational. Still in use today.
+  1995 javadoc *Presentational*. Still in use today.
 
   Has never specified the subset of HTML it allows.
 
@@ -749,7 +744,7 @@ More setext
 
    .. [1] Or we could use ``backquotes``.
 
-.. note:: Presentational. Lightweight.
+.. note:: 1996 StructuredText *Presentational*. Lightweight.
 
   Created by Jim Fulton of Digital Creations (later Zope Foundation) for use
   in Zope.
@@ -761,7 +756,9 @@ More setext
 1997: XML
 ---------
 
-.. note:: Semantic.
+.. note:: 1997 XML *Semantic*.
+
+  Extensible Markup Language
 
   wikipedia: "XML is an application profile of SGML"
 
@@ -770,6 +767,9 @@ More setext
   A simpler subset of SGML, which makes parsers easier to write. Other SGML
   based tools (TEI, Docbook, HTML itself) have generally moved towards using
   XML rather than SGML in their specification.
+
+  XML was compiled by a working group of eleven members,[30] supported by a
+  (roughly) 150-member Interest Group.
 
 ----
 
@@ -798,9 +798,11 @@ More setext
 
    .. [1] Lines after the first line of a list item must be indented appropriately.
 
-.. note:: Presentational. Lightweight.
+.. note:: 2001/2002 reStructuredText *Presentational*. Lightweight.
 
   David Goodger had a professional background in SGML.
+
+  Original mailing of the idea to the Doc-Sig was in Nov 2000
 
   Readable is the main aim.
 
@@ -836,20 +838,22 @@ More setext
   Sub-section body text is not indented either. What makes sense for
   programming languages is irritating for text.
 
-.. note:: Presentational. Lightweight.
+.. note:: 2002 Asciidoc *Presentational*. Lightweight.
+
+  Stuart Rackham
 
   Aimed specifically as a lightweight way of producing docbook.
+
+  Well specified, allowing other implementations which behave in the same way.
 
   The original Asciidoc implementation was written in Python in 2002.
 
   Asciidoctor came out in 2013, and is written in Ruby.
 
-  Well specified, allowing other implementations which behave in the same way.
-
 ----
 
-markdown
---------
+2004: markdown
+--------------
 
 ::
 
@@ -871,17 +875,21 @@ markdown
 
    (We don't do footnotes, but you can include <tt>HTML</tt>.)
 
-.. note::
-  Presentation. Lightweight.
+.. note:: 2004 markdown *Presentation*. Lightweight.
+
+  John Gruber, collaborating with Aaron Swartz on the syntax
 
   Yes, I know headings can be underline as well, but I've never seen
   anyone actually doing that.
 
   Aimed at producing HTML.
 
-  Poorly specified. Ambiguous. Most implementations extend it, incompatibly.
+  From the syntax page: "Markdown’s syntax is intended for one purpose: to be
+  used as a format for *writing* for the web." Their emphasis.
 
+  Poorly specified. Ambiguous.
   Allows embedded HTML.
+  Most implementations extend it, incompatibly.
 
   Very successful because (the most popular variants) hit a good compromise on
   the simplicity/capability curve.

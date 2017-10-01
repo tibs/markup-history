@@ -528,6 +528,30 @@ very nice timeline. Items marked [T] are from it.
 * 2004 markdown John Gruber and Aaron Swartz
 * 2013 Asciidoctor
 
+or:
+
+* 1964 TYPSET and RUNOFF
+* 1969 GML
+* 1970s roff, runoff
+* 1976 nroff and troff
+* 1977/1978 |TeX| and Metafont
+* 1980 Scribe
+* 1983-1985 |LaTeX|
+* 1984 Postscript
+* 1986 SGML
+* 1987 TEI
+* 1989-1991 HTML
+* 1991 setext
+* 1991 Docbook
+* 1994/1995 WikiWikiWeb
+* 1994 Perl 5.000 and pod
+* 1996 StructuredText
+* 1997 XML
+* 2000-2002 reStructuredText
+* 2002 AsciiDoc
+* 2004 markdown
+
+
 Mumblings
 =========
 
@@ -841,6 +865,19 @@ Links:
      and their friends...", Arno Trautman
    * https://tex.stackexchange.com/questions/42594/tex-family-tree-with-timeline
    
+* http://www.xent.com/FoRK-archive/feb98/0307.html - A Brief History of LaTeX,
+  I Find Karma 1998
+* https://www.microsoft.com/en-us/research/wp-content/uploads/2016/12/TeX-changed-the-face-of-Mathematics.pdf
+  "How (La)TeX changed the face of Mathematics", and E-interview with Leslie
+  Lamport, 2000
+* http://tug.org/TUGboat/tb24-1/gaudeul.pdf "The (La)TeX project: A case study
+  of open source software" Alexandre Gaudeul 2003
+* http://www.tug.org/TUGboat/tb29-1/tb91reutenauer.pdf "A brief history of
+  TeX, volume II" Arthur Reutenauer, 2007
+
+  Successor article to https://tug.org/TUGboat/tb17-4/tb53tayl.pdf, "A Brief
+  History of TeX" Philip Taylor 1995, which also talks about Postscript,
+  HTML, PDF and other matters.
 
 ----
 
