@@ -41,9 +41,9 @@ Timeline
 --------
 
 * 1960s TYPSET and RUNOFF, GML
-* 1970s roff, runoff, nroff/troff, |TeX| and Metafont in SAIL
-* 1980s Scribe, |TeX| and Metafont in WEB/Pascal, |LaTeX|, Postscript, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, POD, javadoc, StructuredText, XML
+* 1970s roff, runoff, nroff/troff, |TeX| in SAIL
+* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, Postscript, SGML, TEI
+* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
 .. note:: There's a lot to cover, even so.
@@ -111,88 +111,10 @@ Categories of markup
 
 ----
 
-Digital Standard Runoff
------------------------
+1969: GML / 1986: SGML
+----------------------
 
-::
-
-    .TITLE A simpler DSR example
-    .CHAPTER This is a chapter
-
-    This is the first paragraph.
-    .LIST
-    .LIST ELEMENT;This is a list element. We have *bold\* and &underline\&.
-    .LIST ELEMENT;This is another list element. I like interrobangs ?%!
-    .END LIST
-
-.. note:: **skippable** DSR
-
-  This is an example using Digital Standard Runoff (DSR), which I
-  used to use in the 1980s/90s on VMS.
-
-  Abbreviated forms are also available, e.g., ``.ls`` instead of
-  ``.list``, and ``.le;`` instead of ``list element;``.
-
-----
-
-1969: GML and 1986: SGML
-------------------------
-
-::
-
-  <td> The Implication of SGML for the Preparation of Scientific Publications
-  <au> Joan M. Smith
-  <ad>
-  <al> National Computing Centre, Oxford Road, Manchester M1 7ED
-  <ab> The &SGML (SGML) is a draft international standard for publishing.
-  ...
-  <h1>Introduction
-  <p> The official title of SGML, currently, is ISO/DIS 8879,
-  <ci> Information Processing &end Text and Office Systems &end &SGML (SGML)
-  </ci>. <ref> ISO/DIS 8879 <ci> Information Processing &end Text and Office
-  Systems &end &SGML (SGML). ISO, Geneva (1985). </ref>
-  ...
-  <p>There are several points worthy of note here:
-  <ul>
-  <li> the normal publishing delay with ISO standards...
-  ...
-  </ul>
-
-
-.. note:: 1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
-
-  GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM. 
-
-  [Standard] Generalised Markup Language.
-
-  The example is actually SGML. It is transcribed from Figure 3 of the
-  paper named. The ellipses are mine.
-
-  The GML starter set was a set of macros for IBM Script.
-
-  A mechanism for *describing* markup languages. Use of the DTD.
-
-  Sensibly, SGML came with a "starter set" drafted by Joan Smith and
-  Janet Vandore.
-
-  Note how SGML allowed the
-  definition of elements that were implicitly closed by another element -
-  e.g., <li> and <p>
-
-  - <td> is the document title
-  - <ad> is an address, <al> an address line
-  - <ab> is the abstract
-  - <ci> indicates a citation, which rendered as italics in the resulting paper.
-  - <ref> marks up a Reference, collected for the section at the end of the document.
-  - &SGML is an "entity reference" that expands to 'Standard Generalized
-    Markup Language' - we're familiar with things like &eacute; from HTML.
-
-----
-
-SGML: DTD for a list
---------------------
-
-::
+*DTD for a list*::
 
   <!--      ELEMENT MIN CONTENT             >
   <!ELEMENT list    - - (item)+             >
@@ -206,7 +128,13 @@ SGML: DTD for a list
   <item>Last item</item>
   </list>
 
-.. note:: **skippable** DTD for a list
+.. note:: 1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
+
+  GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM. 
+
+  [Standard] Generalised Markup Language.
+
+  A mechanism for *describing* markup languages. Use of the DTD.
 
   SGML uses DTDs (Document Type Definitions) to describe the set of
   markup declarations that form a *document type* (e.g., SGML itself, XML,
@@ -215,28 +143,12 @@ SGML: DTD for a list
   Shown is a DTD fragment for defining a simple list, and an example of the
   list structure described.
 
-----
+  Sensibly, SGML came with a "starter set" drafted by Joan Smith and
+  Janet Vandore.
 
-SGML: document declares its DOCTYPE
------------------------------------
-
-::
-
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>This is a title</title>
-    </head>
-    <body>
-      <p>Hello world!</p>
-    </body>
-  </html>
-
-.. note:: **skippable** Using a DTD
-
-  DOCTYPE = Documentation Type Declaration
-
-  A document can use a DOCTYPE to say what DTD it is conforming to.
+  SGML allowed the definition of elements that were implicitly closed by
+  another element - e.g., <li> and <p> in HTML. *Can the <item> elements
+  here be closed implicitly?*
 
 ----
 
@@ -273,39 +185,6 @@ SGML: document declares its DOCTYPE
   font and underlining) are indicated by the \\f sequences.
 
 .. _`Writing manual pages`: https://liw.fi/manpages/,
-
-----
-
-1990: groff
------------
-
-::
-
-  ..INCLUDE  mission-statement-strings.mom
-  .TITLE    "\*[Groff-Mission-Statement]
-  .SUBTITLE "\*[2014]
-  .INCLUDE  mission-statement-style.mom
-  .PP
-  As the most widely deployed implementation of troff in use today,
-  groff holds an important place in the Unix universe.  Frequently
-  and erroneously dismissed as a legacy program for formatting
-  Unix manuals (manpages), groff is in fact a sophisticated system
-  for producing high-quality typeset material, from business
-  correspondence to complex, technical reports and plate-ready books.
-  \*[BU3]With an impressive record for backward compatibility, it
-  continues to evolve and play a leading role in the development of
-  free typesetting software.
-
-.. note:: **skippable** groff
-
-  1990 groff
-
-  Some example groff (GNU troff) code.
-
-  Whilst the roff family are not strictly speaking programmable as
-  such, their use of macros (originally m4?) means that in practice they are
-  as capable as systems such as |TeX| (although I don't think that DSLs like
-  |LaTeX| exist as-such).
 
 ----
 
@@ -349,38 +228,6 @@ SGML: document declares its DOCTYPE
 
 ----
 
-1983: |LaTeX|
--------------
-
-::
-
-  \begin{center}
-  \rule{5in}{0.1mm}
-  \end{center}
-
-  \section*{Captain Competent strikes again}
-
-  The superhero is a familiar concept in comics, science fiction and many other
-  fields. However, I am more interested in what might be called `the competent
-  hero'. This is a subtler form of protagonist---a person who has attained
-  {\em competence} in their daily life.
-
-.. note:: |LaTeX| is essentially a DSL written in |TeX|. It's probably still
-   the best known, but certainly not the only one.
-
-   I used to write plain |TeX|, but most people actually use |LaTeX|,
-   which dates from about 1983/1984, or one of the other systems written in
-   |TeX|.
-
-.. note:: 1983 |LaTeX| *Presentational*. Still in use.
-
-  Leslie Lamport.
-
-  Most people use |LaTeX| (or one of the equivalents) instead of directly
-  using |TeX|.
-
-----
-
 1980: Scribe
 ------------
 
@@ -404,6 +251,10 @@ SGML: document declares its DOCTYPE
   University. Lisp based.
 
   Similar systems still appear to exist.
+
+  **Maybe** could drop this slide as well, although I'd rather not.
+
+  Also, need to check if it is "programmable".
 
 ----
 
@@ -432,6 +283,8 @@ SGML: document declares its DOCTYPE
   Similar to Forth.
 
   This is the example on the Wikipedia page.
+
+  **Maybe** drop this, as it's not a form aimed at human use.
 
 ----
 
@@ -501,38 +354,6 @@ SGML: document declares its DOCTYPE
 
 ::
 
-  Why setext?
-  -----------
-
-    I agree that FAQ's would best be written in something like setext_.
-    Why?  Because this document is written in setext and it includes
-    the ability to embed HTML hypertext links without being obnoxious.
-
-    As you can see it's easy to write setext documents, and as Edward
-    pointed out, it uses existing text conventions for **bold** and _italic_
-    words and titles.
-
-  .. _setext http://www.bsdi.com/setext/
-  ..
-
-.. note:: 1991 setext *Presentational*. Lightweight.
-
-  Ian Feldman, for use in writing the TidBITs electronic newsletter.
-
-  Excerpted from a document called "Why setext".
-
-  Partly a reaction to SGML. Clearly influential on
-  all of the succeeding lightweight markups.
-
-  Same year as HTML
-
-----
-
-More setext
------------
-
-::
-
    This is the title. There can be only one.
    =========================================
      Body text must be indented by two spaces.
@@ -551,7 +372,16 @@ More setext
    .. the logical end of text
    ..
 
-.. note:: **skippable** More setext
+.. note:: 1991 setext *Presentational*. Lightweight.
+
+  Ian Feldman, for use in writing the TidBITs electronic newsletter.
+
+  Partly a reaction to SGML. Clearly influential on
+  all of the succeeding lightweight markups.
+
+  Same year as HTML
+
+  **Maybe** add an example of a link?
 
 ----
 
@@ -617,7 +447,7 @@ More setext
 
 .. note:: **skippable** wikiwikiweb
 
-  1994/1995 wikiwikiweb *Presentational*
+   1994/1995 wikiwikiweb *Presentational*
 
    The first wiki, invented by Ward Cunningham
 
@@ -683,6 +513,10 @@ More setext
 
   XML was compiled by a working group of eleven members,[30] supported by a
   (roughly) 150-member Interest Group.
+
+  **If this is kept** it needs to be a very brief slide. On the other hand,
+  I think it is useful as a marker, given how XML is important to the SGML
+  world.
 
 ----
 
@@ -813,9 +647,9 @@ Fin
 ---
 
 * 1960s TYPSET and RUNOFF, GML
-* 1970s roff, runoff, nroff/troff, |TeX| and Metafont in SAIL
-* 1980s Scribe, |TeX| and Metafont in WEB/Pascal, |LaTeX|, Postscript, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, POD, javadoc, StructuredText, XML
+* 1970s roff, runoff, nroff/troff, |TeX| in SAIL
+* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, Postscript, SGML, TEI
+* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
 Written using reStructuredText_.  Presented using hovercraft_.
