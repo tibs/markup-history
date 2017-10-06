@@ -261,7 +261,7 @@ SGML: document declares its DOCTYPE
   .BR \-n ", " \-\-bits =\fIBITS\fR
   Set the number of bits to modify.  Default is one bit.
 
-.. note:: 1970s \*roff *Presentational*. Still in use (as groff)
+.. note:: 1970s \*roff *Presentational*. Still in use (as 1990: groff)
 
   Started as a transliteration of the BCPL version of runoff, for UNIX,
   around 1970.
@@ -309,7 +309,7 @@ SGML: document declares its DOCTYPE
 
 ----
 
-1997/1998: |TeX|
+1977/1978: |TeX|
 ----------------
 
 ::
@@ -334,7 +334,7 @@ SGML: document declares its DOCTYPE
 
   \endlist
 
-.. note:: 1997/1998 |TeX|
+.. note:: 1977/1978 |TeX|
 
   *Presentational with semantic leanings*. Programmable. Still in use.
 
@@ -592,31 +592,6 @@ More setext
   Before Docbook 5, an SGML language, defined by a DTD, and then later with
   an XML variant (if I've got that right).
 
-----
-
-2009: Docbook 5
----------------
-
-::
-
-   <?xml version="1.0" encoding="UTF-8"?>
-   <book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
-     <title>Very simple book</title>
-     <chapter xml:id="chapter_1">
-       <title>Chapter 1</title>
-       <para>Hello world!</para>
-       <para>I hope that your day is proceeding <emphasis>splendidly</emphasis>!</para>
-     </chapter>
-     <chapter xml:id="chapter_2">
-       <title>Chapter 2</title>
-       <para>Hello again, world!</para>
-     </chapter>
-   </book>
-
-.. note:: **skippable** Docbook 5
-
-  Example from wikipedia (for Docbook 5, which is relatively recent).
-
   DocBook 5 is an XML language, formally defined by a RELAX NG schema with
   integrated Schematron rules.
 
@@ -656,72 +631,9 @@ More setext
       means you have to concentrate on saying things carefully and clearly.
       Content over form."
 
-----
-
-1994: POD
----------
-
-::
-
-  =pod
-
-  =head1 DESCRIPTION
-
-  This is not I<really> representative of POD usage.
-
-  =over 2
-
-  =item This is a list item.
-
-  =item This is another list item.
-
-  =back
-
-  =cut
-
-.. note:: 1994 POD *Presentational*. Still in use today.
-
-  Perl's "Plain Old Documentation".
-
-  Same year as wikiwikiweb
-
-  An example of markup to a specific purpose, and clearly very successful.
-
-  Note that the blank lines are required around the POD commands.
-
-  I don't think you can do multi-paragraph list items. The POD definitions
-  contains ambuguities, although how to handle some of them is explained in
-  the POD documentation.
 
 ----
 
-1995: Javadoc
--------------
-
-::
-
-  /**
-   * Short one line description.
-   * <p>
-   * Longer description. If there were any, it would be here.
-   * <p>
-   * And even more explanations to follow in consecutive
-   * paragraphs separated by HTML paragraph breaks.
-   *
-   * @param  variable Description text text text.
-   * @return Description text text text.
-   */
-  public int methodName (...) {
-      // ...
-  }
-
-.. note::  **skippable** javadoc
-
-  1995 javadoc *Presentational*. Still in use today.
-
-  Has never specified the subset of HTML it allows.
-
-----
 
 1996: StructuredText
 --------------------
@@ -910,6 +822,6 @@ Written using reStructuredText_.  Presented using hovercraft_.
 
 Source and a longer article at https://github.com/tibs/markup-history
 
-You may also be inerested in Write the Docs: http://www.writethedocs.org/
+You may also be interested in Write the Docs: http://www.writethedocs.org/
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
