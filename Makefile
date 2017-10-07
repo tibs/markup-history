@@ -22,6 +22,7 @@ clean:
 	rm -f markup-history.html
 	rm -f markup-history-paper.html
 	rm -rf slides
+	rm *~
 
 .PHONY: help
 help:
