@@ -10,6 +10,8 @@ By Tibs / Tony Ibbs, for PyConUK 2017
 
 Written using reStructuredText_.  Presented using hovercraft_.
 
+Source and a longer article at https://github.com/tibs/markup-history
+
 .. _reStructuredText: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 .. _hovercraft: https://github.com/regebro/hovercraft
 

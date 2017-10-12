@@ -1361,4 +1361,25 @@ Maybe there should be an entry for wikiwikiweb after all.
    (expecially those targetting HTML, which is many of them), it's rather
    harder to understand the limitation.
 
+Yet more links
+==============
+
+* `Why we need constrainable lightweight markup languages`_, Mark Baker, 2016,
+  and sam_ (Semantic Authoring Markdown), his proposed solution (still under
+  active development)
+ 
+.. _`Why we need constrainable lightweight markup languages`:  http://everypageispageone.com/2016/06/05/why-we-need-constrainable-lightweight-markup-languages/
+.. _sam: https://github.com/mbakeranalecta/sam
+
+* `Common markup for Markdown and reStructuredText`_, Alexander Dupuy, 2017 -
+  an attempt to describe the commonality between the two markups, so that text
+  can be written to satisfy both.
+
+.. _`Common markup for Markdown and reStructuredText`: https://gist.github.com/dupuy/1855764
+
+* `reStructuredText vs Markdown for documentation`_, Victor Zverovich, 2016 -
+  a short comparison.
+  
+.. _`reStructuredText vs Markdown for documentation`:  http://zverovich.net/2016/06/16/rst-vs-markdown.html
+
 .. vim: set filetype=rst tabstop=8  softtabstop=2 shiftwidth=2 expandtab:
