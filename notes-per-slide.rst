@@ -30,8 +30,8 @@ This is a very brief timeline - I shan't actually talk about everything on it.
 What's interesting, though, is that just about everything named is still in
 use, in one form or another.
 
-Categories of markup
---------------------
+The types of markup
+-------------------
 
 *Presentational*: how the text should be presented, e.g., as a man page, on a
 screen, or on a typeset page.
@@ -165,24 +165,6 @@ Similar systems still appear to exist.
 Note the two representations - the second one being more lisp-like.
 
 Q: **Also, need to check if it is "programmable".**
-
-1984: Postscript
-----------------
-
-**Maybe** drop this, as it's not a form aimed at human use.
-
-**Really seriously consider dropping this slide**
-
-1984 Postscript *Presentational*, and programmable. Still in use.
-
-Created at Adobe Systems by John Warnock, Charles Geschke, Doug Brotz, Ed
-Taft and Bill Paxton from 1982 to 1984.
-
-Not really intended to be written by people.
-
-Similar to Forth.
-
-This is the example on the Wikipedia page.
 
 1987: TEI
 ---------
@@ -422,7 +404,7 @@ Fin
 
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, Postscript, SGML, TEI
+* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
 * 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 

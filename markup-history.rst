@@ -44,7 +44,7 @@ Timeline
 
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, Postscript, SGML, TEI
+* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
 * 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
@@ -55,12 +55,12 @@ Timeline
 
 ----
 
-Categories of markup
---------------------
+The types of markup
+-------------------
 
-1. Presentational
-2. Semantic
-3. Lightweight
+Presentational or Semantic
+
+...but also lightweight, and maybe programmable
 
 .. note::
 
@@ -257,36 +257,6 @@ Categories of markup
   **Maybe** could drop this slide as well, although I'd rather not.
 
   Also, need to check if it is "programmable".
-
-----
-
-1984: Postscript
-----------------
-
-::
-
-   %!PS
-   /Courier             % name the desired font
-   20 selectfont        % choose the size in points and establish 
-                        % the font as the current one
-   72 500 moveto        % position the current point at 
-                        % coordinates 72, 500 (the origin is at the 
-                        % lower-left corner of the page)
-   (Hello world!) show  % stroke the text in parentheses
-   showpage             % print all on the page
-
-.. note:: 1984 Postscript *Presentational*, and programmable. Still in use.
-
-  Created at Adobe Systems by John Warnock, Charles Geschke, Doug Brotz, Ed
-  Taft and Bill Paxton from 1982 to 1984.
-
-  Not really intended to be written by people.
-
-  Similar to Forth.
-
-  This is the example on the Wikipedia page.
-
-  **Maybe** drop this, as it's not a form aimed at human use.
 
 ----
 
@@ -650,7 +620,7 @@ Fin
 
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, Postscript, SGML, TEI
+* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
 * 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 

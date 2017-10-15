@@ -83,8 +83,8 @@ Basically anything that isn't just a text document.
 Links and timelines
 ===================
 
-http://www.math.utah.edu/~beebe/talks/2003/tug2003/tug2003-keynote.pdf has a
-very nice timeline. Items marked [T] are from it.
+`25 Years of |TeX| and Metafont: Looking Back and Looking Forward`_,
+has a very nice timeline. Items marked [T] are from it.
 
 * 1964 TYPSET and RUNOFF https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
 * 1967 William Tunincliffe: the separation of the information content of
