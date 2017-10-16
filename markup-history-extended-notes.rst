@@ -177,6 +177,10 @@ Also annotate each "chapter" with:
 
 General
 -------
+*Some of these are sensible to keep here, as an "introduction", and some
+need a bit more thought as to where to place them - maybe a "Miscellaneous"
+section at the end.*
+
 * `Wikipedia on Markup Language`_ - see the taxonomy of (three) types therein, and the history section
 * `Wikipedia List of document markup languages`_
 * `Charles Goldfarb — the Godfather of Markup Languages`_, Georgi Dalako,
@@ -196,6 +200,11 @@ General
 
 .. _`Python docstrings`: https://en.wikipedia.org/wiki/Docstring
 .. _`Docstring Convention: Python vs Emacs Lisp`: http://xahlee.info/comp/python_vs_elisp_docstring_convention.html
+
+* `SGML and PDF--Why We Need Both`_, Bill Kasdorf, Volume 3, Issue 4: *Moving
+  from Print to Electronic Publishing*, June, 1998
+  
+.. _`SGML and PDF--Why We Need Both`: https://quod.lib.umich.edu/j/jep/3336451.0003.406?view=text;rgn=main
 
 
 RUNOFF and its descendants
@@ -447,6 +456,107 @@ amazing things.
 .. _`A brief history of TeX, volume II`: http://www.tug.org/TUGboat/tb29-1/tb91reutenauer.pdf
 .. _`A Brief History of TeX`: https://tug.org/TUGboat/tb17-4/tb53tayl.pdf
 
+
+Choosing |TeX| or troff
+-----------------------
+
+.. _`TeX/troff/typesetting markups`: http://minnie.tuhs.org/pipermail/tuhs/2017-April/009638.html ::
+
+`TeX/troff/typesetting markups`_ is an email conversation from 2017 comparing
+use of |TeX| and troff::
+
+  [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
+  Toby Thain toby at telegraphics.com.au
+  Sun Apr 16 01:09:15 AEST 2017
+
+      Previous message (by thread): [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
+      Next message (by thread): [TUHS] TeX/troff/typesetting markups - SunOS 4 documentation
+      Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+  On 2017-04-15 10:23 AM, Michael Kerpan wrote:
+  > Comparing documents produced by Heirloom troff and modern versions of
+  > LaTeX, I just can't see a huge difference. The main thing TeX has going
+  > for it is LyX, which makes composing documents a whole lot more
+  > comfortable for folks raised on WYSIWYG. If a tool like that was
+  > available for troff...
+
+  I'm not only talking about the _output_. But my intention isn't to 
+  denigrate troff but to show that they are completely different animals. 
+  A glance through the TeXbook would confirm.
+
+  TeX is a complete domain-specific language, page model, and runtime 
+  environment (without even discussing its layered frameworks like LaTeX). 
+  I admit it took me a few weeks or months of study back in the late 1980s 
+  to understand this distinction; previously I had been using a 
+  troff-level markup (perhaps even troff-inspired) on Mac called 
+  "JustText", which generated PostScript of course.
+
+  One _can_ typeset books in both troff and TeX, but that doesn't make 
+  them at all equivalent. The process and possibilities are different. For 
+  example, that simple task of producing two different output formats from 
+  the same manuscript, that I mentioned upthread, is made possible by TeX 
+  macros. But the sophistication of its page model is also required for 
+  any nontrivial layout, table, diagram, math, or just typographic 
+  refinement.
+
+  Some projects _have_ tried to replace TeX. 
+  https://tex.stackexchange.com/questions/120271/alternatives-to-latex
+
+  --------
+
+  Clem Cole clemc at ccc.com
+  Sun Apr 16 01:27:49 AEST 2017
+
+      Previous message (by thread): [TUHS] TeX/troff/typesetting markups - SunOS 4 documentation
+      Next message (by thread): [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
+      Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+  On Fri, Apr 14, 2017 at 6:24 PM, Toby Thain <toby at telegraphics.com.au>
+  wrote:
+  >
+  >
+  > No matter how far you tart up the former, Troff and TeX just aren't
+  > playing the same ballgame.
+
+
+  Toby - that's a tad inflammatory - at least to my American sensibilities.
+  Saying one or the other has been "dressed up" (using a derogatory term or
+  not) is to me the same as the vi/emacs wars or rugby/American Football
+  argument.   Some people like the taste of one, others do not, and thank
+  goodness we have choices.   I've used the afore mentioned systems (and
+  played the games too at a fairly high level in my day); and frankly it is a
+  matter if taste.  They all have their place.
+
+  If you grew up with an affinity for one, you are more likely to find it
+  more comfortable for your needs.  I find a TeX just as ugly and unreadable
+  as  the runoff family with troff is a member.   It's just a different view
+  of beauty.  Frankly, Brian Reid's Scribe on the "Twinex" and VMS was the
+  "best" document product system I ever really used (for those that do not
+  know, LaTex was an attempt to bring Scribe-like functions into TeX).    But
+  as Brian Kernighan points out in his "Page Makeup" paper, even Scribe had
+  some flaws (it's too bad Scribe seems to have been lost to IP and source
+  issues - I've often wonder how it would have played out in the modern
+  world).
+
+  Anyway - it fine to say you don't like troff - please feel free to suggest
+  that you don't think that it can be made to your style/preferences.   But
+  please don't sling to many insults as the truth is, that troff is still
+  useful to many people and a lot people do still like it.
+
+  In my own case, I'll use TeX if a colleague wants too, but I'm a fair bit
+  faster with troff than almost any other doc prep system for any document of
+  almost any size; but particularly when the documents get large such as
+  book.   But that's me; although I note it is also a lot of other people.
+  As Brian points out, many of the Pearson and Wiley texts use troff; and of
+  course you have to note that my old deskmate, Tim O'Reilly founded his
+  empire on it 😂 (I still have a copy of the his original style manual they
+  wrote for the Masscomp engineers and doc writers in the mid 80s).
+  Clem
+
+Personally, my conclusion would be the opposite, as I think |TeX| being a
+language (albeit a macro language, with the problems that is recognised as
+entailing) is a big benefit. But it's an interesting comparison, nonetheless.
+
 Scribe
 ------
 Scribe was another influential early markup language, from around 1908.
@@ -562,13 +672,6 @@ Docbook
 .. _`DocBook.org`: http://docbook.org/
 .. _`Overview of the DocBook format`: https://workaround.org/docbook/
 
-POD
----
-Perl's POD (or Plain Old Documentation)
-
-*Do I keep this entry here, or just in* `Programming language internal
-documentation`_
-
 Wikiwikiweb
 -----------
 
@@ -586,8 +689,11 @@ Wikiwikiweb
 .. _`Wikipedia on WikiWikiWeb`: https://en.wikipedia.org/wiki/WikiWikiWeb.
 .. _`Text formatting rules`: http://wiki.c2.com/?TextFormattingRules
 
+
 Programming language internal documentation
 -------------------------------------------
+
+Perl's POD (or Plain Old Documentation)
 
 * `The Timeline of Perl and its Culture`_ explains that POD was introduced in
   1995 at the same time as Perl 5.001. This is a very nice brief history of
@@ -628,9 +734,6 @@ specification.
 
 Lightweight markup
 ------------------
-
-General, lightweight markup
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * `Why we need constrainable lightweight markup languages`_, Mark Baker, 2016,
   and sam_ (Semantic Authoring Markdown), his proposed solution (still under
   active development)
@@ -650,7 +753,7 @@ General, lightweight markup
 .. _`reStructuredText vs Markdown for documentation`:  http://zverovich.net/2016/06/16/rst-vs-markdown.html
 
 setext
-~~~~~~
+------
 setext was invented by Ian Feldman as an alternative to RTF and SGML. He used
 it to format the online magazine TidBITS from issue 100 - before that the
 magazine was distributed as a HyperCard_ stack. 
@@ -689,7 +792,7 @@ An example::
 
 
 Python's Doc-SIG
-~~~~~~~~~~~~~~~~
+----------------
 Python's Doc-SIG was started to look at documentation matters for Python, and
 in particular had two main interests - how to write the text in docstrings,
 and how to write "external" documentation.
@@ -741,7 +844,7 @@ approach like::
 
 
 StructuredText
-~~~~~~~~~~~~~~
+--------------
 StructuredText was used extensively in the Zope world, in part to convey type
 information [citation needed]. However there were various problems with it,
 [give examples]. A start was made on a replacement format, StructuredTextNG
@@ -806,7 +909,7 @@ reStructuredText.
 .. _`StructuredTextNG - Format`: http://www.tibsnjoan.co.uk/docutils/STNG-format.html
 
 reStructuredText
-~~~~~~~~~~~~~~~~
+----------------
 
 An example. Rather sadly, the same(ish) text as from the StructuredText slide::
 
@@ -903,7 +1006,7 @@ It's also worth looking at:
 .. _`Problems With StructuredText`: http://docutils.sourceforge.net/docs/dev/rst/problems.html
 
 AsciiDoc
-~~~~~~~~
+--------
 
 The tradeoffs made for a particular form of lightweight markup are always very
 personal - one person's just-simple-enough is another person's step too far.
@@ -988,7 +1091,12 @@ makes sense as its ambitions are greater.
 .. _`AsciiDoc Writer's Guide`: http://asciidoctor.org/docs/asciidoc-writers-guide/
 
 Markdown
-~~~~~~~~
+--------
+
+...it should have been so wonderful... (me, just now)
+
+.. note:: Would markdown be hurt **in any way** by just removing the ability
+   to embed HTML?
 
 The `original introduction to markdown`_ said:
 
@@ -1128,9 +1236,18 @@ which one might, perhaps, find distressing.
 .. _`markdown considered harmful (or perhaps just a loved but irritating old uncle)`: https://medium.com/the-bower/markdown-considered-harmful-495ccfe24a52
 .. _`beyond markdown, part 1`: https://medium.com/the-bower/beyond-markdown-part-1-2300665659f7
 
+* `Why Markdown is not my favourite language`_ (from 2012) shares many of my
+  grumbles about markdown, gives a reasoned look at reStructuredText, and
+  decides that actually the best hope is actually Creole_. Unfortunately, I
+  don't think there's been much adoption of Creole.
+
+.. _`Why Markdown is not my favourite language`: http://www.wilfred.me.uk/blog/2012/07/30/why-markdown-is-not-my-favourite-language/
+.. _Creole: http://www.wikicreole.org/
 
 Other lightweight markups
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
+A very scattershot section.
+
 `Org-Mode Is One of the Most Reasonable Markup Language to Use for Text`_,
 Karl Voit, 2017. Emacs org-mode considered as a general markup language
 
@@ -1156,118 +1273,5 @@ background.
 
 .. _`Mathematical Markup Language (MathML™) 1.01 Specification`: https://www.w3.org/TR/REC-MathML/
 .. _`Introduction`: https://www.w3.org/TR/REC-MathML/chapter1.html
-
-Comparisons between markups
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Unsurprisingly, there are many comparisons of markdown and other markups:
-
-* `Why Markdown is not my favourite language`_ (from 2012) shares many of my
-  grumbles about markdown, gives a reasoned look at reStructuredText, and
-  decides that actually the best hope is actually Creole_. Unfortunately, I
-  don't think there's been much adoption of Creole.
-
-.. _`Why Markdown is not my favourite language`: http://www.wilfred.me.uk/blog/2012/07/30/why-markdown-is-not-my-favourite-language/
-.. _Creole: http://www.wikicreole.org/
-.. _`TeX/troff/typesetting markups`: http://minnie.tuhs.org/pipermail/tuhs/2017-April/009638.html ::
-
-* `SGML and PDF--Why We Need Both`_, Bill Kasdorf, Volume 3, Issue 4: *Moving
-  from Print to Electronic Publishing*, June, 1998
-  
-.. _`SGML and PDF--Why We Need Both`: https://quod.lib.umich.edu/j/jep/3336451.0003.406?view=text;rgn=main
-
-
-`TeX/troff/typesetting markups`_ is an email conversation from 2017 comparing
-use of |TeX| and troff::
-
-  [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
-  Toby Thain toby at telegraphics.com.au
-  Sun Apr 16 01:09:15 AEST 2017
-
-      Previous message (by thread): [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
-      Next message (by thread): [TUHS] TeX/troff/typesetting markups - SunOS 4 documentation
-      Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
-
-  On 2017-04-15 10:23 AM, Michael Kerpan wrote:
-  > Comparing documents produced by Heirloom troff and modern versions of
-  > LaTeX, I just can't see a huge difference. The main thing TeX has going
-  > for it is LyX, which makes composing documents a whole lot more
-  > comfortable for folks raised on WYSIWYG. If a tool like that was
-  > available for troff...
-
-  I'm not only talking about the _output_. But my intention isn't to 
-  denigrate troff but to show that they are completely different animals. 
-  A glance through the TeXbook would confirm.
-
-  TeX is a complete domain-specific language, page model, and runtime 
-  environment (without even discussing its layered frameworks like LaTeX). 
-  I admit it took me a few weeks or months of study back in the late 1980s 
-  to understand this distinction; previously I had been using a 
-  troff-level markup (perhaps even troff-inspired) on Mac called 
-  "JustText", which generated PostScript of course.
-
-  One _can_ typeset books in both troff and TeX, but that doesn't make 
-  them at all equivalent. The process and possibilities are different. For 
-  example, that simple task of producing two different output formats from 
-  the same manuscript, that I mentioned upthread, is made possible by TeX 
-  macros. But the sophistication of its page model is also required for 
-  any nontrivial layout, table, diagram, math, or just typographic 
-  refinement.
-
-  Some projects _have_ tried to replace TeX. 
-  https://tex.stackexchange.com/questions/120271/alternatives-to-latex
-
-  --------
-
-  Clem Cole clemc at ccc.com
-  Sun Apr 16 01:27:49 AEST 2017
-
-      Previous message (by thread): [TUHS] TeX/troff/typesetting markups - SunOS 4 documentation
-      Next message (by thread): [TUHS] TeX/troff/typesetting markups - Re: SunOS 4 documentation
-      Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
-
-  On Fri, Apr 14, 2017 at 6:24 PM, Toby Thain <toby at telegraphics.com.au>
-  wrote:
-  >
-  >
-  > No matter how far you tart up the former, Troff and TeX just aren't
-  > playing the same ballgame.
-
-
-  Toby - that's a tad inflammatory - at least to my American sensibilities.
-  Saying one or the other has been "dressed up" (using a derogatory term or
-  not) is to me the same as the vi/emacs wars or rugby/American Football
-  argument.   Some people like the taste of one, others do not, and thank
-  goodness we have choices.   I've used the afore mentioned systems (and
-  played the games too at a fairly high level in my day); and frankly it is a
-  matter if taste.  They all have their place.
-
-  If you grew up with an affinity for one, you are more likely to find it
-  more comfortable for your needs.  I find a TeX just as ugly and unreadable
-  as  the runoff family with troff is a member.   It's just a different view
-  of beauty.  Frankly, Brian Reid's Scribe on the "Twinex" and VMS was the
-  "best" document product system I ever really used (for those that do not
-  know, LaTex was an attempt to bring Scribe-like functions into TeX).    But
-  as Brian Kernighan points out in his "Page Makeup" paper, even Scribe had
-  some flaws (it's too bad Scribe seems to have been lost to IP and source
-  issues - I've often wonder how it would have played out in the modern
-  world).
-
-  Anyway - it fine to say you don't like troff - please feel free to suggest
-  that you don't think that it can be made to your style/preferences.   But
-  please don't sling to many insults as the truth is, that troff is still
-  useful to many people and a lot people do still like it.
-
-  In my own case, I'll use TeX if a colleague wants too, but I'm a fair bit
-  faster with troff than almost any other doc prep system for any document of
-  almost any size; but particularly when the documents get large such as
-  book.   But that's me; although I note it is also a lot of other people.
-  As Brian points out, many of the Pearson and Wiley texts use troff; and of
-  course you have to note that my old deskmate, Tim O'Reilly founded his
-  empire on it 😂 (I still have a copy of the his original style manual they
-  wrote for the Masscomp engineers and doc writers in the mid 80s).
-  Clem
-
-
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
