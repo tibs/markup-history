@@ -1,10 +1,16 @@
 A history of markup languages
 =============================
 
+.. warning:: These documents are not yet finished. They will be finished for
+   the conference, but probably not (much) before.
+
 A slideshow produced for `PyConUK 2017`_
 
 .. _`PyConUK 2017`: http://2017.pyconuk.org/
 .. _CamPUG: https://www.meetup.com/CamPUG/
+
+The slides are in ``markup-history.rst``, and extended notes (with links) are
+in ``markup-history-extended-notes.rst``.
 
 For convenience, you can use the Makefile to show the presentation, create the
 HTML version of the talk, and so on. For instance::
@@ -20,9 +26,9 @@ For what the Makefile can do::
 Requirements:
 
 * hovercraft
-* Python 3 (of whatever version hovercraft wants)
+* Python 3 (or whatever version hovercraft wants)
 
-and an appropriate ``make`` if you want to use the Makefile.
+and an appropriate ``make`` program if you want to use the Makefile.
 
 --------
 
