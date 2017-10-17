@@ -113,8 +113,8 @@ Presentational or Semantic
 
 ----
 
-1969: GML / 1986: SGML
-----------------------
+1969: GML / 1986: SGML / 1997: XML
+----------------------------------
 
 *DTD for a list*::
 
@@ -315,9 +315,48 @@ Presentational or Semantic
 
   HTML 2.0 was published as IETF RFC 1866 in 1995
 
-  Yes, that is the same example as from the "using a DTD" page.
-
   HTML (at least until HTML5) is an SGML document type - an SGML application
+
+----
+
+1991: Docbook
+-------------
+
+::
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
+  "http://www.oasis-open.org/docbook/xml/simple/1.0/sdocbook.dtd">
+  <article>
+    <title>DocBook Tutorial</title>
+    <articleinfo>
+      <author>
+        <firstname>Adrian</firstname>
+        <surname>Giurca</surname>
+      </author>
+      <date>April 5, 2005</date>
+    </articleinfo>
+    <section>
+      <title>What is DocBook ?</title>
+      <para>DocBook is an SGML dialect developed by O'Reilly and HaL Computer
+      Systems in 1991.
+      </para>
+    </section>
+  </article>
+
+.. note:: 1991 Docbook *Semantic*. Still in use today.
+
+  "A semantic markup language for technical documentation"
+
+  Same year as HTML
+
+  Example of Docbook 4.3 from
+  http://www.informatik.tu-cottbus.de/~giurca/tutorials/DocBook/index.htm
+
+  Before Docbook 5, an SGML language, defined by a DTD
+
+  DocBook 5 is an XML language, formally defined by a RELAX NG schema with
+  integrated Schematron rules.
 
 ----
 
@@ -351,51 +390,9 @@ Presentational or Semantic
   Partly a reaction to SGML. Clearly influential on
   all of the succeeding lightweight markups.
 
-  Same year as HTML
+  Same year as HTML and Docbook
 
   **Maybe** add an example of a link?
-
-----
-
-1991: Docbook
--------------
-
-::
-
-  <?xml version="1.0" encoding="UTF-8"?>
-  <!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
-  "http://www.oasis-open.org/docbook/xml/simple/1.0/sdocbook.dtd">
-  <article>
-    <title>DocBook Tutorial</title>
-    <articleinfo>
-      <author>
-        <firstname>Adrian</firstname>
-        <surname>Giurca</surname>
-      </author>
-      <date>April 5, 2005</date>
-    </articleinfo>
-    <section>
-      <title>What is DocBook ?</title>
-      <para>DocBook is an SGML dialect developed by O'Reilly and HaL Computer
-      Systems in 1991.
-      </para>
-    </section>
-  </article>
-
-.. note:: 1991 Docbook *Semantic*. Still in use today.
-
-  "A semantic markup language for technical documentation"
-
-  Same year as HTML and setext.
-
-  Example of Docbook 4.3 from
-  http://www.informatik.tu-cottbus.de/~giurca/tutorials/DocBook/index.htm
-
-  Before Docbook 5, an SGML language, defined by a DTD, and then later with
-  an XML variant (if I've got that right).
-
-  DocBook 5 is an XML language, formally defined by a RELAX NG schema with
-  integrated Schematron rules.
 
 ----
 
@@ -465,30 +462,6 @@ Presentational or Semantic
   in Zope.
 
   Significant indentation - good idea in a programming language.
-
-----
-
-1997: XML
----------
-
-.. note:: 1997 XML *Semantic*.
-
-  Extensible Markup Language
-
-  wikipedia: "XML is an application profile of SGML"
-
-  No example because there is no "default" XML - a schema is needed.
-
-  A simpler subset of SGML, which makes parsers easier to write. Other SGML
-  based tools (TEI, Docbook, HTML itself) have generally moved towards using
-  XML rather than SGML in their specification.
-
-  XML was compiled by a working group of eleven members,[30] supported by a
-  (roughly) 150-member Interest Group.
-
-  **If this is kept** it needs to be a very brief slide. On the other hand,
-  I think it is useful as a marker, given how XML is important to the SGML
-  world.
 
 ----
 

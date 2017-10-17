@@ -12,20 +12,21 @@ A history of markup languages
 
 A summary of some of the more obvious bits of the history of document markup.
 
-I'm ignoring anything that isn't just text (so, music, mathematics, diagrams,
-bibliographies, indices, etc.).
-
 And only hitting the "high spots" for what I am talking about.
 
-But there's a longer article at the github repository, as well as the source
-for these slides. I'll give the link again at the end.
+However, the github repository has the source for these slides, and also a set
+of extended notes with links. I'll give the URL again at the end.
 
 Timeline
 --------
 
-There's a lot to cover, even so.
+I'm ignoring anything that isn't just text (so, music, mathematics, diagrams,
+bibliographies, indices, etc.).
 
-This is a very brief timeline - I shan't actually talk about everything on it.
+Even so, this is clearly not all of the text markup formats there are, but
+hopefully its a good survey.
+
+There's a lot to cover, even so.
 
 What's interesting, though, is that just about everything named is still in
 use, in one form or another.
@@ -56,7 +57,8 @@ presentationally marked documents.
 
 But it can also be important to mark up the meaning of text for its own sake.
 
-Subcategories, mainly of Presentational:
+Subcategories, mainly of Presentational
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Lightweight markup*: simple to type, and hopefully easier to read. Hence also
 
@@ -72,7 +74,7 @@ Obviously a markup may span categories.
 
 Jerome H. Saltzer for CTSS (Compatible Time Sharing System)
 
-Ported to BCPL and then Multics. Ancestor to roff and thus, ultimately, all of
+Ported to BCPL and Multics. Ancestor to roff and thus, ultimately, all of
 the roff family.
 
 In the 1980s/1990s I used Digital Standard Runoff, also a direct descendant.
@@ -85,15 +87,15 @@ Commands could be abbreviated.
 
 Inline commands shift the "case", for instance in and out of bold case.
 
-1969: GML / 1986: SGML
-----------------------
+1969: GML / 1986: SGML / 1997: XML
+----------------------------------
 
 1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
 
-GML (Charles Goldfarb, Edward Mosher, Raymond Lorie - note the initials of the
+1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie - note the initials of the
 surnames) at IBM. 
 
-[Standard] Generalised Markup Language.
+1986 [Standard] Generalised Markup Language.
 
 A mechanism for *describing* markup languages.
 
@@ -111,6 +113,19 @@ SGML allowed the definition of elements that were implicitly closed by
 another element - e.g., <li> and <p> in HTML.
 
 Q: **Can the <item> elements here be closed implicitly?**
+
+1997 XML (Extensible Markup Language) *Semantic*.
+
+wikipedia: "XML is an application profile of SGML"
+
+XML was compiled by a working group of eleven members,[30] supported by a
+(roughly) 150-member Interest Group.
+
+No example because there is no "default" XML - a schema is needed.
+
+A simpler subset of SGML, which makes parsers easier to write. Other SGML
+based tools (TEI, Docbook, HTML itself) have generally moved towards using
+XML rather than SGML in their specification.
 
 1970s: roff, nroff, troff, groff
 --------------------------------
@@ -195,9 +210,27 @@ internet in 1991.
 
 HTML 2.0 was published as IETF RFC 1866 in 1995
 
-Yes, that is the same example as from the "using a DTD" page.
-
 HTML (at least until HTML5) is an SGML document type - an SGML application.
+
+1991: Docbook
+-------------
+
+1991 Docbook *Semantic*. Still in use today.
+
+"A semantic markup language for technical documentation"
+
+However, I think it is often "semantic" in the same way that |LaTeX| is
+"semantic" - often also for presentational purposes (but not *necessarily*).
+
+Same year as HTML
+
+Example of Docbook 4.3 from
+http://www.informatik.tu-cottbus.de/~giurca/tutorials/DocBook/index.htm
+
+Before Docbook 5, an SGML language, defined by a DTD
+
+DocBook 5 is an XML language, formally defined by a RELAX NG schema with
+integrated Schematron rules.
 
 1991: setext
 ------------
@@ -209,10 +242,12 @@ Ian Feldman, for use in writing the TidBITs electronic newsletter.
 Partly a reaction to SGML. Clearly influential on all of the succeeding
 lightweight markups.
 
-Same year as HTML
+Same year as HTML and Docbook
 
-Note: body text indented. Underlining indicated by something like
-underlining (but nb: underlining *should* mean italics).
+Note: the body text must be indented.
+
+Underlining markup reminiscent of actual underlining
+(but nb: underlining *should* mean italics).
 
 Two dots for comments or special meaning.
 
@@ -222,27 +257,6 @@ own purposes.
 
   **Maybe** add an example of a link? (Links look very similar to one of the
   forms that reStructuredText supports)
-
-1991: Docbook
--------------
-
-1991 Docbook *Semantic*. Still in use today.
-
-"A semantic markup language for technical documentation"
-
-However, partly semantic in the same way that |LaTeX| is used - often also for
-presentational purposes (but not *necessarily*).
-
-Same year as HTML and setext.
-
-Example of Docbook 4.3 from
-http://www.informatik.tu-cottbus.de/~giurca/tutorials/DocBook/index.htm
-
-Before Docbook 5, an SGML language, defined by a DTD, and then later with
-an XML variant (if I've got that right).
-
-DocBook 5 is an XML language, formally defined by a RELAX NG schema with
-integrated Schematron rules.
 
 1994/1995: wikiwikiweb
 ----------------------
@@ -293,33 +307,16 @@ when writing plain text.
 
 A heading is a heading because it is followed by a non-heading (!)
 
+Single quotes or doubled backquotes for "inline" text.
+
+Footnotes are fairly simple. Note the use of two dots to introduce the
+actual footnote.
+
 All block entities must be separated by blank lines.
 
 Note that "o" can be a list delimiter - regarded as a serious ambiguity.
 
 Specified by example, somewhat ambiguously.
-
-1997: XML
----------
-
-**If this is kept** it needs to be a very brief slide. On the other hand,
-I think it is useful as a marker, given how XML is important to the SGML
-world.
-
-1997 XML *Semantic*.
-
-Extensible Markup Language
-
-wikipedia: "XML is an application profile of SGML"
-
-No example because there is no "default" XML - a schema is needed.
-
-A simpler subset of SGML, which makes parsers easier to write. Other SGML
-based tools (TEI, Docbook, HTML itself) have generally moved towards using
-XML rather than SGML in their specification.
-
-XML was compiled by a working group of eleven members,[30] supported by a
-(roughly) 150-member Interest Group.
 
 2001/2002: reStructuredText
 ---------------------------
@@ -334,11 +331,19 @@ Original mailing of the idea to the Doc-Sig was in Nov 2000
 * Output agnostic.
 * Well specified, allowing other implementations which behave in the same way.
 
+Clearly influenced by setext and StructuredText, but with more rigor.
+
+Body text isn't indented, but things must line up when appropriate (see the lists).
+
+NB: no underlining.
+Consciously designed to allow doing certain things but not others - basically,
+if a document is too complex for reStructuredText, use something like Docbook.
+
 Sphinx was first introduced as a means of using reStructuredText to write
 the Python documenation, instead of |LaTeX|.
 
-Consciously designed to allow doing certain things but not others - basically,
-if a document is too complex for reStructuredText, use something like Docbook.
+
+Maybe mention that < and > are not special.
 
 -----
 
@@ -351,11 +356,24 @@ Stuart Rackham
 
 Aimed specifically as a lightweight way of producing docbook.
 
-Well specified, allowing other implementations which behave in the same way.
+Producing docbook means that toolchains exist to produce almost anything else.
 
 The original Asciidoc implementation was written in Python in 2002.
 
 Asciidoctor came out in 2013, and is written in Ruby.
+
+Well specified, allowing other implementations which behave in the same way.
+
+Note the use of underlines to indicate emphasis, a nice look back to
+typewritten manuscripts.
+
+Paired plus signs for monotyped text.
+
+Use of a + sign to continue a list item into a second paragraph.
+
+Nice (easy to type) way of distinguishing opening and closing quotes.
+
+Footnotes done inline - less readable, but more convenient.
 
 2004: markdown
 --------------
@@ -363,6 +381,8 @@ Asciidoctor came out in 2013, and is written in Ruby.
 2004 markdown *Presentation*. Lightweight.
 
 John Gruber, collaborating with Aaron Swartz on the syntax
+
+*So* nearly a wonderful success.
 
 Yes, I know headings can be underline as well, but I've never seen
 anyone actually doing that.
@@ -378,6 +398,9 @@ anyone actually doing that.
 
 Very successful because (the most popular variants) hit a good compromise on
 the simplicity/capability curve.
+
+Personally, I *think* that markdown would be improved a lot by just removing
+the ability to embed HTML.
 
 Hopefully CommonMark_ will improve the situation - for instance,
 github-flavoured markdown is at least now based on CommonMark.

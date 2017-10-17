@@ -7,6 +7,30 @@ To get it down to 40 minutes
 
 ----
 
+1997: XML
+---------
+
+.. note:: 1997 XML *Semantic*.
+
+  Extensible Markup Language
+
+  wikipedia: "XML is an application profile of SGML"
+
+  No example because there is no "default" XML - a schema is needed.
+
+  A simpler subset of SGML, which makes parsers easier to write. Other SGML
+  based tools (TEI, Docbook, HTML itself) have generally moved towards using
+  XML rather than SGML in their specification.
+
+  XML was compiled by a working group of eleven members,[30] supported by a
+  (roughly) 150-member Interest Group.
+
+  **If this is kept** it needs to be a very brief slide. On the other hand,
+  I think it is useful as a marker, given how XML is important to the SGML
+  world.
+
+----
+
 2009: Docbook 5
 ---------------
 
