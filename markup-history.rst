@@ -1,5 +1,4 @@
 :title: A history of markup languages
-:slide-numbers: true
 
 ----
 
@@ -89,7 +88,7 @@ Presentational or Semantic
 1964: RUNOFF
 ------------
 
-::
+.. code:: Groff
 
   .LINE LENGTH 60
   .LEFT MARGIN 0
@@ -116,13 +115,17 @@ Presentational or Semantic
 1969: GML / 1986: SGML / 1997: XML
 ----------------------------------
 
-*DTD for a list*::
+*DTD for a list:*
+
+.. code:: DTD
 
   <!--      ELEMENT MIN CONTENT             >
   <!ELEMENT list    - - (item)+             >
   <!ELEMENT item    O O (#PCDATA, (list)*)  >
 
-*and such a list*::
+*and such a list:*
+
+.. code:: XML
 
   <list>
   <item>First item</item>
@@ -157,7 +160,7 @@ Presentational or Semantic
 1970s: roff, nroff, troff, groff
 --------------------------------
 
-::
+.. code:: Groff
 
   .TH CORRUPT 1
   .SH NAME
@@ -193,7 +196,7 @@ Presentational or Semantic
 1977/1978: |TeX|
 ----------------
 
-::
+.. code:: TeX
 
   \name{Name Redacted} wrote:
 
@@ -233,14 +236,16 @@ Presentational or Semantic
 1980: Scribe
 ------------
 
-::
+.. code::
 
     @Heading(The Beginning)
     @Begin(Quotation)
         Let's start at the very beginning, a @i(very good place) to start
     @End(Quotation)
 
-*which can also be written*::
+*which can also be written:*
+
+.. code::
 
     @Heading(The Beginning)
     @(Quotation
@@ -263,7 +268,7 @@ Presentational or Semantic
 1987: TEI
 ---------
 
-::
+.. code:: XML
 
   <lg type="sestina">
   <lg type="sestet" rhyme="ababab">
@@ -295,7 +300,7 @@ Presentational or Semantic
 1991: HTML
 ----------
 
-::
+.. code:: HTML
 
   <!DOCTYPE html>
   <html>
@@ -322,7 +327,7 @@ Presentational or Semantic
 1991: Docbook
 -------------
 
-::
+.. code:: XML
 
   <?xml version="1.0" encoding="UTF-8"?>
   <!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
@@ -363,7 +368,7 @@ Presentational or Semantic
 1991: setext
 ------------
 
-::
+.. code:: reST
 
    This is the title. There can be only one.
    =========================================
@@ -399,7 +404,7 @@ Presentational or Semantic
 1994/1995: wikiwikiweb
 ----------------------
 
-::
+.. code::
 
   Paragraphs are not indented.
 
@@ -437,7 +442,7 @@ Presentational or Semantic
 1996: StructuredText
 --------------------
 
-::
+.. code:: reST
 
    This is a heading
 
@@ -468,7 +473,7 @@ Presentational or Semantic
 2001/2002: reStructuredText
 ---------------------------
 
-::
+.. code:: reST
 
    This is a heading
    =================
@@ -510,7 +515,9 @@ Presentational or Semantic
 2002: Asciidoc
 --------------
 
-::
+.. There doesn't seem to be a Pygments mode for AsciiDoc
+
+.. code:: reST
 
   This is a heading
   -----------------
@@ -547,7 +554,9 @@ Presentational or Semantic
 2004: markdown
 --------------
 
-::
+.. There doesn't seem to be a Pygments mode for markdown
+
+.. code:: reST
 
    # This is a heading
 
