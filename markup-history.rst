@@ -9,7 +9,7 @@ By Tibs / Tony Ibbs, for PyConUK 2017
 
 Written using reStructuredText_.  Presented using hovercraft_.
 
-Source and a longer article at https://github.com/tibs/markup-history
+Source and extended notes at https://github.com/tibs/markup-history
 
 .. _reStructuredText: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 .. _hovercraft: https://github.com/regebro/hovercraft
@@ -608,7 +608,7 @@ Fin
 
 Written using reStructuredText_.  Presented using hovercraft_.
 
-Source and a longer article at https://github.com/tibs/markup-history
+Source and extended notes at https://github.com/tibs/markup-history
 
 You may also be interested in Write the Docs: http://www.writethedocs.org/
 

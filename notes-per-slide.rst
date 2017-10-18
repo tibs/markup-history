@@ -431,7 +431,9 @@ Fin
 * 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
-Written using reStructuredText_.  Presented using hovercraft_.
+Written using reStructuredText.
+
+Presented using hovercraft
 
 Source and a longer article at https://github.com/tibs/markup-history
 
