@@ -191,11 +191,12 @@ set of high-quality guidelines for the encoding of humanities texts, and to
 support their use by a wide community of projects, institutions, and
 individuals"
 
-Some mark up of the start of Swinburne's Sestina, showing the working of the
-ryhming scheme - ``rhyme="ababab"`` and then on each line the rhyming word
-and which part (a, b) of the rhyming scheme it is.
+Some mark up of the start of Swinburne's Sestina,
+taken from the poetry examples at `TEI By Example`_,
+showing the working of the ryhming scheme.
 
-Taken from the poetry examples at `TEI By Example`_.
+``rhyme="ababab"`` and then on each line the rhyming word and which part (a,
+b) of the rhyming scheme it is.
 
 .. _`TEI by example`: http://teibyexample.org/examples/TBED04v00.htm
 
@@ -246,8 +247,8 @@ Same year as HTML and Docbook
 
 Note: the body text must be indented.
 
-Underlining markup reminiscent of actual underlining
-(but nb: underlining *should* mean italics).
+Underlining should really mean italics, following typewritten text
+conventions.
 
 Two dots for comments or special meaning.
 
@@ -302,6 +303,8 @@ Like most wiki formats, specified by example, with no real rigour.
 Created by Jim Fulton of Digital Creations (later Zope Foundation) for use
 in Zope.
 
+Clearly influenced by setext.
+
 Significant indentation - good idea in a programming language, not so much
 when writing plain text.
 
@@ -342,10 +345,7 @@ if a document is too complex for reStructuredText, use something like Docbook.
 Sphinx was first introduced as a means of using reStructuredText to write
 the Python documenation, instead of |LaTeX|.
 
-
 Maybe mention that < and > are not special.
-
------
 
 2002: Asciidoc
 --------------
