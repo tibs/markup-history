@@ -130,7 +130,7 @@ has a very nice timeline. Items marked [T] are from it.
 * 2004 markdown John Gruber and Aaron Swartz
 * 2013 Asciidoctor
 
-or:
+or (from various sources, including wikipedia):
 
 * 1964 TYPSET and RUNOFF
 * 1969 GML
@@ -210,13 +210,42 @@ section at the end.*
 RUNOFF and its descendants
 --------------------------
 
-.. note:: RUNOFF, roff, nroff, troff, DSR, groff
+.. code:: Groff
+
+  .LINE LENGTH 60
+  .LEFT MARGIN 0
+  .PARAGRAPH 5
+  Call us on our toll free number
+
+  .CENTER
+  1-800-555-5555
+
+  and we will respond as soon as convenient.
+
+RUNOFF, roff, nroff, troff, DSR, groff
 
 Simple text layout and pagination, including right justification.
 
 The original RUNOFF and TYPSET were written by
 Jerome H. Saltzer for CTSS_ (Compatible Time Sharing System)
 
+.. code:: Groff
+
+  .TH CORRUPT 1
+  .SH NAME
+  corrupt \- modify files by randomly changing bits
+  .SH SYNOPSIS
+  .B corrupt
+  [\fB\-n\fR \fIBITS\fR]
+  [\fB\-\-bits\fR \fIBITS\fR]
+  .IR file ...
+  .SH DESCRIPTION
+  .B corrupt
+  modifies files by toggling a randomly chosen bit.
+  .SH OPTIONS
+  .TP
+  .BR \-n ", " \-\-bits =\fIBITS\fR
+  Set the number of bits to modify.  Default is one bit.
 
 * `Wikipedia on TYPSET and RUNOFF`_
 * CTSS_ (the Compatible Time Sharing System) which is the machine on which the
@@ -282,8 +311,26 @@ Jerome H. Saltzer for CTSS_ (Compatible Time Sharing System)
    .. _`TJ-2`: `Wikipedia on TJ-2`_
    .. _`Wikipedia on TJ-2`: https://en.wikipedia.org/wiki/TJ-2
 
-GML and SGML
-------------
+GML and SGML and XML
+--------------------
+
+*DTD for a list:*
+
+.. code:: DTD
+
+  <!--      ELEMENT MIN CONTENT             >
+  <!ELEMENT list    - - (item)+             >
+  <!ELEMENT item    O O (#PCDATA, (list)*)  >
+
+*and such a list:*
+
+.. code:: XML
+
+  <list>
+  <item>First item</item>
+  <item>Second item</item>
+  <item>Last item</item>
+  </list>
 
 GML: 1969 onwards, Charles Goldfarb, Edward Mosher and Raymond Lorie
 
@@ -317,44 +364,56 @@ Originally a GML starter set was provided as a set of macros for IBM Script_
 .. _`Guidelines for Writing SGML DTDs (Draft)`: http://www.tei-c.org/Vault/ML/mlw01.htm
 .. _`Wikipedia on Document Type Definition`: https://en.wikipedia.org/wiki/Document_type_definition
 
-TEI
----
+1997: XML
 
-  """The mission of the Text Encoding Initiative is to develop and maintain a
-  set of high-quality guidelines for the encoding of humanities texts, and to
-  support their use by a wide community of projects, institutions, and
-  individuals"""
+Not itself of direct interest as a markup language, but important because it
+is a subset of SGML. In particular, it is a simpler subset of SGML, which
+makes parsers easier to write. Other SGML based tools (TEI, Docbook, HTML
+itself) have generally moved towards using XML rather than SGML in their
+specification.
 
-This alone looks like a whole field of study I haven't even started - I don't
-expect to be able to do it justice here.
+* `XML Information`_  is a nested set of pages (I assume course notes).
+  Constituent topics are "What is Markup?", "Schemas" and "Special Characters
+  and Unicode". Author presumably Beck, undated.
+* `Is there a difference between SGML DTDs and XML DTDs?`_ is from the "Schemas"
+  section of the above.
+* `XML People`_, an article by Tim Bray, originally writing in 1998, and
+  republished in 2008. It describes the genesis of XML and the people (and
+  organisations) involved.
 
-* `Wikipedia on Text Encoding Initiative`_
-* `TEI\: Text Encoding Initiative`_ (homepage), and some interesting things
-  there:
 
-  * `The TEI Archive`_ 1988-1999 articles on the Text Encoding Initiative, with
-    a link to another part for 1987-1988
-  * `A Bibliography of Publications Related to the Text Encoding Initiative`_,
-    ...-2013, which are not just related to TEI itself
-
-* `The TEI and XML`_, from "What is the Text Encoding Initiative?", Lou
-  Burnard, OpenEdition Press, 2014
-* `The TEI By Example Project`_ "offers a series of freely
-  available online tutorials walking individuals through the different stages
-  in marking up a document in TEI (Text Encoding Initiative)."
-
-.. _`Wikipedia on Text Encoding Initiative`: https://en.wikipedia.org/wiki/Text_Encoding_Initiative
-.. _`TEI\: Text Encoding Initiative`: http://www.tei-c.org/index.xml
-.. _`The TEI Archive`: http://www.tei-c.org/Vault/
-.. _`A Bibliography of Publications Related to the Text Encoding Initiative`: http://www.tei-c.org/Support/Learn/tei_bibliography.xml
-.. _`The TEI and XML`: http://books.openedition.org/oep/680
-.. _`The TEI By Example Project`: http://teibyexample.org/
-
+.. _`XML Information`: https://www.ncbi.nlm.nih.gov/staff/beck/xml/index.html
+.. _`Is there a difference between SGML DTDs and XML DTDs?`: https://www.ncbi.nlm.nih.gov/staff/beck/xml/schemas/II-C.html
+.. _`XML People`: http://www.tbray.org/ongoing/When/200x/2008/02/10/XML-People
 
 |TeX| and related
 -----------------
 
-An example::
+.. code:: TeX
+
+  \name{Name Redacted} wrote:
+
+  \beginletter
+  Thoughts on ``Why I like children's books'':
+
+  \beginlist
+
+  \item{\blob} They aren't afraid to show a sense of wonder.
+
+  \item{\blob} They aren't `duty bound' to include love interest for the sake of
+  it.
+
+  \item{\blob} They are rarely cynical, rarely bitter---but the best do not avoid
+  tragedy and truth.
+
+  \item{\blob} They are willing to teach the simple lessons of being human---which
+  adult books so often scorn, but which we all need to learn and relearn.
+
+  \endlist
+
+|LaTeX|
+
+.. code:: TeX
 
    \beginsection
    A new section
@@ -599,6 +658,52 @@ not clear from it's documentation if the author is aware of Scribe_.
 
   .. _`This is Scribe!`: http://www-sop.inria.fr/members/Manuel.Serrano/scribe/doc/scribe.html
 
+TEI
+---
+
+.. code:: XML
+
+  <lg type="sestina">
+  <lg type="sestet" rhyme="ababab">
+  <l>I saw my soul at rest upon a <rhyme label="a" xml:id="A">day</rhyme></l>
+  <l>As a bird sleeping in the nest of <rhyme label="b" xml:id="B">night</rhyme>,</l>
+  <l>Among soft leaves that give the starlight <rhyme label="a" xml:id="C">way</rhyme></l>
+  <l>To touch its wings but not its eyes with <rhyme label="b" xml:id="D">light</rhyme>;</l>
+  <l>So that it knew as one in visions <rhyme label="a" xml:id="E">may</rhyme>,</l>
+  <l>And knew not as men waking, of <rhyme label="b" xml:id="F">delight</rhyme>.</l>
+  </lg>
+
+  """The mission of the Text Encoding Initiative is to develop and maintain a
+  set of high-quality guidelines for the encoding of humanities texts, and to
+  support their use by a wide community of projects, institutions, and
+  individuals"""
+
+This alone looks like a whole field of study I haven't even started - I don't
+expect to be able to do it justice here.
+
+* `Wikipedia on Text Encoding Initiative`_
+* `TEI\: Text Encoding Initiative`_ (homepage), and some interesting things
+  there:
+
+  * `The TEI Archive`_ 1988-1999 articles on the Text Encoding Initiative, with
+    a link to another part for 1987-1988
+  * `A Bibliography of Publications Related to the Text Encoding Initiative`_,
+    ...-2013, which are not just related to TEI itself
+
+* `The TEI and XML`_, from "What is the Text Encoding Initiative?", Lou
+  Burnard, OpenEdition Press, 2014
+* `The TEI By Example Project`_ "offers a series of freely
+  available online tutorials walking individuals through the different stages
+  in marking up a document in TEI (Text Encoding Initiative)."
+
+.. _`Wikipedia on Text Encoding Initiative`: https://en.wikipedia.org/wiki/Text_Encoding_Initiative
+.. _`TEI\: Text Encoding Initiative`: http://www.tei-c.org/index.xml
+.. _`The TEI Archive`: http://www.tei-c.org/Vault/
+.. _`A Bibliography of Publications Related to the Text Encoding Initiative`: http://www.tei-c.org/Support/Learn/tei_bibliography.xml
+.. _`The TEI and XML`: http://books.openedition.org/oep/680
+.. _`The TEI By Example Project`: http://teibyexample.org/
+
+
 Postscript
 ----------
 
@@ -615,6 +720,18 @@ Postscript
 
 HTML and related
 ----------------
+
+.. code:: HTML
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>This is a title</title>
+    </head>
+    <body>
+      <p>Hello world!</p>
+    </body>
+  </html>
 
 There's not a lot here, as I'm not (in this context) especially interested in
 HTML-as-markup, and it's really a specialism of its own, with its own
@@ -647,6 +764,28 @@ consideration and politics.
 Docbook
 -------
 
+.. code:: XML
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
+  "http://www.oasis-open.org/docbook/xml/simple/1.0/sdocbook.dtd">
+  <article>
+    <title>DocBook Tutorial</title>
+    <articleinfo>
+      <author>
+        <firstname>Adrian</firstname>
+        <surname>Giurca</surname>
+      </author>
+      <date>April 5, 2005</date>
+    </articleinfo>
+    <section>
+      <title>What is DocBook ?</title>
+      <para>DocBook is an SGML dialect developed by O'Reilly and HaL Computer
+      Systems in 1991.
+      </para>
+    </section>
+  </article>
+
 - DocBook before 4.1 - SGML with a DTD
 - DocBook from 4.1 but before 5 - SGML/XML with a DTD
 - 2005 DocBook 5 and later - XML with a RELAX NG schema, with rule-based
@@ -674,6 +813,21 @@ Docbook
 
 Wikiwikiweb
 -----------
+
+.. code::
+
+  Paragraphs are not indented.
+
+  * This is a list item
+  ** This is a sub-list item
+
+    Indented text is monospaced.
+
+  We have ''emphasis'', '''bold''', '''''bold italic''''', and a LinkToAnotherPage.
+
+  But we can A''''''voidMakingAWikiLink.
+
+  No HTML, tables, headers, maths, scripts. No links within a page.
 
 * WikiWikiWeb_ itself (now readonly).
 * `Wikipedia on Wiki`_ talks about wiki pages themselves.
@@ -707,30 +861,6 @@ Perl's POD (or Plain Old Documentation)
 .. _`The Timeline of Perl and its Culture`: http://history.perl.org/PerlTimeline.html
 .. _perlpodspec: https://perldoc.perl.org/perlpodspec.html
 .. _`Wikipedia on Javadoc`: https://en.wikipedia.org/wiki/Javadoc
-
-XML
----
-1997
-
-Not itself of direct interest as a markup language, but important because it
-is a subset of SGML. In particular, it is a simpler subset of SGML, which
-makes parsers easier to write. Other SGML based tools (TEI, Docbook, HTML
-itself) have generally moved towards using XML rather than SGML in their
-specification.
-
-* `XML Information`_  is a nested set of pages (I assume course notes).
-  Constituent topics are "What is Markup?", "Schemas" and "Special Characters
-  and Unicode". Author presumably Beck, undated.
-* `Is there a difference between SGML DTDs and XML DTDs?`_ is from the "Schemas"
-  section of the above.
-* `XML People`_, an article by Tim Bray, originally writing in 1998, and
-  republished in 2008. It describes the genesis of XML and the people (and
-  organisations) involved.
-
-
-.. _`XML Information`: https://www.ncbi.nlm.nih.gov/staff/beck/xml/index.html
-.. _`Is there a difference between SGML DTDs and XML DTDs?`: https://www.ncbi.nlm.nih.gov/staff/beck/xml/schemas/II-C.html
-.. _`XML People`: http://www.tbray.org/ongoing/When/200x/2008/02/10/XML-People
 
 Lightweight markup
 ------------------
@@ -845,6 +975,26 @@ approach like::
 
 StructuredText
 --------------
+
+.. code:: reST
+
+   This is a heading
+
+     This is a paragraph. Body text is indented.
+
+     - This is a list item. Words can be *emphasized*, _underlined_,
+     **strong** or 'inline' - yes, that's using single quotes [1].
+
+     o This is a list item as well. Each list item must be separated by a
+     blank line from other entities.
+
+     This is a sub-heading
+
+       Sub-section body text is indented even further. We know the sub-header
+       is such because it is followed by this indented text.
+
+   .. [1] Or we could use ``backquotes``.
+
 StructuredText was used extensively in the Zope world, in part to convey type
 information [citation needed]. However there were various problems with it,
 [give examples]. A start was made on a replacement format, StructuredTextNG
@@ -911,7 +1061,7 @@ reStructuredText.
 reStructuredText
 ----------------
 
-An example. Rather sadly, the same(ish) text as from the StructuredText slide::
+An example. Similar text to that for StructuredText::
 
    This is a heading
    =================
@@ -1008,6 +1158,26 @@ It's also worth looking at:
 AsciiDoc
 --------
 
+.. code:: reST
+
+  This is a heading
+  -----------------
+
+  This is a paragraph. Body text is not indented.
+
+  - This is a list item. Words can be _italic_, *bold* or
+   +mono+ - yes, that's paired plus-signs.
+  - This is a list item as well. We don't need blank lines between list items.
+  +
+  This is more of the second list item. It is "`joined on`" by the
+  `+`.footnote:[Note the quotation marks around _joined on_.]
+
+  This is a sub-heading
+  ~~~~~~~~~~~~~~~~~~~~~
+
+  Sub-section body text is not indented either. What makes sense for
+  programming languages is irritating for text.
+
 The tradeoffs made for a particular form of lightweight markup are always very
 personal - one person's just-simple-enough is another person's step too far.
 This means that developers keep trying to come up with a form of markup that
@@ -1092,6 +1262,26 @@ makes sense as its ambitions are greater.
 
 Markdown
 --------
+
+.. code:: reST
+
+   # This is a heading
+
+   This is a paragraph. Body text is not indented.
+
+   - This is a list item. Words can be *emphasized*, **strong** or
+   `inline` - that's single backquotes.
+   - This is a list item as well. We don't need blank lines between list items.
+
+       This is more of the second list item. It's first line must be indented
+     by 4 spaces or a tab.
+
+   ## This is a sub-heading
+
+   Sub-section body text is not indented either. What makes sense for
+   programming languages is irritating for text.
+
+   (We don't do footnotes, but you can include <tt>HTML</tt>.)
 
 ...it should have been so wonderful... (me, just now)
 
@@ -1273,5 +1463,20 @@ background.
 
 .. _`Mathematical Markup Language (MathML™) 1.01 Specification`: https://www.w3.org/TR/REC-MathML/
 .. _`Introduction`: https://www.w3.org/TR/REC-MathML/chapter1.html
+
+Fin
+---
+
+* 1960s TYPSET and RUNOFF, GML
+* 1970s roff, runoff, nroff/troff, |TeX| in SAIL
+* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
+* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
+* 2000s reStructuredText, AsciiDoc, markdown
+
+Written using reStructuredText_.
+
+Source and extended notes at https://github.com/tibs/markup-history
+
+You may also be interested in Write the Docs: http://www.writethedocs.org/
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
