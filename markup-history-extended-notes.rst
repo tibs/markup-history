@@ -4,8 +4,11 @@ A history of markup languages
 
 By Tibs / Tony Ibbs, for PyConUK 2017
 
-.. note:: This is the "paper" that is equivalent to the slideshow. It may or
-   may not remainng a separate document.
+.. note:: These are the extended notes to go with the slideshow, together
+   with links which I hope will be useful, and perhaps act as a start on
+   finding out more about markup languages.
+
+.. warning:: **This document is still a work in progress.**
 
 .. For the moment, we represent TeX and LaTeX as simple text, but I might
    change that in the future
@@ -13,6 +16,8 @@ By Tibs / Tony Ibbs, for PyConUK 2017
 .. |TeX| replace:: TeX
 
 .. |LaTeX| replace:: LaTeX
+
+.. contents::
 
 Introduction
 ============
@@ -72,26 +77,28 @@ write a text without regard to the mechanism by which it will actually be
 represented to the reader - so, for instance, in creating man pages, articles
 like this, or books of mathematics.
 
-.. note:: Interestingly, almost all of the markup formats I'm going to discuss
-   are still in use today.
+Interestingly, almost all of the markup formats I'm going to discuss are still
+in use today.
 
 Things I'm ignoring
 ===================
+
+I'm ignoring anything that isn't just text, so:
+
 * Music
 * Mathematics
 * Pictures/diagrams/graphs
 * Bibliographies and indices
 * All sorts of other things
 
-Basically anything that isn't just a text document.
+Basically, I'm ignoring anything that isn't just a text document.
+
+Further, there are many more markup formats than I discuss here (perhaps
+unsurprisingly, people have been inventing "easier" ways to write HTML
+documents since the early days of HTML).
 
 Links and timelines
 ===================
-
-*To be rationalised*
-
-`25 Years of |TeX| and METAFONT\: Looking Back and Looking Forward`_:
-has a very nice timeline. Items marked [T] are from it.
 
 * 1964 TYPSET and RUNOFF https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
 * 1967 William Tunincliffe: the separation of the information content of
@@ -100,20 +107,20 @@ has a very nice timeline. Items marked [T] are from it.
   "heading" rather than "format-17") with this presentation given at a meeting of the
   Canadian Government Printing Office in September 1967
 * 1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM
-* [T] "1970s" roff, script, runoff, document
-* [T] 1976 nroff and troff (J. Ossanna)
-* [T] 1978 bib and refer
-* [T] 1977/1978 |TeX| and Metafont ("classic" version, written in SAIL)
-* [T] 1978-1980 Scribe (B. Reid) https://en.wikipedia.org/wiki/Scribe_(markup_language)
-* [T] 1982 |TeX| and Metafont in WEB/Pascal
-* [T] 1983-1985 |LaTeX| (L. Lamport)
+* "1970s" roff, script, runoff, document
+* 1976 nroff and troff (J. Ossanna)
+* 1978 bib and refer
+* 1977/1978 |TeX| and Metafont ("classic" version, written in SAIL)
+* 1978-1980 Scribe (B. Reid) https://en.wikipedia.org/wiki/Scribe_(markup_language)
+* 1982 |TeX| and Metafont in WEB/Pascal
+* 1983-1985 |LaTeX| (L. Lamport)
 * 1984 Postscript (https://en.wikipedia.org/wiki/PostScript has 1982-1984)
 * 1986 ISO standard SGML (although the first working draft was in 1980)
 * 1987 TEI 
 * 1991 Time Berners-Lee wrote "HTML Tags" document, proposing what was
   essentially HTML, built on SGML
-* [T] 1989-1991 HTML and HTTP (T. Berners-Lee)
-* [T] 1993 PDF (Adobe Systems)
+* 1989-1991 HTML and HTTP (T. Berners-Lee)
+* 1993 PDF (Adobe Systems)
 * 1991 setext, Ian Feldman, for use in the TidBITS electronic newsletter
 * 1991 Docbook
 * 1994/1995 WikiWikiWeb, the first wiki, Ward Cunningham
@@ -130,53 +137,12 @@ has a very nice timeline. Items marked [T] are from it.
 * 2004 markdown John Gruber and Aaron Swartz
 * 2013 Asciidoctor
 
-or (from various sources, including wikipedia):
-
-* 1964 TYPSET and RUNOFF
-* 1969 GML
-* 1970s roff, runoff
-* 1976 nroff and troff
-* 1977/1978 |TeX| and Metafont
-* 1980 Scribe
-* 1983-1985 |LaTeX|
-* 1984 Postscript
-* 1986 SGML
-* 1987 TEI
-* 1989-1991 HTML
-* 1991 setext
-* 1991 Docbook
-* 1994/1995 WikiWikiWeb
-* 1994 Perl 5.000 and pod
-* 1996 StructuredText
-* 1997 XML
-* 2000-2002 reStructuredText
-* 2002 AsciiDoc
-* 2004 markdown
-
-
-----------------------------
-
-*More to be written*
-
-----------------------------
-
-Things in some order
-====================
-All the links, collected in some sort of order, organised by topic.
-This needs ordering, and then expanding into the actual "chapters" on each
-topic.
-
-Examples need copying across from the slideshow.
-
-Also annotate each "chapter" with:
-
-* the date of each markup
-* its type (Semantic, lightweight, etc.)
-* its principal authors
-* whether it is still in use.
+Various sources were used in creating the timeline, but a special mention has
+to go to `25 Years of |TeX| and METAFONT\: Looking Back and Looking
+Forward`_, and of course to Wikipedia.
 
 General
--------
+=======
 *Some of these are sensible to keep here, as an "introduction", and some
 need a bit more thought as to where to place them - maybe a "Miscellaneous"
 section at the end.*
@@ -208,7 +174,14 @@ section at the end.*
 
 
 RUNOFF and its descendants
---------------------------
+==========================
+
+.. note:: 1964 RUNOFF *Presentational*
+
+.. note:: 1970s \*roff *Presentational*. Still in use (as 1990: groff)
+
+RUNOFF
+------
 
 .. code:: Groff
 
@@ -229,6 +202,48 @@ Simple text layout and pagination, including right justification.
 The original RUNOFF and TYPSET were written by
 Jerome H. Saltzer for CTSS_ (Compatible Time Sharing System)
 
+  Ported to BCPL and Multics. Ancestor to roff and thus, ultimately, all of
+  the roff family.
+
+  This example is (more or less) from the original TYPSET/RUNOFF documentation.
+
+  Commands starting with a dot in the first column.
+
+  Commands could be abbreviated.
+
+  Inline commands shift the "case", for instance in and out of bold case.
+
+An example of Digital Standard Runoff (DSR), showing that the name had an
+enduring meaning. I used to use DSR on VMS in the 1980s/90s.
+
+.. code:: Groff
+
+    .TITLE A simpler DSR example
+    .CHAPTER This is a chapter
+
+    This is the first paragraph.
+    .LIST
+    .LIST ELEMENT;This is a list element. We have *bold\* and &underline\&.
+    .LIST ELEMENT;This is another list element. I like interrobangs ?%!
+    .END LIST
+
+Abbreviated forms are also available, e.g., ``.ls`` instead of
+``.list``, and ``.le;`` instead of ``list element;``.
+
+The roffs
+---------
+
+roff started as a transliteration of the BCPL version of runoff, for UNIX,
+around 1970.
+
+The example is a (fake) man page, using the ``man`` macro package from
+Lars Wirzenius' `Writing manual pages`_
+
+.TH = title, .SH = sub-heading, .B = bold, other font usages (e.g., normal
+font and underlining) are indicated by the \\f sequences.
+
+Q: **Commonly used with a macro language - essentially programmable?**
+
 .. code:: Groff
 
   .TH CORRUPT 1
@@ -246,6 +261,32 @@ Jerome H. Saltzer for CTSS_ (Compatible Time Sharing System)
   .TP
   .BR \-n ", " \-\-bits =\fIBITS\fR
   Set the number of bits to modify.  Default is one bit.
+
+The following is an example of ``groff``:
+
+.. code:: Groff
+
+  ..INCLUDE  mission-statement-strings.mom
+  .TITLE    "\*[Groff-Mission-Statement]
+  .SUBTITLE "\*[2014]
+  .INCLUDE  mission-statement-style.mom
+  .PP
+  As the most widely deployed implementation of troff in use today,
+  groff holds an important place in the Unix universe.  Frequently
+  and erroneously dismissed as a legacy program for formatting
+  Unix manuals (manpages), groff is in fact a sophisticated system
+  for producing high-quality typeset material, from business
+  correspondence to complex, technical reports and plate-ready books.
+  \*[BU3]With an impressive record for backward compatibility, it
+  continues to evolve and play a leading role in the development of
+  free typesetting software.
+
+1990 groff (GNU troff)
+
+  Whilst the roff family are not strictly speaking programmable as
+  such, their use of macros (originally m4?) means that in practice they are
+  as capable as systems such as |TeX| (although I don't think that DSLs like
+  |LaTeX| exist as-such).
 
 * `Wikipedia on TYPSET and RUNOFF`_
 * CTSS_ (the Compatible Time Sharing System) which is the machine on which the
@@ -269,6 +310,7 @@ Jerome H. Saltzer for CTSS_ (Compatible Time Sharing System)
   and document formatting package that allows you to create high-quality
   Portable Document Format (.pdf) or PostScript (.ps) files. It is a macro set
   that sits on top of groff_.
+* `Writing manual pages`_, Lars Wirzenius, 2016
 
 * From `Unix history`_, `William Stewart`_, 1996-2014:V
 
@@ -290,6 +332,7 @@ Jerome H. Saltzer for CTSS_ (Compatible Time Sharing System)
 .. _`Wikipedia on groff`: https://en.wikipedia.org/wiki/Groff_(software)
 .. _`roff - concepts and history of roff typesetting`: https://linux.die.net/man/7/roff
 .. _`OpenVMS Digital Standard Runoff Reference Manual`: http://h20565.www2.hpe.com/hpsc/doc/public/display?docId=emr_na-c04623260  
+.. _`Writing manual pages`: https://liw.fi/manpages/
 .. _`History of UNIX Manpages`: http://manpages.bsd.lv/history.html
 .. _Groff: http://www.gnu.org/software/groff/
 .. _`Groff and mom\: an overview`: https://www.gnu.org/software/groff/groff-and-mom.pdf
@@ -312,9 +355,61 @@ Jerome H. Saltzer for CTSS_ (Compatible Time Sharing System)
    .. _`Wikipedia on TJ-2`: https://en.wikipedia.org/wiki/TJ-2
 
 GML and SGML and XML
---------------------
+====================
 
-*DTD for a list:*
+.. note:: 1969 GML, 1986 SGML, 1997: XML
+
+   *Semantic* and *"meta"* (DTDs, schemas)
+
+GML
+---
+
+1969 GML
+
+GML stood for Generalized Markup Language, but also for the initials of the
+surnames of its inventors (Charles Goldfarb, Edward Mosher, Raymond Lorie).
+surnames).
+
+GML was intended to be a mechanism for *describing* markup languages, rather
+than a markup language itself. 
+
+1986 [Standard] Generalised Markup Language.
+
+Here is an example of GML, from `The Roots of SGML -- A Personal
+Recollection`_ by Charles F. Goldfarb. It uses the "starter set", implemented
+using macros in IBM's Script_:
+
+.. code::
+
+  :h1.Chapter 1:  Introduction
+  :p.GML supported hierarchical containers, such as
+  :ol
+  :li.Ordered lists (like this one),
+  :li.Unordered lists, and
+  :li.Definition lists
+  :eol.
+  as well as simple structures.
+  :p.Markup minimization (later generalized and formalized in SGML),
+  allowed the end-tags to be omitted for the "h1" and "p" elements.
+
+.. _`The Roots of SGML -- A Personal Recollection`: http://www.sgmlsource.com/history/roots.htm
+
+Use of GML (specifically, the starter set) is described by:
+
+* `GML Starter Set User's Guide`_, IBM 1980, 1991
+* `GML Starter Set Reference`_, IBM 1980, 1991
+
+.. _`GML Starter Set User's Guide`: http://publibfp.boulder.ibm.com/cgi-bin/bookmgr/BOOKS/dsm04m00/CCONTENTS
+.. _`GML Starter Set Reference`: http://publibfp.boulder.ibm.com/cgi-bin/bookmgr/BOOKS/dsm05m00/CCONTENTS
+
+SGML
+----
+
+SGML uses DTDs (Document Type Definitions) to describe the set of
+markup declarations that form a *document type* (e.g., SGML itself, XML,
+HTML).
+
+Shown is a DTD fragment for defining a simple list:
 
 .. code:: DTD
 
@@ -322,7 +417,7 @@ GML and SGML and XML
   <!ELEMENT list    - - (item)+             >
   <!ELEMENT item    O O (#PCDATA, (list)*)  >
 
-*and such a list:*
+and an example of the list structure described:
 
 .. code:: XML
 
@@ -332,9 +427,59 @@ GML and SGML and XML
   <item>Last item</item>
   </list>
 
-GML: 1969 onwards, Charles Goldfarb, Edward Mosher and Raymond Lorie
+Q: **Can the <item> elements here be closed implicitly?**
 
-Originally a GML starter set was provided as a set of macros for IBM Script_
+Sensibly, SGML also came with a "starter set", drafted by Joan Smith and
+Janet Vandore.
+
+The following example of SGML, using that starter set, is transcribed from
+Figure 3 of the paper named in the example. The ellipses are mine.
+
+.. code:: XML
+
+  <td> The Implication of SGML for the Preparation of Scientific Publications
+  <au> Joan M. Smith
+  <ad>
+  <al> National Computing Centre, Oxford Road, Manchester M1 7ED
+  <ab> The &SGML (SGML) is a draft international standard for publishing.
+  ...
+  <h1>Introduction
+  <p> The official title of SGML, currently, is ISO/DIS 8879,
+  <ci> Information Processing &end Text and Office Systems &end &SGML (SGML)
+  </ci>. <ref> ISO/DIS 8879 <ci> Information Processing &end Text and Office
+  Systems &end &SGML (SGML). ISO, Geneva (1985). </ref>
+  ...
+  <p>There are several points worthy of note here:
+  <ul>
+  <li> the normal publishing delay with ISO standards...
+  ...
+  </ul>
+
+Note how SGML (like GML before it) allowed the definition of elements that
+were implicitly closed by another element - e.g., <li> and <p>
+
+  - <td> is the document title
+  - <ad> is an address, <al> an address line
+  - <ab> is the abstract
+  - <ci> indicates a citation, which rendered as italics in the resulting paper.
+  - <ref> marks up a Reference, collected for the section at the end of the document.
+  - &SGML is an "entity reference" that expands to 'Standard Generalized
+    Markup Language' - we're familiar with things like &eacute; from HTML.
+
+An SGML document must declares a DOCTYPE to say what DTD it is conforming to.
+The following example should look very familiar:
+
+.. code:: html
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>This is a title</title>
+    </head>
+    <body>
+      <p>Hello world!</p>
+    </body>
+  </html>
 
 * `Wikipedia on GML`_
 * `Wikipedia on SCRIPT`_
@@ -348,7 +493,7 @@ Originally a GML starter set was provided as a set of macros for IBM Script_
 * https://en.wikipedia.org/wiki/Document_type_definition
 
 * `The SGML History Niche`_, Charles F. Goldfarb, 2002/2003. Some personal
-  recollections.
+  recollections, all of which are well worth reading.
 
 .. _`Wikipedia on GML`: https://en.wikipedia.org/wiki/IBM_Generalized_Markup_Language
 .. _Script: `Wikipedia on SCRIPT`_
@@ -364,13 +509,25 @@ Originally a GML starter set was provided as a set of macros for IBM Script_
 .. _`Guidelines for Writing SGML DTDs (Draft)`: http://www.tei-c.org/Vault/ML/mlw01.htm
 .. _`Wikipedia on Document Type Definition`: https://en.wikipedia.org/wiki/Document_type_definition
 
-1997: XML
+XML
+---
 
 Not itself of direct interest as a markup language, but important because it
 is a subset of SGML. In particular, it is a simpler subset of SGML, which
 makes parsers easier to write. Other SGML based tools (TEI, Docbook, HTML
 itself) have generally moved towards using XML rather than SGML in their
 specification.
+
+  wikipedia: "XML is an application profile of SGML"
+
+  A simpler subset of SGML, which makes parsers easier to write. Other SGML
+  based tools (TEI, Docbook, HTML itself) have generally moved towards using
+  XML rather than SGML in their specification.
+
+  XML was compiled by a working group of eleven members,[30] supported by a
+  (roughly) 150-member Interest Group.
+
+  No example because there is no "default" XML - a schema is needed.
 
 * `XML Information`_  is a nested set of pages (I assume course notes).
   Constituent topics are "What is Markup?", "Schemas" and "Special Characters
@@ -387,7 +544,26 @@ specification.
 .. _`XML People`: http://www.tbray.org/ongoing/When/200x/2008/02/10/XML-People
 
 |TeX| and related
------------------
+=================
+
+|TeX|
+-----
+
+.. note:: 1977/1978 |TeX| *Presentational with semantic leanings*.
+   Programmable. Still in use.
+
+Designed and mostly written by Donald Knuth.
+
+Driven by the need to guarantee accurate typesetting of mathematics.
+
+In serious use of |TeX|, one starts by defining lots of useful
+commands - although `the TeXbook`_ has many useful ideas one can copy.
+
+Most people actually use |LaTeX| (1984) or one of the other markup languages
+written in |TeX|. |LaTeX| is still dominant in scientific and mathematical
+publishing.
+
+.. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
 
 .. code:: TeX
 
@@ -412,6 +588,7 @@ specification.
   \endlist
 
 |LaTeX|
+-------
 
 .. code:: TeX
 
@@ -428,6 +605,35 @@ specification.
 
    \bye
 
+And an another example from a fanzine:
+
+.. code:: TeX
+
+  \begin{center}
+  \rule{5in}{0.1mm}
+  \end{center}
+
+  \section*{Captain Competent strikes again}
+
+  The superhero is a familiar concept in comics, science fiction and many other
+  fields. However, I am more interested in what might be called `the competent
+  hero'. This is a subtler form of protagonist---a person who has attained
+  {\em competence} in their daily life.
+
+.. note:: |LaTeX| is essentially a DSL written in |TeX|. It's probably still
+   the best known, but certainly not the only one.
+
+   I used to write plain |TeX|, but most people actually use |LaTeX|,
+   which dates from about 1983/1984, or one of the other systems written in
+   |TeX|.
+
+.. note:: 1983 |LaTeX| *Presentational*. Still in use.
+
+  Leslie Lamport.
+
+  Most people use |LaTeX| (or one of the equivalents) instead of directly
+  using |TeX|.
+
    
 .. note:: I used to write plain |TeX|, but most people actually use |LaTeX|,
    which dates from about 1983/1984, or one of the other systems written in
@@ -443,6 +649,9 @@ specification.
 .. _SAIL: `Wikipedia on SAIL`_
 .. _`Wikipedia on SAIL`: https://en.wikipedia.org/wiki/SAIL_(programming_language)
 .. _`SAIL Tutorial`: http://i.stanford.edu/pub/cstr/reports/cs/tr/76/575/CS-TR-76-575.pdf
+
+The history
+-----------
 
 |TeX| (and Metafont) were originally written in SAIL_
 
@@ -517,7 +726,7 @@ amazing things.
 
 
 Choosing |TeX| or troff
------------------------
+=======================
 
 .. _`TeX/troff/typesetting markups`: http://minnie.tuhs.org/pipermail/tuhs/2017-April/009638.html ::
 
@@ -617,22 +826,38 @@ language (albeit a macro language, with the problems that is recognised as
 entailing) is a big benefit. But it's an interesting comparison, nonetheless.
 
 Scribe
-------
+======
+
+.. note:: 1980 Scribe *Presentational*, and maybe also programmable
+
 Scribe was another influential early markup language, from around 1908.
 
-An example::
+An example:
+
+.. code::
 
     @Heading(The Beginning)
     @Begin(Quotation)
         Let's start at the very beginning, a @i(very good place) to start
     @End(Quotation)
 
-but that can also be written::
+but that can also be written:
+
+.. code::
 
     @Heading(The Beginning)
     @(Quotation
         Let's start at the very beginning, a @i(very good place) to start
     )
+
+Described in Brian Reid's 1980 doctoral dissertation at Carnegie Mellon
+University. Lisp based.
+
+Similar systems still appear to exist.
+
+Note the two representations - the second one being more lisp-like.
+
+Q: **Also, need to check if it is "programmable".**
 
 * `Wikipedia on Scribe`_
 * `Scribe\: A Document Specification Language and its Compiler`_, Brian Reid's
@@ -659,7 +884,22 @@ not clear from it's documentation if the author is aware of Scribe_.
   .. _`This is Scribe!`: http://www-sop.inria.fr/members/Manuel.Serrano/scribe/doc/scribe.html
 
 TEI
----
+===
+.. note:: 1987 TEI *Semantic*. Still in use today.
+
+"The mission of the Text Encoding Initiative is to develop and maintain a
+set of high-quality guidelines for the encoding of humanities texts, and to
+support their use by a wide community of projects, institutions, and
+individuals"
+
+Some mark up of the start of Swinburne's Sestina,
+taken from the poetry examples at `TEI By Example`_,
+showing the working of the ryhming scheme.
+
+``rhyme="ababab"`` and then on each line the rhyming word and which part (a,
+b) of the rhyming scheme it is.
+
+.. _`TEI by example`: http://teibyexample.org/examples/TBED04v00.htm
 
 .. code:: XML
 
@@ -705,7 +945,25 @@ expect to be able to do it justice here.
 
 
 Postscript
-----------
+==========
+
+.. note:: Entirely *Presentational*, still in use.
+
+Not intended to be written by people (although it is possible).
+
+An example from wikipedia:
+
+.. code:: postscript
+
+   %!PS
+   /Courier             % name the desired font
+   20 selectfont        % choose the size in points and establish 
+                        % the font as the current one
+   72 500 moveto        % position the current point at 
+                        % coordinates 72, 500 (the origin is at the 
+                        % lower-left corner of the page)
+   (Hello world!) show  % stroke the text in parentheses
+   showpage             % print all on the page
 
 * `Wikipedia on PostScript`_
 * `Wikipedia on PDF`_
@@ -718,8 +976,18 @@ Postscript
 
 .. _`Wikipedia on PDF`: https://en.wikipedia.org/wiki/Portable_Document_Format
 
-HTML and related
-----------------
+HTML
+====
+
+.. note:: 1991 HTML *Presentational*. Still in use today (although rather altered).
+
+Tim Berners-Lee, at CERN, specified HTML and wrote browser and server
+software in late 1990. The "HTML Tags" document was first mentioned on the
+internet in 1991.
+
+HTML 2.0 was published as IETF RFC 1866 in 1995
+
+HTML (at least until HTML5) is an SGML document type - an SGML application.
 
 .. code:: HTML
 
@@ -762,7 +1030,24 @@ consideration and politics.
 
 
 Docbook
--------
+=======
+
+.. note:: 1991 Docbook *Semantic*. Still in use today.
+
+"A semantic markup language for technical documentation"
+
+However, I think it is often "semantic" in the same way that |LaTeX| is
+"semantic" - often also for presentational purposes (but not *necessarily*).
+
+Same year as HTML
+
+Example of Docbook 4.3 from
+http://www.informatik.tu-cottbus.de/~giurca/tutorials/DocBook/index.htm
+
+Before Docbook 5, an SGML language, defined by a DTD
+
+DocBook 5 is an XML language, formally defined by a RELAX NG schema with
+integrated Schematron rules.
 
 .. code:: XML
 
@@ -791,7 +1076,23 @@ Docbook
 - 2005 DocBook 5 and later - XML with a RELAX NG schema, with rule-based
   validation for some constraints using Schematron
 
+An example of Docbook 5 (taken from wikipedia):
 
+.. code:: XML
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <book xml:id="simple_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
+     <title>Very simple book</title>
+     <chapter xml:id="chapter_1">
+       <title>Chapter 1</title>
+       <para>Hello world!</para>
+       <para>I hope that your day is proceeding <emphasis>splendidly</emphasis>!</para>
+     </chapter>
+     <chapter xml:id="chapter_2">
+       <title>Chapter 2</title>
+       <para>Hello again, world!</para>
+     </chapter>
+   </book>
 
 * `Wikipedia on DocBook`_
 * `The DocBook Project`_ on Sourceforge
@@ -812,7 +1113,36 @@ Docbook
 .. _`Overview of the DocBook format`: https://workaround.org/docbook/
 
 Wikiwikiweb
------------
+===========
+
+.. note:: 1994/1995 wikiwikiweb *Presentational*
+
+The first wiki, invented by Ward Cunningham
+
+I think that newlines within a paragraph are ignored, but it's hard  to
+tell.
+
+The lack of capability is deliberate, aiming to promote a particular style
+of discourse:
+
+   "This wiki is quite bare bones, and intentionally so. Less formatting
+   means you have to concentrate on saying things carefully and clearly.
+   Content over form."
+
+Introduced CamelCasedWords as wiki links.
+
+Single quotes - this really distressed me when I first came across it:
+
+- 1 = single quote
+- 2 = emphasis
+- 3 = bold
+- 5 = emphasised bold (2+3)
+- 6 are used to stop a CamelCased word from being a WikiLink
+
+Later wiki formats appear not to have understood *why* the design decisions
+were taken.
+
+Like most wiki formats, specified by example, with no real rigour.
 
 .. code::
 
@@ -845,9 +1175,44 @@ Wikiwikiweb
 
 
 Programming language internal documentation
--------------------------------------------
+===========================================
+Two examples, POD (from Perl) and javadoc (from Java), both of which are the
+dominant standards for their respective languages.
+
+POD
+---
+
+.. note:: 1994 POD *Presentational*. Still in use today.
 
 Perl's POD (or Plain Old Documentation)
+
+.. code:: perl
+
+  =pod
+
+  =head1 DESCRIPTION
+
+  This is not I<really> representative of POD usage.
+
+  =over 2
+
+  =item This is a list item.
+
+  =item This is another list item.
+
+  =back
+
+  =cut
+
+The same year as wikiwikweb
+
+  An example of markup to a specific purpose, and clearly very successful.
+
+  Note that the blank lines are required around the POD commands.
+
+  I don't think you can do multi-paragraph list items. The POD definitions
+  contains ambuguities, although how to handle some of them is explained in
+  the POD documentation.
 
 * `The Timeline of Perl and its Culture`_ explains that POD was introduced in
   1995 at the same time as Perl 5.001. This is a very nice brief history of
@@ -856,6 +1221,30 @@ Perl's POD (or Plain Old Documentation)
 * perlpodspec_ is the format specification and notes for Perl's Plain Old
   Documentation.
 
+javadoc
+-------
+
+.. note:: 1995 javadoc *Presentational*. Still in use today.
+
+Has never specified the subset of HTML it allows.
+
+.. code:: java
+
+  /**
+   * Short one line description.
+   * <p>
+   * Longer description. If there were any, it would be here.
+   * <p>
+   * And even more explanations to follow in consecutive
+   * paragraphs separated by HTML paragraph breaks.
+   *
+   * @param  variable Description text text text.
+   * @return Description text text text.
+   */
+  public int methodName (...) {
+      // ...
+  }
+
 * `Wikipedia on Javadoc`_
 
 .. _`The Timeline of Perl and its Culture`: http://history.perl.org/PerlTimeline.html
@@ -863,7 +1252,11 @@ Perl's POD (or Plain Old Documentation)
 .. _`Wikipedia on Javadoc`: https://en.wikipedia.org/wiki/Javadoc
 
 Lightweight markup
-------------------
+==================
+
+*Some sort of general introduction to why we want lightweight markups, and
+what the trade-offs are.*
+
 * `Why we need constrainable lightweight markup languages`_, Mark Baker, 2016,
   and sam_ (Semantic Authoring Markdown), his proposed solution (still under
   active development)
@@ -883,12 +1276,59 @@ Lightweight markup
 .. _`reStructuredText vs Markdown for documentation`:  http://zverovich.net/2016/06/16/rst-vs-markdown.html
 
 setext
-------
+======
+
+.. note:: 1991 setext *Presentational*. Lightweight.
+
+Ian Feldman, for use in writing the TidBITs electronic newsletter.
+
+Partly a reaction to SGML. Clearly influential on all of the succeeding
+lightweight markups.
+
+Same year as HTML and Docbook
+
+Note: the body text must be indented.
+
+Underlining should really mean italics, following typewritten text
+conventions.
+
+Two dots for comments or special meaning.
+
+Unclear if lists actually were supported. Specification not very clear,
+specified by examples, not rigorous at all. Really just what he needed for his
+own purposes.
+
+  **Maybe** add an example of a link? (Links look very similar to one of the
+  forms that reStructuredText supports)
+
+-----------------
+
 setext was invented by Ian Feldman as an alternative to RTF and SGML. He used
 it to format the online magazine TidBITS from issue 100 - before that the
 magazine was distributed as a HyperCard_ stack. 
 
-An example::
+An example:
+
+.. Unsurprisingly, there isn't a Pygments highlighter for setext
+
+.. code:: reST
+
+  Why setext?
+  -----------
+
+    I agree that FAQ's would best be written in something like setext_.
+    Why?  Because this document is written in setext and it includes
+    the ability to embed HTML hypertext links without being obnoxious.
+
+    As you can see it's easy to write setext documents, and as Edward
+    pointed out, it uses existing text conventions for **bold** and _italic_
+    words and titles.
+
+  .. _setext http://www.bsdi.com/setext/
+  ..
+
+
+.. code:: reST
 
    This is the title. There can be only one.
    =========================================
@@ -908,6 +1348,17 @@ An example::
    .. the logical end of text
    ..
 
+.. note:: 1991 setext *Presentational*. Lightweight.
+
+  Ian Feldman, for use in writing the TidBITs electronic newsletter.
+
+  Excerpted from a document called "Why setext".
+
+  Partly a reaction to SGML. Clearly influential on
+  all of the succeeding lightweight markups.
+
+  Same year as HTML
+
 * `Wikipedia on setext`_ 
 * The `docutils`_ site holds a `Setext Documents Mirror`_ which preserves copies
   of some of the setext documentation.
@@ -922,7 +1373,7 @@ An example::
 
 
 Python's Doc-SIG
-----------------
+================
 Python's Doc-SIG was started to look at documentation matters for Python, and
 in particular had two main interests - how to write the text in docstrings,
 and how to write "external" documentation.
@@ -974,7 +1425,32 @@ approach like::
 
 
 StructuredText
---------------
+==============
+
+.. note:: 1996 StructuredText *Presentational*. Lightweight.
+
+Created by Jim Fulton of Digital Creations (later Zope Foundation) for use
+in Zope.
+
+Clearly influenced by setext.
+
+Significant indentation - good idea in a programming language, not so much
+when writing plain text.
+
+A heading is a heading because it is followed by a non-heading (!)
+
+Single quotes or doubled backquotes for "inline" text.
+
+Footnotes are fairly simple. Note the use of two dots to introduce the
+actual footnote.
+
+All block entities must be separated by blank lines.
+
+Note that "o" can be a list delimiter - regarded as a serious ambiguity.
+
+Specified by example, somewhat ambiguously.
+
+----------------------
 
 .. code:: reST
 
@@ -1059,9 +1535,36 @@ reStructuredText.
 .. _`StructuredTextNG - Format`: http://www.tibsnjoan.co.uk/docutils/STNG-format.html
 
 reStructuredText
-----------------
+================
 
-An example. Similar text to that for StructuredText::
+.. note:: 2001/2002 reStructuredText *Presentational*. Lightweight.
+
+David Goodger had a professional background in SGML.
+
+Original mailing of the idea to the Doc-Sig was in Nov 2000
+
+* Readable is the main aim.
+* Output agnostic.
+* Well specified, allowing other implementations which behave in the same way.
+
+Clearly influenced by setext and StructuredText, but with more rigor.
+
+Body text isn't indented, but things must line up when appropriate (see the lists).
+
+NB: no underlining.
+Consciously designed to allow doing certain things but not others - basically,
+if a document is too complex for reStructuredText, use something like Docbook.
+
+Sphinx was first introduced as a means of using reStructuredText to write
+the Python documenation, instead of |LaTeX|.
+
+Maybe mention that < and > are not special.
+
+------------------
+
+An example. Similar text to that for StructuredText:
+
+.. code:: reST
 
    This is a heading
    =================
@@ -1156,7 +1659,34 @@ It's also worth looking at:
 .. _`Problems With StructuredText`: http://docutils.sourceforge.net/docs/dev/rst/problems.html
 
 AsciiDoc
---------
+========
+
+.. note:: 2002 Asciidoc *Presentational*. Lightweight.
+
+Stuart Rackham
+
+Aimed specifically as a lightweight way of producing docbook.
+
+Producing docbook means that toolchains exist to produce almost anything else.
+
+The original Asciidoc implementation was written in Python in 2002.
+
+Asciidoctor came out in 2013, and is written in Ruby.
+
+Well specified, allowing other implementations which behave in the same way.
+
+Note the use of underlines to indicate emphasis, a nice look back to
+typewritten manuscripts.
+
+Paired plus signs for monotyped text.
+
+Use of a + sign to continue a list item into a second paragraph.
+
+Nice (easy to type) way of distinguishing opening and closing quotes.
+
+Footnotes done inline - less readable, but more convenient.
+
+---------------------
 
 .. code:: reST
 
@@ -1199,7 +1729,11 @@ The AsciiDoc user guide says:
   toolchain wrapper to produce PDF, EPUB, DVI, LaTeX, PostScript, man page,
   HTML and text formats.
 
-An example::
+An example:
+
+.. There doesn't seem to be a Pygments highlighter for DocBook
+
+.. code:: reST
 
    Top level heading
    =================
@@ -1261,7 +1795,55 @@ makes sense as its ambitions are greater.
 .. _`AsciiDoc Writer's Guide`: http://asciidoctor.org/docs/asciidoc-writers-guide/
 
 Markdown
---------
+========
+
+.. note:: 2004 markdown *Presentation*. Lightweight.
+
+John Gruber, collaborating with Aaron Swartz on the syntax
+
+*So* nearly a wonderful success.
+
+Yes, I know headings can be underline as well, but I've never seen
+anyone actually doing that.
+
+* Aimed at producing HTML.
+
+   From the syntax page: "Markdown’s syntax is intended for one purpose: to be
+   used as a format for *writing* for the web." Their emphasis.
+
+* Poorly specified. Ambiguous.
+* Allows embedded HTML.
+* Most implementations extend it, incompatibly.
+
+Very successful because (the most popular variants) hit a good compromise on
+the simplicity/capability curve.
+
+Personally, I *think* that markdown would be improved a lot by just removing
+the ability to embed HTML.
+
+Hopefully CommonMark_ will improve the situation - for instance,
+github-flavoured markdown is at least now based on CommonMark.
+
+.. _CommonMark: http://commonmark.org/
+
+  The Common Mark spec is at http://spec.commonmark.org/. It is clearly aimed
+  to be a rigourous specification, which is excellent. Note that it calls
+  the underlined heading style "setext headings", which is nice. It still
+  retains the ability to embed HTML in a document, which is not so nice.
+
+  The CommonMark specification is also an interesting summary of the problems
+  and incompatibilities of the different implementations, and tries to explain
+  *why* they have made the choices they have made. It is worth reading
+  (although quite long).
+
+  However, by the time we've got the rigour of a CommonMark, the complexity of
+  the language seems to me to be at least that of reStructuredText, without
+  the tidyness of that latter. I think there are many more surprises in how
+  CommonMark "works".
+
+----------------
+
+.. There doesn't seem to be a Pygments highlighter for markdown
 
 .. code:: reST
 
@@ -1314,7 +1896,9 @@ Whilst markdown does support using underlines for headings (it specifies what
 sort of underlining for each level), it also supports the use of multiple "#"
 characters instead, and this seems to be the more colloquial usage.
 
-An example::
+An example:
+
+.. code:: reST
 
    # A first-level header
 
@@ -1435,7 +2019,7 @@ which one might, perhaps, find distressing.
 .. _Creole: http://www.wikicreole.org/
 
 Other lightweight markups
--------------------------
+=========================
 A very scattershot section.
 
 `Org-Mode Is One of the Most Reasonable Markup Language to Use for Text`_,
@@ -1465,12 +2049,12 @@ background.
 .. _`Introduction`: https://www.w3.org/TR/REC-MathML/chapter1.html
 
 Fin
----
+===
 
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
+* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, PostScript, SGML, TEI
+* 1990s HTML, setext, Docbook, WikiWikiWeb, POD, javadoc, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
 Written using reStructuredText_.

@@ -1,8 +1,6 @@
 Notes per slide
 ===============
 
-.. My intent is to transfer these to hand-held cards
-
 A history of markup languages
 =============================
 
