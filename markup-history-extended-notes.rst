@@ -657,7 +657,7 @@ Here is an example of |LaTeX|:
 
    \bye
 
-And example from the first edition of the aforementioned fanzine (before I
+And an example from the first issue of the aforementioned fanzine (before I
 switched from |LaTeX| back to |TeX|):
 
 .. code:: TeX
@@ -672,24 +672,6 @@ switched from |LaTeX| back to |TeX|):
   fields. However, I am more interested in what might be called `the competent
   hero'. This is a subtler form of protagonist---a person who has attained
   {\em competence} in their daily life.
-
-.. note:: |LaTeX| is essentially a DSL written in |TeX|. It's probably still
-   the best known, but certainly not the only one.
-
-   I used to write plain |TeX|, but most people actually use |LaTeX|,
-   which dates from about 1983/1984, or one of the other systems written in
-   |TeX|.
-
-.. note::
-
-
-  Most people use |LaTeX| (or one of the equivalents) instead of directly
-  using |TeX|.
-
-   
-.. note:: I used to write plain |TeX|, but most people actually use |LaTeX|,
-   which dates from about 1983/1984, or one of the other systems written in
-   |TeX|.
 
 * `25 Years of |TeX| and METAFONT\: Looking Back and Looking Forward`_:
   TUG’2003 Keynote Address, Nelson H. F. Beebe. Including sections on "What
