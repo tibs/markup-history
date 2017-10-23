@@ -1,9 +1,6 @@
 A history of markup languages
 =============================
 
-.. warning:: **These documents are not yet finished. They will be finished for
-   the conference, but probably not (much) before.**
-
 A slideshow produced for `PyConUK 2017`_
 
 .. _`PyConUK 2017`: http://2017.pyconuk.org/
