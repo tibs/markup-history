@@ -8,8 +8,6 @@ By Tibs / Tony Ibbs, for PyConUK 2017
    with links which I hope will be useful, and perhaps act as a start on
    finding out more about markup languages.
 
-.. warning:: **This document is still a work in progress.**
-
 .. For the moment, we represent TeX and LaTeX as simple text, but I might
    change that in the future
 
@@ -22,36 +20,6 @@ By Tibs / Tony Ibbs, for PyConUK 2017
 Introduction
 ============
 
-*To be redone*
-
-"Markup languages" as described here are to be taken as a means of marking up
-plain text so that it can be used as the source for a generated output that is
-represented in a different (often more complex) manner. Typically, this means
-taking annotated text and producing something that is to be typeset, or (in
-the case of semantic markup) analysed.
-
-Perhaps calling this a history is a mistake, and it should more accurately be
-called an opinionated overview. I hope it works as a starting point for
-finding out more about markup languages, why they exist and what a wide range
-of possibilities they represent.
-
-Interestingly, almost all of the markup formats I'm going to discuss are still
-in use today.
-
-.. note:: Indeed, this is a summary of some of the more obvious bits of the
-   history of document markup. It's the sort of stuff that one can find with a
-   little bit of memory and some googling. That means that there is doubtless
-   interesting stuff I've missed, and there is also bound to be *exciting*
-   work going on **right now** that is not mentioned anywhere here - for
-   instance, I think Pollen_ looks quite interesting.
-
-.. _Pollen: http://docs.racket-lang.org/pollen/
-
-Why we markup
-=============
-
-*To be redone*
-
 We've always added markup to text.
 
 When writing by hand, we underline to indicate emphasis.
@@ -62,29 +30,57 @@ indicate titles, emphasis, and so on.
 Play scripts use various abbreviations and conventions to distinguish dialogue,
 effects and stage arrangements.
 
+This "history" (or "opinionated overview") will hopefully serve as a starting
+point for finding out more about markup languages, why they exist and what a
+wide range of possibilities they represent.
+
+I'm taking "markup language" to mean a way of marking up plain text so it can
+be turned into something more interesting (for instance, output to a
+typesetter), or so it can be analysed more easily.
+
+Interestingly, almost all of the markup formats I'm going to discuss are still
+in use today.
+
+.. note:: Basically, these notes are a summary of some of the more obvious
+   bits of the history of document markup. It's the sort of stuff that one can
+   find with a little bit of memory and some googling. That means that there
+   is doubtless interesting stuff I've missed, and there is also bound to be
+   *exciting* work going on **right now** that is not mentioned anywhere here
+   - for instance, I think Pollen_ looks quite interesting.
+
+.. _Pollen: http://docs.racket-lang.org/pollen/
+
 Types of markup
 ===============
 
-We mark text up in two main ways.
+It is common to distiguish two main ways of marking up text:
 
-The first is to annotate semantics - to give more information about the thing
-being marked up. For instance, there are strong conventions on how book titles
-are shown in bibliographies, in contrast to articles or shorter works.
-Similarly, early computer languages would mark keywords by using upper case,
-or by surrounding them by quotes.
+* Semantic - what it means
+* Presentational - how it should be shown
 
-Semantic markup techniques are used when one wants to be able to analyse the
-text, to mine its information. These have had much success in big industry and
-in the military.
+Semantic markup is intended to give more information about the meaning of the
+text. This may be an end in and of itself, for reasons as disparate as
+allowing extraction of information about aeroplane parts or determining the
+parts of speech in a corpus.
 
-The second is in many ways a simpler derivative, and is primarily marking up
-to determine presentation - although that presentation may be as high level as
-"this is a title" or "this is emphasised".
+Presentational markup indicates how the text should be presented, for instance
+as a man page, or printed using a typesetter.
 
-Such presentational markup techniques are much more about letting the author
-write a text without regard to the mechanism by which it will actually be
-represented to the reader - so, for instance, in creating man pages, articles
-like this, or books of mathematics.
+  (Even at the beginning of our timeline, people had access to typesetters, and
+  wanted to drive them.)
+
+These two aren't necessarily entirely distinct, though: one of the important
+early realisations was that presentational markup benefits from some degree of
+semantics. So, for instance, it is more useful to say "heading", than
+"bold font X at size Y".
+
+We can also separate out two other types of markup
+
+* Lightweight markup us designed to be simple to type, and hopefully easier to
+  read.
+
+* Programmable markup (wikipedia calls this "procedural") is actually merging
+  a programming language with the text. The best know of these is |TeX|.
 
 Things I'm ignoring
 ===================
@@ -96,8 +92,6 @@ I'm ignoring anything that isn't just text, so:
 * Pictures/diagrams/graphs
 * Bibliographies and indices
 * All sorts of other things
-
-Basically, I'm ignoring anything that isn't just a text document.
 
 Further, there are many more markup formats than I discuss here (for instance,
 and perhaps unsurprisingly, people have been inventing "easier" ways to write
@@ -132,47 +126,44 @@ Nowadays, reStructuredText is my "how to write text" format for almost all
 my own purposes, and like everyone I can also write markdown when necessary
 (although not with any great understanding of its edge cases).
 
-Links and timelines
-===================
+A timeline
+==========
 
-* 1964 TYPSET and RUNOFF https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
+* 1964 TYPSET and RUNOFF
 * 1967 William Tunincliffe: "The separation of the information content of
-  documents from their format" - Goldfarb credits him with starting the generic
+  documents from their format". Goldfarb credits him with starting the generic
   coding movement (i.e., the idea of using descriptive tags like
   "heading" rather than "format-17") with this presentation given at a meeting of the
   Canadian Government Printing Office in September 1967
-* 1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM
+* 1969 GML (Goldfarb, Mosher, Lorie) at IBM
 * "1970s" roff, script, runoff, document
-* 1976 nroff and troff (J. Ossanna)
+* 1976 nroff and troff (Ossanna)
 * 1978 bib and refer
-* 1977/1978 |TeX| and Metafont ("classic" version, written in SAIL, Donald
-  Knuth and others)
-* 1978-1980 Scribe (B. Reid) https://en.wikipedia.org/wiki/Scribe_(markup_language)
+* 1977/1978 |TeX| and Metafont ("classic" version, written in SAIL, Knuth and others)
+* 1978-1980 Scribe (Reid)
 * 1982 |TeX| and Metafont in WEB/Pascal
-* 1983-1985 |LaTeX| (Leslie Lamport)
-* 1984 Postscript (https://en.wikipedia.org/wiki/PostScript has 1982-1984)
+* 1983-1985 |LaTeX| (Lamport)
+* 1984 Postscript (`Wikipedia on PostScript`_ has 1982-1984)
 * 1986 ISO standard SGML (although the first working draft was in 1980)
 * 1987 TEI 
-* 1991 Time Berners-Lee wrote "HTML Tags" document, proposing what was
+* 1991 Tim Berners-Lee wrote the "HTML Tags" document, proposing what was
   essentially HTML, built on SGML
-* 1989-1991 HTML and HTTP (Tim Berners-Lee)
-* 1991 setext, Ian Feldman, for use in the TidBITS electronic newsletter
+* 1989-1991 HTML and HTTP (Berners-Lee)
+* 1991 setext, (Feldman) for use in the TidBITS electronic newsletter
 * 1991 Docbook
 * 1993 PDF (Adobe Systems)
-* 1994/1995 WikiWikiWeb, the first wiki, Ward Cunningham
-* 1994 Perl 5.000 introduces pod (http://history.perl.org/PerlTimeline.html)
-* 1995 Java appears, and thus its use of (some parts of) HTML in its javadoc
-  (https://en.wikipedia.org/wiki/Javadoc)
-* 1996 StructuredText (Jim Fulton, Zope Corporation / Digital Creations)
+* 1994/1995 WikiWikiWeb (Cunningham) the first wiki
+* 1994 Perl 5.000 introduces POD
+* 1995 Java appears, and with it javadoc
+* 1996 StructuredText (Fulton, Zope Corporation / Digital Creations)
 * 1997 XML
-* 2000 Digital Creations began development of StructuredTextNG
-* 2000 First draft of reStructuredText spec posted to Doc-Utils SIG (David
-  Goodger)
-* 2001-2002 reStructuredText and Docutils developed fully
+* 2000 Digital Creations begins development of StructuredTextNG
+* 2000 First draft of reStructuredText spec posted to Doc-Utils SIG (Goodger)
+* 2001-2002 reStructuredText and Docutils
 * 2002 PEP 287 "reStructuredText Standard Docstring Format"
-* 2002 AsciiDoc (Stuart Rackham)
-* 2004 markdown (John Gruber and Aaron Swartz)
-* 2013 Asciidoctor (Ryan Waldron and others)
+* 2002 AsciiDoc (Rackham)
+* 2004 markdown (Gruber and Swartz)
+* 2013 Asciidoctor (Waldron and others)
 
 Various sources were used in creating the timeline, but a special mention has
 to go to `25 Years of |TeX| and METAFONT\: Looking Back and Looking
