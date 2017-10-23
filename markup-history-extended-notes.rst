@@ -856,15 +856,13 @@ entailing) is a big benefit. But it's an interesting comparison, nonetheless.
 Scribe
 ======
 
-:1980 Scribe: *Presentational*, and maybe also programmable
+:1980 Scribe: *Presentational*
 
 Scribe was another influential early markup language [#]_,
 described in Brian Reid's 1980 doctoral dissertation
 `Scribe\: A Document Specification Language and its Compiler`_,
 at Carnegie Mellon
 University.
-
-The implementation was Lisp based.
 
 .. [#] Lamport explicitly acknowledges its influence on |LaTeX|.
 
@@ -886,14 +884,11 @@ which can also be written in a more LISP-like style:
         Let's start at the very beginning, a @i(very good place) to start
     )
 
-
-.. note:: Q: **Also, need to check if it is "programmable".**
-
 * `Wikipedia on Scribe`_
 * `Scribe\: A Document Specification Language and its Compiler`_, Brian Reid's
   1980 doctoral dissertation at Carnegie Mellon University.
  
-  .. note:: My first quick scan suggests that this is very worth reading. NB:
+  .. note:: My first quick scan suggests that this is well worth reading. NB:
      It mentions |TeX| and EQN (the roff-related tool for equations) as
      influences.
 

@@ -252,7 +252,7 @@ Presentational or Semantic
         Let's start at the very beginning, a @i(very good place) to start
     )
 
-.. note:: 1980 Scribe *Presentational*, and maybe also programmable
+.. note:: 1980 Scribe *Presentational*
 
   Described in Brian Reid's 1980 doctoral dissertation at Carnegie Mellon
   University. Lisp based.
@@ -260,8 +260,6 @@ Presentational or Semantic
   Similar systems still appear to exist.
 
   **Maybe** could drop this slide as well, although I'd rather not.
-
-  Also, need to check if it is "programmable".
 
 ----
 

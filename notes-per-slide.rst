@@ -168,7 +168,7 @@ publishing.
 
 **Maybe** could drop this slide as well, although I'd rather not.
 
-1980 Scribe *Presentational*, and maybe also programmable
+1980 Scribe *Presentational*
 
 Described in Brian Reid's 1980 doctoral dissertation at Carnegie Mellon
 University. Lisp based.
@@ -176,8 +176,6 @@ University. Lisp based.
 Similar systems still appear to exist.
 
 Note the two representations - the second one being more lisp-like.
-
-Q: **Also, need to check if it is "programmable".**
 
 1987: TEI
 ---------
