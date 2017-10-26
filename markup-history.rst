@@ -14,27 +14,15 @@ Source and extended notes at https://github.com/tibs/markup-history
 .. _reStructuredText: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 .. _hovercraft: https://github.com/regebro/hovercraft
 
-
 .. |TeX| replace:: TeX
 
 .. |LaTeX| replace:: LaTeX
 
-.. If using beamer, I might do:
-..
-.. .. role: latex(raw)
-..    :format: latex
-..
-.. .. |TeX| replace:: :latex:`{\TeX}`
-..
-.. .. |LaTeX| replace:: :latex:`{\LaTeX}`
-..
-.. or so I think
+.. Slide notes are in notes-per-slide.rst - they're too long to fit
+.. comfortably in the presenter notes, and this file reads better if
+.. "following along" on github without the extra notes being inline.
 
-.. note:: A summary of some of the more obvious bits of the history of
-  document markup.
-
-  Specifically ignoring anything that isn't just text (so, music, mathematics,
-  diagrams, bibliographies, indices, etc.).
+.. Full notes (and links) are in markup-history-extended-notes.rst
 
 ----
 
@@ -47,11 +35,6 @@ Timeline
 * 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
-.. note:: There's a lot to cover, even so.
-
-  The longer notes in the github repository have more detail, and give links
-  to interesting pages on the web.
-
 ----
 
 The types of markup
@@ -60,28 +43,6 @@ The types of markup
 Presentational or Semantic
 
 ...but also lightweight, and maybe programmable
-
-.. note::
-
-  Presentational: how the text should be presented, e.g., as a man page, on a
-  screen, or on a typeset page.
-  
-  Even at the beginning of our timeline, people had access to typesetters, and
-  wanted to drive them.
-
-  Semantic: marking up the meaning of the text.
-
-  One of the important early realisations was that even presentation benefits
-  from some degree of semantics - i.e., "heading", not "font X at size Y in
-  bold".
-
-  Lightweight: simple to type, and hopefully easier to read. Hence also
-  the sub-category Readable plaintext.
-
-  Obviously a markup may span categories.
-
-  Separately, "static" markup (e.g., HTML) versus "programmable" (wikipedia:
-  "procedural") markup (e.g., |TeX|).
 
 ----
 
@@ -99,16 +60,6 @@ Presentational or Semantic
   1-800-555-5555
 
   and we will respond as soon as convenient.
-
-.. note:: 1964 RUNOFF *Presentational*
-
-   Jerome H. Saltzer for CTSS (Compatible Time Sharing System)
-
-   Ported to BCPL and then Multics. Ancestor to roff.
-
-   This example is (more or less) from the original TYPSET/RUNOFF documentation.
-
-   Commands starting with a dot in the first column, and could be abbreviated.
 
 ----
 
@@ -133,28 +84,6 @@ Presentational or Semantic
   <item>Last item</item>
   </list>
 
-.. note:: 1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
-
-  GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM. 
-
-  [Standard] Generalised Markup Language.
-
-  A mechanism for *describing* markup languages. Use of the DTD.
-
-  SGML uses DTDs (Document Type Definitions) to describe the set of
-  markup declarations that form a *document type* (e.g., SGML itself, XML,
-  HTML).
-
-  Shown is a DTD fragment for defining a simple list, and an example of the
-  list structure described.
-
-  Sensibly, SGML came with a "starter set" drafted by Joan Smith and
-  Janet Vandore.
-
-  SGML allowed the definition of elements that were implicitly closed by
-  another element - e.g., <li> and <p> in HTML. *Can the <item> elements
-  here be closed implicitly?*
-
 ----
 
 1970s: roff, nroff, troff, groff
@@ -177,19 +106,6 @@ Presentational or Semantic
   .TP
   .BR \-n ", " \-\-bits =\fIBITS\fR
   Set the number of bits to modify.  Default is one bit.
-
-.. note:: 1970s \*roff *Presentational*. Still in use (as 1990: groff)
-
-  Started as a transliteration of the BCPL version of runoff, for UNIX,
-  around 1970.
-
-  The example is a (fake) man page, using the ``man`` macro package from
-  Lars Wirzenius' `Writing manual pages`_
-
-  .TH = title, .SH = sub-heading, .B = bold, other font usages (e.g., normal
-  font and underlining) are indicated by the \\f sequences.
-
-.. _`Writing manual pages`: https://liw.fi/manpages/,
 
 ----
 
@@ -218,19 +134,6 @@ Presentational or Semantic
 
   \endlist
 
-.. note:: 1977/1978 |TeX|
-
-  *Presentational with semantic leanings*. Programmable. Still in use.
-
-  Designed and mostly written by Donald Knuth.
- 
-  Driven by the need to guarantee accurate typesetting of mathematics.
-
-  In serious use of |TeX|, one starts by defining lots of useful
-  commands - although `the TeXbook`_ has many useful ideas one can copy.
-
-.. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
-
 ----
 
 1980: Scribe
@@ -252,15 +155,6 @@ Presentational or Semantic
         Let's start at the very beginning, a @i(very good place) to start
     )
 
-.. note:: 1980 Scribe *Presentational*
-
-  Described in Brian Reid's 1980 doctoral dissertation at Carnegie Mellon
-  University. Lisp based.
-
-  Similar systems still appear to exist.
-
-  **Maybe** could drop this slide as well, although I'd rather not.
-
 ----
 
 1987: TEI
@@ -278,21 +172,6 @@ Presentational or Semantic
   <l>And knew not as men waking, of <rhyme label="b" xml:id="F">delight</rhyme>.</l>
   </lg>
 
-
-.. note:: 1987 TEI *Semantic*. Still in use today.
-
-  "The mission of the Text Encoding Initiative is to develop and maintain a
-  set of high-quality guidelines for the encoding of humanities texts, and to
-  support their use by a wide community of projects, institutions, and
-  individuals"
-
-  Some mark up of the start of Swinburne's Sestina, showing the working of the
-  ryhming scheme.
-
-  Taken from the poetry examples at `TEI By Example`_.
-
-.. _`TEI by example`: http://teibyexample.org/examples/TBED04v00.htm
-
 ----
 
 1991: HTML
@@ -309,16 +188,6 @@ Presentational or Semantic
       <p>Hello world!</p>
     </body>
   </html>
-
-.. note:: 1991 HTML *Presentational*. Still in use today (although rather altered).
-
-  Tim Berners-Lee, at CERN, specified HTML and wrote browser and server
-  software in late 1990. The "HTML Tags" document was first mentioned on the
-  internet in 1991.
-
-  HTML 2.0 was published as IETF RFC 1866 in 1995
-
-  HTML (at least until HTML5) is an SGML document type - an SGML application
 
 ----
 
@@ -347,20 +216,6 @@ Presentational or Semantic
     </section>
   </article>
 
-.. note:: 1991 Docbook *Semantic*. Still in use today.
-
-  "A semantic markup language for technical documentation"
-
-  Same year as HTML
-
-  Example of Docbook 4.3 from
-  http://www.informatik.tu-cottbus.de/~giurca/tutorials/DocBook/index.htm
-
-  Before Docbook 5, an SGML language, defined by a DTD
-
-  DocBook 5 is an XML language, formally defined by a RELAX NG schema with
-  integrated Schematron rules.
-
 ----
 
 1991: setext
@@ -386,17 +241,6 @@ Presentational or Semantic
    .. the logical end of text
    ..
 
-.. note:: 1991 setext *Presentational*. Lightweight.
-
-  Ian Feldman, for use in writing the TidBITs electronic newsletter.
-
-  Partly a reaction to SGML. Clearly influential on
-  all of the succeeding lightweight markups.
-
-  Same year as HTML and Docbook
-
-  **Maybe** add an example of a link?
-
 ----
 
 1994/1995: wikiwikiweb
@@ -416,23 +260,6 @@ Presentational or Semantic
   But we can A''''''voidMakingAWikiLink.
 
   No HTML, tables, headers, maths, scripts. No links within a page.
-
-.. note:: **skippable** wikiwikiweb
-
-   1994/1995 wikiwikiweb *Presentational*
-
-   The first wiki, invented by Ward Cunningham
-
-   I think that newlines within a paragraph are ignored, but it's hard  to
-   tell.
-
-   The lack of capability is deliberate, aiming to promote a particular style
-   of discourse:
-
-      "This wiki is quite bare bones, and intentionally so. Less formatting
-      means you have to concentrate on saying things carefully and clearly.
-      Content over form."
-
 
 ----
 
@@ -458,13 +285,6 @@ Presentational or Semantic
        is such because it is followed by this indented text.
 
    .. [1] Or we could use ``backquotes``.
-
-.. note:: 1996 StructuredText *Presentational*. Lightweight.
-
-  Created by Jim Fulton of Digital Creations (later Zope Foundation) for use
-  in Zope.
-
-  Significant indentation - good idea in a programming language.
 
 ----
 
@@ -493,21 +313,6 @@ Presentational or Semantic
 
    .. [1] Lines after the first line of a list item must be indented appropriately.
 
-.. note:: 2001/2002 reStructuredText *Presentational*. Lightweight.
-
-  David Goodger had a professional background in SGML.
-
-  Original mailing of the idea to the Doc-Sig was in Nov 2000
-
-  Readable is the main aim.
-
-  Output agnostic.
-
-  Sphinx was first introduced as a means of using reStructuredText to write
-  the Python documenation, instead of |LaTeX|.
-
-  Well specified, allowing other implementations which behave in the same way.
-
 -----
 
 2002: Asciidoc
@@ -535,18 +340,6 @@ Presentational or Semantic
   Sub-section body text is not indented either. What makes sense for
   programming languages is irritating for text.
 
-.. note:: 2002 Asciidoc *Presentational*. Lightweight.
-
-  Stuart Rackham
-
-  Aimed specifically as a lightweight way of producing docbook.
-
-  Well specified, allowing other implementations which behave in the same way.
-
-  The original Asciidoc implementation was written in Python in 2002.
-
-  Asciidoctor came out in 2013, and is written in Ruby.
-
 ----
 
 2004: markdown
@@ -573,25 +366,6 @@ Presentational or Semantic
    programming languages is irritating for text.
 
    (We don't do footnotes, but you can include <tt>HTML</tt>.)
-
-.. note:: 2004 markdown *Presentation*. Lightweight.
-
-  John Gruber, collaborating with Aaron Swartz on the syntax
-
-  Yes, I know headings can be underline as well, but I've never seen
-  anyone actually doing that.
-
-  Aimed at producing HTML.
-
-  From the syntax page: "Markdown’s syntax is intended for one purpose: to be
-  used as a format for *writing* for the web." Their emphasis.
-
-  Poorly specified. Ambiguous.
-  Allows embedded HTML.
-  Most implementations extend it, incompatibly.
-
-  Very successful because (the most popular variants) hit a good compromise on
-  the simplicity/capability curve.
 
 ----
 
