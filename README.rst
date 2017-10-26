@@ -7,11 +7,8 @@ A slideshow produced for `PyConUK 2017`_
 .. _CamPUG: https://www.meetup.com/CamPUG/
 
 The slides are in `<markup-history.rst>`_. Notes per slide (for the presenter)
-are separated out into `<notes-per-slide.rst>`_ [1]_. Extended notes (with links) are
+are separated out into `<notes-per-slide.rst>`_. Extended notes (with links) are
 in `<markup-history-extended-notes.rst>`_.
-
-.. [1] There may also be in-line notes in with the slides, but they may be
-  less complete/up-to-date.
 
 For convenience, you can use the Makefile to show the presentation, create the
 HTML version of the talk, and so on. For instance::
