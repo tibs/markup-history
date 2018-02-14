@@ -127,10 +127,16 @@ To get it down to 40 minutes
 To get it down to (maybe) 25 minutes
 ====================================
 
-If 26 slides took 40 minutes, then that's about 1-and-a-half slides per
-minute, and 25 minutes suggests 16 slides. Which is going to be interesting to
+If 26 slides took 40 minutes, then that's about 1-and-a-half minutes per
+slide, and 25 minutes suggests 16 slides. Which is going to be interesting to
 do, as it means dropping 10 slides. And not talking longer per slide to make
 up for it(!).
+
+Scaling back to 40 minutes
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+26 slides was pushing it (in fact, 16-18 slides was pushing it for 30
+minutes). It's probably better to aim for 20-ish slides at most, and leave
+myself a bit more freedom of time.
 
 ----
 

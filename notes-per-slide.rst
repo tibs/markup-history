@@ -243,6 +243,9 @@ Same year as HTML and Docbook
 
 Note: the body text must be indented.
 
+Multi-word italics (``~multiword~italics~``) appears to have been an
+extension. 
+
 Underlining should really mean italics, following typewritten text
 conventions.
 
@@ -332,9 +335,14 @@ Original mailing of the idea to the Doc-Sig was in Nov 2000
 
 Clearly influenced by setext and StructuredText, but with more rigor.
 
-Body text isn't indented, but things must line up when appropriate (see the lists).
+Body text isn't indented (what makes sense for programming languages is
+irritating for text), but things must line up when appropriate (see the
+lists).
+
+"o" is not allowed as a list delimiter, as it is too ambiguous.
 
 NB: no underlining.
+
 Consciously designed to allow doing certain things but not others - basically,
 if a document is too complex for reStructuredText, use something like Docbook.
 
