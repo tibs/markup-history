@@ -42,7 +42,7 @@ Timeline
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
 * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
+* 1990s HTML, groff, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
 ----
@@ -59,7 +59,7 @@ Presentational or Semantic
 1964: RUNOFF
 ------------
 
-.. code:: Groff
+.. code:: roff
 
   .LINE LENGTH 60
   .LEFT MARGIN 0
@@ -70,6 +70,50 @@ Presentational or Semantic
   1-800-555-5555
 
   and we will respond as soon as convenient.
+
+----
+
+Digital Standard Runoff
+-----------------------
+
+.. code:: roff
+
+    .TITLE A simpler DSR example
+    .CHAPTER This is a chapter
+
+    This is the first paragraph.
+    .LIST
+    .LIST ELEMENT;This is a list element. We have *bold\* and
+    &underline\&.
+    .LIST ELEMENT;This is another list element. I like
+    interrobangs ?%!
+    .END LIST
+
+----
+
+1969: GML and 1986: SGML
+------------------------
+
+.. code:: sgml
+
+  <td> The Implication of SGML for the Preparation of
+  Scientific Publications
+  <au> Joan M. Smith
+  ...
+  <ab> The &SGML (SGML) is a draft international standard
+  for publishing.
+  ...
+  <h1>Introduction
+  <p> The official title of SGML, currently, is ISO/DIS 8879,
+  <ci> Information Processing &end Text and Office Systems
+  &end &SGML (SGML) </ci>. <ref> ISO/DIS 8879 ... </ref>
+  ...
+  <p>There are several points worthy of note here:
+  <ul>
+  <li> the normal publishing delay with ISO standards...
+  ...
+  </ul>
+
 
 ----
 
@@ -86,7 +130,7 @@ Presentational or Semantic
 
 *and such a list:*
 
-.. code:: XML
+.. code:: sgml
 
   <list>
   <item>First item</item>
@@ -99,7 +143,7 @@ Presentational or Semantic
 1970s: roff, nroff, troff, groff
 --------------------------------
 
-.. code:: Groff
+.. code:: roff
 
   .TH CORRUPT 1
   .SH NAME
@@ -119,10 +163,33 @@ Presentational or Semantic
 
 ----
 
+1990: groff
+-----------
+
+.. code:: roff
+
+  ..INCLUDE mission-statement-strings.mom
+  .TITLE    "\*[Groff-Mission-Statement]
+  .SUBTITLE "\*[2014]
+  .INCLUDE  mission-statement-style.mom
+  .PP
+  As the most widely deployed implementation of troff in use
+  today, groff holds an important place in the Unix universe.
+  Frequently and erroneously dismissed as a legacy program
+  for formatting Unix manuals (manpages), groff is in fact a
+  sophisticated system for producing high-quality typeset
+  material, from business correspondence to complex,
+  technical reports and plate-ready books. \*[BU3]With an
+  impressive record for backward compatibility, it continues
+  to evolve and play a leading role in the development of
+  free typesetting software.
+
+----
+
 1977/1978: |TeX|
 ----------------
 
-.. code:: TeX
+.. code:: tex
 
   \name{Name Redacted} wrote:
 
@@ -142,10 +209,30 @@ Presentational or Semantic
 
 ----
 
+1983: |LaTeX|
+-------------
+
+.. code:: latex
+
+  \begin{center}
+  \rule{5in}{0.1mm}
+  \end{center}
+
+  \section*{Captain Competent strikes again}
+
+  The superhero is a familiar concept in comics, science
+  fiction and many other fields. However, I am more
+  interested in what might be called `the competent
+  hero'. This is a subtler form of protagonist---a
+  person who has attained {\em competence} in their
+  daily life.
+
+----
+
 1980: Scribe
 ------------
 
-.. code::
+.. code:: scribe
 
     @Heading(The Beginning)
     @Begin(Quotation)
@@ -155,7 +242,7 @@ Presentational or Semantic
 
 *which can also be written:*
 
-.. code::
+.. code:: scribe
 
     @Heading(The Beginning)
     @(Quotation
@@ -258,7 +345,7 @@ Presentational or Semantic
 1994/1995: wikiwikiweb
 ----------------------
 
-.. code::
+.. code:: wiki
 
   Paragraphs are not indented.
 
@@ -358,9 +445,7 @@ Presentational or Semantic
 2004: markdown
 --------------
 
-.. There doesn't seem to be a Pygments mode for markdown
-
-.. code:: reST
+.. code:: markdown
 
    # This is a heading
 

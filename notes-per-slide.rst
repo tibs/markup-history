@@ -85,6 +85,50 @@ Commands could be abbreviated.
 
 Inline commands shift the "case", for instance in and out of bold case.
 
+Digital Standard Runoff
+-----------------------
+
+**Not in the shorter version**
+
+This is an example using Digital Standard Runoff (DSR), which I
+used to use in the 1980s/90s on VMS.
+
+Abbreviated forms are also available, e.g., ``.ls`` instead of
+``.list``, and ``.le;`` instead of ``list element;``.
+
+1969: GML and 1986: SGML
+------------------------
+
+**Not in shorter version**
+
+1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
+
+GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM. 
+
+[Standard] Generalised Markup Language.
+
+The example is actually SGML. It is transcribed from Figure 3 of the
+paper named. The ellipses are mine.
+
+The GML starter set was a set of macros for IBM Script.
+
+A mechanism for *describing* markup languages. Use of the DTD.
+
+Sensibly, SGML came with a "starter set" drafted by Joan Smith and
+Janet Vandore.
+
+Note how SGML allowed the
+definition of elements that were implicitly closed by another element -
+e.g., <li> and <p>
+
+- <td> is the document title
+- <ad> is an address, <al> an address line
+- <ab> is the abstract
+- <ci> indicates a citation, which rendered as italics in the resulting paper.
+- <ref> marks up a Reference, collected for the section at the end of the document.
+- &SGML is an "entity reference" that expands to 'Standard Generalized
+  Markup Language' - we're familiar with things like &eacute; from HTML.
+
 1969: GML / 1986: SGML / 1997: XML
 ----------------------------------
 
@@ -143,6 +187,18 @@ Q: **Commonly used with a macro language - essentially programmable?**
 
 .. _`Writing manual pages`: https://liw.fi/manpages/,
 
+1990: groff
+-----------
+
+**Not in the shorter version**
+
+Some example groff (GNU troff) code.
+
+Whilst the roff family are not strictly speaking programmable as
+such, their use of macros (originally m4?) means that in practice they are
+as capable as systems such as |TeX| (although I don't think that DSLs like
+|LaTeX| exist as-such).
+
 1977/1978: |TeX|
 ----------------
 
@@ -162,6 +218,24 @@ written in |TeX|. |LaTeX| is still dominant in scientific and mathematical
 publishing.
 
 .. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
+
+1983: |LaTeX|
+-------------
+
+**Not in the shorter version**
+
+1983 |LaTeX| *Presentational*. Still in use.
+
+Leslie Lamport.
+
+|LaTeX| is essentially a DSL written in |TeX|. It's probably still
+the best known, but certainly not the only one.
+
+I used to write plain |TeX|, but most people actually use |LaTeX|,
+which dates from about 1983/1984, or one of the other systems written in
+|TeX|.
+
+
 
 1980: Scribe
 ------------
