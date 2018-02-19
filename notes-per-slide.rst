@@ -15,6 +15,10 @@ And only hitting the "high spots" for what I am talking about.
 However, the github repository has the source for these slides, and also a set
 of extended notes with links. I'll give the URL again at the end.
 
+.. raw:: latex
+
+   \newpage
+
 Timeline
 --------
 
@@ -28,6 +32,10 @@ There's a lot to cover, even so.
 
 What's interesting, though, is that just about everything named is still in
 use, in one form or another.
+
+.. raw:: latex
+
+   \newpage
 
 The types of markup
 -------------------
@@ -65,6 +73,10 @@ language (wikipedia calls this "procedural" markup). For instance, |TeX|.
 
 Obviously a markup may span categories.
 
+.. raw:: latex
+
+   \newpage
+
 1964: RUNOFF
 ------------
 
@@ -85,6 +97,10 @@ Commands could be abbreviated.
 
 Inline commands shift the "case", for instance in and out of bold case.
 
+.. raw:: latex
+
+   \newpage
+
 Digital Standard Runoff
 -----------------------
 
@@ -95,6 +111,10 @@ used to use in the 1980s/90s on VMS.
 
 Abbreviated forms are also available, e.g., ``.ls`` instead of
 ``.list``, and ``.le;`` instead of ``list element;``.
+
+.. raw:: latex
+
+   \newpage
 
 1969: GML and 1986: SGML
 ------------------------
@@ -128,6 +148,10 @@ e.g., <li> and <p>
 - <ref> marks up a Reference, collected for the section at the end of the document.
 - &SGML is an "entity reference" that expands to 'Standard Generalized
   Markup Language' - we're familiar with things like &eacute; from HTML.
+
+.. raw:: latex
+
+   \newpage
 
 1969: GML / 1986: SGML / 1997: XML
 ----------------------------------
@@ -169,6 +193,10 @@ A simpler subset of SGML, which makes parsers easier to write. Other SGML
 based tools (TEI, Docbook, HTML itself) have generally moved towards using
 XML rather than SGML in their specification.
 
+.. raw:: latex
+
+   \newpage
+
 1970s: roff, nroff, troff, groff
 --------------------------------
 
@@ -187,6 +215,10 @@ Q: **Commonly used with a macro language - essentially programmable?**
 
 .. _`Writing manual pages`: https://liw.fi/manpages/,
 
+.. raw:: latex
+
+   \newpage
+
 1990: groff
 -----------
 
@@ -198,6 +230,10 @@ Whilst the roff family are not strictly speaking programmable as
 such, their use of macros (originally m4?) means that in practice they are
 as capable as systems such as |TeX| (although I don't think that DSLs like
 |LaTeX| exist as-such).
+
+.. raw:: latex
+
+   \newpage
 
 1977/1978: |TeX|
 ----------------
@@ -219,6 +255,10 @@ publishing.
 
 .. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
 
+.. raw:: latex
+
+   \newpage
+
 1983: |LaTeX|
 -------------
 
@@ -235,7 +275,9 @@ I used to write plain |TeX|, but most people actually use |LaTeX|,
 which dates from about 1983/1984, or one of the other systems written in
 |TeX|.
 
+.. raw:: latex
 
+   \newpage
 
 1980: Scribe
 ------------
@@ -250,6 +292,10 @@ University. Lisp based.
 Similar systems still appear to exist.
 
 Note the two representations - the second one being more lisp-like.
+
+.. raw:: latex
+
+   \newpage
 
 1987: TEI
 ---------
@@ -270,6 +316,10 @@ b) of the rhyming scheme it is.
 
 .. _`TEI by example`: http://teibyexample.org/examples/TBED04v00.htm
 
+.. raw:: latex
+
+   \newpage
+
 1991: HTML
 ----------
 
@@ -282,6 +332,10 @@ internet in 1991.
 HTML 2.0 was published as IETF RFC 1866 in 1995
 
 HTML (at least until HTML5) is an SGML document type - an SGML application.
+
+.. raw:: latex
+
+   \newpage
 
 1991: Docbook
 -------------
@@ -302,6 +356,10 @@ Before Docbook 5, an SGML language, defined by a DTD
 
 DocBook 5 is an XML language, formally defined by a RELAX NG schema with
 integrated Schematron rules.
+
+.. raw:: latex
+
+   \newpage
 
 1991: setext
 ------------
@@ -331,6 +389,10 @@ own purposes.
 
   **Maybe** add an example of a link? (Links look very similar to one of the
   forms that reStructuredText supports)
+
+.. raw:: latex
+
+   \newpage
 
 1994/1995: wikiwikiweb
 ----------------------
@@ -368,6 +430,10 @@ were taken.
 
 Like most wiki formats, specified by example, with no real rigour.
 
+.. raw:: latex
+
+   \newpage
+
 1996: StructuredText
 --------------------
 
@@ -393,6 +459,10 @@ All block entities must be separated by blank lines.
 Note that "o" can be a list delimiter - regarded as a serious ambiguity.
 
 Specified by example, somewhat ambiguously.
+
+.. raw:: latex
+
+   \newpage
 
 2001/2002: reStructuredText
 ---------------------------
@@ -425,6 +495,10 @@ the Python documenation, instead of |LaTeX|.
 
 Maybe mention that < and > are not special.
 
+.. raw:: latex
+
+   \newpage
+
 2002: Asciidoc
 --------------
 
@@ -452,6 +526,10 @@ Use of a + sign to continue a list item into a second paragraph.
 Nice (easy to type) way of distinguishing opening and closing quotes.
 
 Footnotes done inline - less readable, but more convenient.
+
+.. raw:: latex
+
+   \newpage
 
 2004: markdown
 --------------
@@ -500,22 +578,15 @@ github-flavoured markdown is at least now based on CommonMark.
   the tidyness of that latter. I think there are many more surprises in how
   CommonMark "works".
 
+.. raw:: latex
+
+   \newpage
+
 Fin
 ---
 
-* 1960s TYPSET and RUNOFF, GML
-* 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
-* 2000s reStructuredText, AsciiDoc, markdown
-
-Written using reStructuredText.
-
-Presented using hovercraft
-
-Source and a longer article at https://github.com/tibs/markup-history
-
-You may also be interested in Write the Docs: http://www.writethedocs.org/
+Since this version of the talk is to be given to Write the Docs, I assume they
+already know about the Write the Docs website: http://www.writethedocs.org/
 
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:

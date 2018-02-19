@@ -2,14 +2,13 @@
 A history of markup languages
 =============================
 
-By Tibs / Tony Ibbs, for PyConUK 2017
+By Tibs / Tony Ibbs
 
 .. note:: These are the extended notes to go with the slideshow, together
    with links which I hope will be useful, and perhaps act as a start on
    finding out more about markup languages.
 
-.. For the moment, we represent TeX and LaTeX as simple text, but I might
-   change that in the future
+.. We can represent TeX and LaTeX as simple text:
 
 .. |TeX| replace:: TeX
 

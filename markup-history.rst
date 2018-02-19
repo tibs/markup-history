@@ -473,7 +473,7 @@ Fin
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
 * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
+* 1990s HTML, groff, setext, Docbook, WikiWikiWeb, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
 Written using reStructuredText_.
@@ -482,6 +482,8 @@ Converted to PDF slides using pandoc_ and beamer_.
 
 Source and extended notes at https://github.com/tibs/markup-history
 
-You may also be interested in Write the Docs: http://www.writethedocs.org/
+.. Since this version is to give to Write the Docs, I assume they know
+.. about the relevant website
+.. You may also be interested in Write the Docs: http://www.writethedocs.org/
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
