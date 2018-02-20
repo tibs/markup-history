@@ -2,7 +2,7 @@
 # available.
 
 .PHONY: default
-default: html slides
+default: html pdf
 
 # We don't try to provide an HTML version of the slides in this version
 # - use the PDF produces by 'slides' instead.
@@ -19,8 +19,8 @@ html:
 # the default, and 32 # for 3:2. It's probably enough to go for the following
 # pair of resolutions.
 # We also make the notes-per-slide as PDF, because we can and it might be useful.
-.PHONY: slides
-slides:
+.PHONY: pdf
+pdf:
 	pandoc markup-history.rst -t beamer -o markup-history-4x3.pdf -V aspectratio:43
 	pandoc markup-history-wide.rst -t beamer -o markup-history-16x9.pdf -V aspectratio:169
 	pandoc notes-per-slide.rst -o notes-per-slide.pdf
@@ -28,12 +28,10 @@ slides:
 .PHONY: clean
 clean:
 	rm -f *.html
-	rm -f markup-history*.pdf
-	rm -f notes-per-slide.pdf
 
 .PHONY: help
 help:
 	@echo 'make         same as: make html slides'
-	@echo 'make slides  create markup-history-[4x3|16x9].pdf and notes-per-slide.pdf'
+	@echo 'make pdf     create markup-history-[4x3|16x9].pdf and notes-per-slide.pdf'
 	@echo 'make html    create HTML files using rst2html'
-	@echo 'make clean   delete HTML and PDF slides'
+	@echo 'make clean   delete HTML files'

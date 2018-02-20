@@ -1,14 +1,14 @@
 A history of markup languages
 =============================
 
-This is a slideshow originally produced for `PyConUK 2017`_
+This is a slideshow originally produced for `PyCon UK 2017`_
 
 History
 ~~~~~~~
 * The current version of the slides is as presented at `Write the Docs
   Cambridge`_ in `February 2018`_. This is meant to be about 40-45 minutes
   long.
-* The version presented at `PyConUK 2017`_ can be found at tag pycon-uk-2017_.
+* The version presented at `PyCon UK 2017`_ can be found at tag pycon-uk-2017_.
   You can see it on video_. This version was 30 minutes long.
 * The earlier version given to CamPUG_ in `October 2017`_ can be found at tag
   campug-oct-2017_. It was about 45 minutes long.
@@ -18,19 +18,29 @@ The files
 All sources are in reStructuredText_, and thus intended to be readable as
 plain text.
 
-The sources for the slides are in `<markup-history.rst>`_. Notes per slide
-(for the presenter) are separated out into `<notes-per-slide.rst>`_. Extended
-notes (with links) are in `<markup-history-extended-notes.rst>`_.
+* The sources for the slides are in `<markup-history.rst>`_ and
+  `<markup-history-wide.rst>`_ (customised for 4x3 and 16x9 respectively,
+  although they're actually the same bar some formatting).
+* Notes per slide (for the presenter) are separated out into `<notes-per-slide.rst>`_.
+* Extended notes (with links) are in `<markup-history-extended-notes.rst>`_.
 
-(Because this version of the talk is using PDF slides, I shall aim to put the
-PDF files up as well, as generating them is non-trivial.)
+Since this version of the talk uses PDF slides, which I produce via pandoc_
+and TeX_, I'm including the resultant PDF files in the repository. These
+will not always be as up-to-date as the source files, so check their
+timestamps.
+
+* The 4x3 aspect ratio slides are `<markup-history-4x3.pdf>`_.
+* The 16x9 aspect ratio slides are `<markup-history-16x9.pdf>`_.
+* There is a PDF version of the notes per slide in `<notes-per-slide.pdf>`_.
+  Beware that it is set with the information for each slide on a separate (A4)
+  page.
 
 Making the PDF and HTML files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For convenience, you can use the Makefile to create the PDF slides, create the
-HTML version of the talk, and so on. For instance::
+HTML version of the extended notes, and so on. For instance::
 
-  $ make slides
+  $ make pdf
 
 will make the PDF files.
 
@@ -45,7 +55,7 @@ Requirements to build the documents:
 
 and an appropriate ``make`` program if you want to use the Makefile.
 
-.. _`PyConUK 2017`: http://2017.pyconuk.org/
+.. _`PyCon UK 2017`: http://2017.pyconuk.org/
 .. _CamPUG: https://www.meetup.com/CamPUG/
 .. _`write the docs cambridge`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
 .. _`February 2018`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
