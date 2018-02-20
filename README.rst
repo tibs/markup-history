@@ -1,30 +1,47 @@
 A history of markup languages
 =============================
 
-A slideshow produced for `PyConUK 2017`_
+A slideshow originally produced for `PyConUK 2017`_
 
 .. _`PyConUK 2017`: http://2017.pyconuk.org/
 .. _CamPUG: https://www.meetup.com/CamPUG/
+.. _`at write the docs cambridge`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
+.. _pandoc: https://pandoc.org/
+.. _docutils: http://docutils.sourceforge.net/
+.. _reStructuredText: http://docutils.sourceforge.net/rst.html
+.. _TeX: https://www.ctan.org/starter
+
+* The current version of the slides is as (to be) presented `at Write the Docs
+Cambridge`_ in February 2018.
+* The version presented at `PyConUK 2017`_ can be found at tag
+  https://github.com/tibs/markup-history/tree/pycon-uk-2017
+* The earlier version given to CamPUG_ can be found at tag
+  https://github.com/tibs/markup-history/tree/campug-oct-2017
 
 The slides are in `<markup-history.rst>`_. Notes per slide (for the presenter)
 are separated out into `<notes-per-slide.rst>`_. Extended notes (with links) are
 in `<markup-history-extended-notes.rst>`_.
 
-For convenience, you can use the Makefile to show the presentation, create the
+(Because this version of the talk is using PDF slides, I shall aim to put the
+PDF files up as well, as generating them is non-trivial.)
+
+Making the PDF and HTML files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For convenience, you can use the Makefile to create the PDF slides, create the
 HTML version of the talk, and so on. For instance::
 
-  $ make show
+  $ make slides
 
-will present the slideshow on ``https://localhost:8000``.
+will make the PDF files.
 
-For what the Makefile can do::
+For what the Makefile can do, use::
 
   $ make help
 
-Requirements:
+Requirements to build the documents:
 
-* hovercraft
-* Python 3 (or whatever version hovercraft wants)
+* pandoc_ and TeX_ (on mac, BasicTeX should be enough)
+* docutils_ (for reStructuredText_)
 
 and an appropriate ``make`` program if you want to use the Makefile.
 
