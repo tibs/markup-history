@@ -630,6 +630,8 @@ don't know if they'd want it used in an example like this!):
 In serious use of |TeX|, one starts by defining lots of useful
 commands - although `the TeXbook`_ has many useful ideas one can copy.
 
+In this example, only the ``\item`` was predefined for me.
+
 .. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
 
 |LaTeX|
@@ -1517,6 +1519,12 @@ All block entities must be separated by blank lines.
 Note that "o" can be a list delimiter - this was regarded as a serious
 ambiguity, especially when writing Spanish, where "o" is a valid word.
 
+Links are done as::
+
+    visit the "Python website" :http://www.python.org/.
+
+i.e., quoted text followed by a colon and then a URL.
+
 The StructuredText documentation was much better than that for setext, but
 still relied on example rather than specification, and left important
 ambiguities.
@@ -1542,9 +1550,7 @@ Some links:
 .. _`Jim Fulton`: http://jimfulton.info/
 .. _`Older Projects`:  http://jimfulton.info/site/older-projects.html
 
-* `An Introduction to Structured Text`_, Paul Everitt, undated - but all of
-  the actual StructuredText has just been rendered as HTML, rendering the page
-  fairly useless
+* `An Introduction to Structured Text`_, Paul Everitt, undated.
 * `zope.structuredtext`_ on github
   https://github.com/zopefoundation/zope.structuredtext
   is an implementation of a StructuredText parser, and appears to be the best
@@ -1746,8 +1752,7 @@ Here is an example similar to the setext example:
 
 .. code:: reST
 
-  This is a heading
-  -----------------
+  = This is a title heading
 
   This is a paragraph. Body text is not indented.
 
@@ -1758,8 +1763,7 @@ Here is an example similar to the setext example:
   This is more of the second list item. It is "`joined on`" by the
   `+`.footnote:[Note the quotation marks around _joined on_.]
 
-  This is a sub-heading
-  ~~~~~~~~~~~~~~~~~~~~~
+  == This is a sub-heading
 
   Sub-section body text is not indented either. What makes sense for
   programming languages is irritating for text.
@@ -1779,6 +1783,10 @@ is nice.
 Note that footnotes are written inline - this is less readable (in the
 original asciidoc), but more convenient to write, and doesn't require the
 author worrying about what footnore marker to use.
+
+Headings can also be delimited in "setext" style, with underlining
+characters, but that doesn't seem to be the normal convention (although
+https://asciidoclive.com still shows that style in its example).
 
 Some links:
 
@@ -2100,7 +2108,7 @@ Fin
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
 * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, PostScript, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, POD, javadoc, StructuredText, XML
+* 1990s groff, HTML, setext, Docbook, WikiWikiWeb, POD, javadoc, StructuredText, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
 This document was written using reStructuredText_.

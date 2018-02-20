@@ -30,8 +30,11 @@ hopefully its a good survey.
 
 There's a lot to cover, even so.
 
-What's interesting, though, is that just about everything named is still in
+What's interesting, though, is that almost everything named is still in
 use, in one form or another.
+
+Note: I'm not going to follow a strict linear sequence in time, but instead
+work partially by topic.
 
 .. raw:: latex
 
@@ -84,6 +87,13 @@ Obviously a markup may span categories.
 
 Jerome H. Saltzer for CTSS (Compatible Time Sharing System)
 
+Commands starting with a dot in the first column.
+
+Commands could be abbreviated, e.g., ``.ls`` instead of ``.list``, and
+``.le;`` instead of ``list element;``.
+
+Inline commands shift the "case", for instance in and out of bold case.
+
 Ported to BCPL and Multics. Ancestor to roff and thus, ultimately, all of
 the roff family.
 
@@ -91,35 +101,12 @@ In the 1980s/1990s I used Digital Standard Runoff, also a direct descendant.
 
 This example is (more or less) from the original TYPSET/RUNOFF documentation.
 
-Commands starting with a dot in the first column.
-
-Commands could be abbreviated.
-
-Inline commands shift the "case", for instance in and out of bold case.
-
-.. raw:: latex
-
-   \newpage
-
-Digital Standard Runoff
------------------------
-
-**Not in the shorter version**
-
-This is an example using Digital Standard Runoff (DSR), which I
-used to use in the 1980s/90s on VMS.
-
-Abbreviated forms are also available, e.g., ``.ls`` instead of
-``.list``, and ``.le;`` instead of ``list element;``.
-
 .. raw:: latex
 
    \newpage
 
 1969: GML and 1986: SGML
 ------------------------
-
-**Not in shorter version**
 
 1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
 
@@ -149,12 +136,14 @@ e.g., <li> and <p>
 - &SGML is an "entity reference" that expands to 'Standard Generalized
   Markup Language' - we're familiar with things like &eacute; from HTML.
 
+**Not in the shorter version**
+
 .. raw:: latex
 
    \newpage
 
-1969: GML / 1986: SGML / 1997: XML
-----------------------------------
+1969: GML / 1986: SGML
+----------------------
 
 1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
 
@@ -175,23 +164,50 @@ list structure described.
 Sensibly, SGML came with a "starter set" drafted by Joan Smith and
 Janet Vandore.
 
-SGML allowed the definition of elements that were implicitly closed by
+SGML allows the definition of elements that were implicitly closed by
 another element - e.g., <li> and <p> in HTML.
 
-Q: **Can the <item> elements here be closed implicitly?**
+In our example::
+
+    <!ELEMENT list - - (item)+ >
+
+* The element being defined is ``list``.
+* The two hyphens indicate that both the start tag ``<list>`` and the end tag
+  ``</list>`` for this element are required.
+* The ``+`` means that there must be "at least one ``<item>`` element".
+
+In::
+
+  <!ELEMENT item O O (#PCDATA, (list)*)  >
+
+* The two ``O`` ("oh", not "zero") characters mean that both the start and end
+  tags can be omitted.
+* The end of the specification tells us that an ``item`` may contain
+  ``PCDATA`` (text) or zero or more ``list`` elements.
+
+.. raw:: latex
+
+   \newpage
+
+1997: XML
+---------
 
 1997 XML (Extensible Markup Language) *Semantic*.
-
-wikipedia: "XML is an application profile of SGML"
 
 XML was compiled by a working group of eleven members,[30] supported by a
 (roughly) 150-member Interest Group.
 
 No example because there is no "default" XML - a schema is needed.
 
-A simpler subset of SGML, which makes parsers easier to write. Other SGML
-based tools (TEI, Docbook, HTML itself) have generally moved towards using
-XML rather than SGML in their specification.
+XML was compiled by a working group of eleven members, supported by a
+(roughly) 150-member Interest Group.
+
+It's a simpler subset of SGML, which makes parsers easier to write.
+
+Other SGML based tools (TEI, Docbook, HTML itself) have generally moved
+towards using XML rather than SGML in their specification.
+
+**Not in the shorter version**
 
 .. raw:: latex
 
@@ -208,10 +224,11 @@ around 1970.
 The example is a (fake) man page, using the ``man`` macro package from
 Lars Wirzenius' `Writing manual pages`_
 
-.TH = title, .SH = sub-heading, .B = bold, other font usages (e.g., normal
-font and underlining) are indicated by the \\f sequences.
-
-Q: **Commonly used with a macro language - essentially programmable?**
+* .TH = title
+* .SH = sub-heading
+* .B = bold
+* other font usages (e.g., normal font and underlining) are indicated by the
+  \\f sequences.
 
 .. _`Writing manual pages`: https://liw.fi/manpages/,
 
@@ -222,14 +239,13 @@ Q: **Commonly used with a macro language - essentially programmable?**
 1990: groff
 -----------
 
-**Not in the shorter version**
-
 Some example groff (GNU troff) code.
 
-Whilst the roff family are not strictly speaking programmable as
-such, their use of macros (originally m4?) means that in practice they are
-as capable as systems such as |TeX| (although I don't think that DSLs like
-|LaTeX| exist as-such).
+Whilst the roff family are not strictly speaking programmable as such, their
+use of macros means that in practice they are as capable as systems such as
+|TeX| (although I don't think that DSLs like |LaTeX| exist as-such).
+
+**Not in the shorter version**
 
 .. raw:: latex
 
@@ -249,9 +265,8 @@ Driven by the need to guarantee accurate typesetting of mathematics.
 In serious use of |TeX|, one starts by defining lots of useful
 commands - although `the TeXbook`_ has many useful ideas one can copy.
 
-Most people actually use |LaTeX| (1984) or one of the other markup languages
-written in |TeX|. |LaTeX| is still dominant in scientific and mathematical
-publishing.
+In this example, `\item` is a standard definition, but all of the other
+commands starting with backslash were defined by my own macros.
 
 .. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
 
@@ -262,8 +277,6 @@ publishing.
 1983: |LaTeX|
 -------------
 
-**Not in the shorter version**
-
 1983 |LaTeX| *Presentational*. Still in use.
 
 Leslie Lamport.
@@ -272,8 +285,14 @@ Leslie Lamport.
 the best known, but certainly not the only one.
 
 I used to write plain |TeX|, but most people actually use |LaTeX|,
-which dates from about 1983/1984, or one of the other systems written in
-|TeX|.
+which dates from about 1983/1984. |LaTeX| is probably still dominant in
+scientific and mathematical publishing.
+
+This example is from the first edition of the same fanzine - all of the
+markup is provided for me by |LaTeX|, so I didn't need to define anything
+here.
+
+**Not in the shorter version**
 
 .. raw:: latex
 
@@ -281,8 +300,6 @@ which dates from about 1983/1984, or one of the other systems written in
 
 1980: Scribe
 ------------
-
-**Maybe** could drop this slide as well, although I'd rather not.
 
 1980 Scribe *Presentational*
 
@@ -314,6 +331,9 @@ showing the working of the ryhming scheme.
 ``rhyme="ababab"`` and then on each line the rhyming word and which part (a,
 b) of the rhyming scheme it is.
 
+(In the 16x9 version of this slide, I've set these far to the right, to make
+them more obvious.)
+
 .. _`TEI by example`: http://teibyexample.org/examples/TBED04v00.htm
 
 .. raw:: latex
@@ -329,9 +349,18 @@ Tim Berners-Lee, at CERN, specified HTML and wrote browser and server
 software in late 1990. The "HTML Tags" document was first mentioned on the
 internet in 1991.
 
-HTML 2.0 was published as IETF RFC 1866 in 1995
+HTML 2.0 was published as IETF RFC 1866 in 1995. There was no specification
+called "HTML 1".
 
-HTML (at least until HTML5) is an SGML document type - an SGML application.
+HTML until HTML5 is an SGML document type - an SGML application.
+
+Wikipedia says:
+
+  "The HTML5 syntax is no longer based on SGML despite the similarity of its
+  markup. It has, however, been designed to be backward compatible with common
+  parsing of older versions of HTML. It comes with a new introductory line
+  that looks like an SGML document type declaration, ``<!DOCTYPE html>``, which
+  triggers the standards-compliant rendering mode."
 
 .. raw:: latex
 
@@ -342,12 +371,12 @@ HTML (at least until HTML5) is an SGML document type - an SGML application.
 
 1991 Docbook *Semantic*. Still in use today.
 
+*(Same year as HTML)*
+
 "A semantic markup language for technical documentation"
 
 However, I think it is often "semantic" in the same way that |LaTeX| is
 "semantic" - often also for presentational purposes (but not *necessarily*).
-
-Same year as HTML
 
 Example of Docbook 4.3 from
 http://www.informatik.tu-cottbus.de/~giurca/tutorials/DocBook/index.htm
@@ -366,12 +395,14 @@ integrated Schematron rules.
 
 1991 setext *Presentational*. Lightweight.
 
+*(Same year as HTML and Docbook)*
+
+*(This is the beginning of our look at lightweight markup formats)*
+
 Ian Feldman, for use in writing the TidBITs electronic newsletter.
 
 Partly a reaction to SGML. Clearly influential on all of the succeeding
 lightweight markups.
-
-Same year as HTML and Docbook
 
 Note: the body text must be indented.
 
@@ -387,8 +418,7 @@ Unclear if lists actually were supported. Specification not very clear,
 specified by examples, not rigorous at all. Really just what he needed for his
 own purposes.
 
-  **Maybe** add an example of a link? (Links look very similar to one of the
-  forms that reStructuredText supports)
+  (Links look very similar to one of the forms that reStructuredText supports)
 
 .. raw:: latex
 
@@ -397,13 +427,11 @@ own purposes.
 1994/1995: wikiwikiweb
 ----------------------
 
-**skippable** wikiwikiweb
-
-  (but I'd prefer to keep, as it's important historically)
-
 1994/1995 wikiwikiweb *Presentational*
 
 The first wiki, invented by Ward Cunningham
+
+Like most wiki formats, specified by example, with no real rigour.
 
 I think that newlines within a paragraph are ignored, but it's hard  to
 tell.
@@ -428,8 +456,6 @@ Single quotes - this really distressed me when I first came across it:
 Later wiki formats appear not to have understood *why* the design decisions
 were taken.
 
-Like most wiki formats, specified by example, with no real rigour.
-
 .. raw:: latex
 
    \newpage
@@ -441,6 +467,8 @@ Like most wiki formats, specified by example, with no real rigour.
 
 Created by Jim Fulton of Digital Creations (later Zope Foundation) for use
 in Zope.
+
+Specified by example, somewhat ambiguously.
 
 Clearly influenced by setext.
 
@@ -458,7 +486,11 @@ All block entities must be separated by blank lines.
 
 Note that "o" can be a list delimiter - regarded as a serious ambiguity.
 
-Specified by example, somewhat ambiguously.
+Links are done as::
+
+    visit the "Python website" :http://www.python.org/.
+
+i.e., quoted text followed by a colon and then a URL.
 
 .. raw:: latex
 
@@ -476,6 +508,8 @@ Original mailing of the idea to the Doc-Sig was in Nov 2000
 * Readable is the main aim.
 * Output agnostic.
 * Well specified, allowing other implementations which behave in the same way.
+* Note that < and > are not special - Guido wanted to be able to discuss XML
+  and suchlike without quoting stuff.
 
 Clearly influenced by setext and StructuredText, but with more rigor.
 
@@ -485,15 +519,13 @@ lists).
 
 "o" is not allowed as a list delimiter, as it is too ambiguous.
 
-NB: no underlining.
+NB: no way to specify underlined text, which is a Good Thing.
 
 Consciously designed to allow doing certain things but not others - basically,
 if a document is too complex for reStructuredText, use something like Docbook.
 
 Sphinx was first introduced as a means of using reStructuredText to write
 the Python documenation, instead of |LaTeX|.
-
-Maybe mention that < and > are not special.
 
 .. raw:: latex
 
@@ -527,6 +559,11 @@ Nice (easy to type) way of distinguishing opening and closing quotes.
 
 Footnotes done inline - less readable, but more convenient.
 
+Note that headings can also be delimited with underlining characters, but that
+doesn't seem to be the normal convention (it's not what the current
+Asciidoctor documentation introduces, although https://asciidoclive.com
+still shows that style in its example).
+
 .. raw:: latex
 
    \newpage
@@ -540,8 +577,8 @@ John Gruber, collaborating with Aaron Swartz on the syntax
 
 *So* nearly a wonderful success.
 
-Yes, I know headings can be underline as well, but I've never seen
-anyone actually doing that.
+Yes, I know headings can be underline as well ("setext" style, as it terms
+it), but I've never seen anyone actually doing that.
 
 * Aimed at producing HTML.
 

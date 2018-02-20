@@ -1,26 +1,26 @@
 A history of markup languages
 =============================
 
-A slideshow originally produced for `PyConUK 2017`_
+This is a slideshow originally produced for `PyConUK 2017`_
 
-.. _`PyConUK 2017`: http://2017.pyconuk.org/
-.. _CamPUG: https://www.meetup.com/CamPUG/
-.. _`at write the docs cambridge`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
-.. _pandoc: https://pandoc.org/
-.. _docutils: http://docutils.sourceforge.net/
-.. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _TeX: https://www.ctan.org/starter
+History
+~~~~~~~
+* The current version of the slides is as presented at `Write the Docs
+  Cambridge`_ in `February 2018`_. This is meant to be about 40-45 minutes
+  long.
+* The version presented at `PyConUK 2017`_ can be found at tag pycon-uk-2017_.
+  You can see it on video_. This version was 30 minutes long.
+* The earlier version given to CamPUG_ in `October 2017`_ can be found at tag
+  campug-oct-2017_. It was about 45 minutes long.
 
-* The current version of the slides is as (to be) presented `at Write the Docs
-  Cambridge`_ in February 2018.
-* The version presented at `PyConUK 2017`_ can be found at tag
-  https://github.com/tibs/markup-history/tree/pycon-uk-2017
-* The earlier version given to CamPUG_ can be found at tag
-  https://github.com/tibs/markup-history/tree/campug-oct-2017
+The files
+~~~~~~~~~
+All sources are in reStructuredText_, and thus intended to be readable as
+plain text.
 
-The slides are in `<markup-history.rst>`_. Notes per slide (for the presenter)
-are separated out into `<notes-per-slide.rst>`_. Extended notes (with links) are
-in `<markup-history-extended-notes.rst>`_.
+The sources for the slides are in `<markup-history.rst>`_. Notes per slide
+(for the presenter) are separated out into `<notes-per-slide.rst>`_. Extended
+notes (with links) are in `<markup-history-extended-notes.rst>`_.
 
 (Because this version of the talk is using PDF slides, I shall aim to put the
 PDF files up as well, as generating them is non-trivial.)
@@ -44,6 +44,19 @@ Requirements to build the documents:
 * docutils_ (for reStructuredText_)
 
 and an appropriate ``make`` program if you want to use the Makefile.
+
+.. _`PyConUK 2017`: http://2017.pyconuk.org/
+.. _CamPUG: https://www.meetup.com/CamPUG/
+.. _`write the docs cambridge`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
+.. _`February 2018`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
+.. _`October 2017`: https://www.meetup.com/CamPUG/events/tpcsxlywnbfb/
+.. _video: https://www.youtube.com/watch?v=qQMXPXzrE_s
+.. _campug-oct-2017: https://github.com/tibs/markup-history/tree/campug-oct-2017
+.. _pycon-uk-2017: https://github.com/tibs/markup-history/tree/pycon-uk-2017
+.. _pandoc: https://pandoc.org/
+.. _docutils: http://docutils.sourceforge.net/
+.. _reStructuredText: http://docutils.sourceforge.net/rst.html
+.. _TeX: https://www.ctan.org/starter
 
 --------
 

@@ -2,32 +2,29 @@
 Slides removed due to time constraints
 ======================================
 
-To get it down to 40 minutes
-============================
+To get it down to roughly 40 minutes
 
 ----
 
-1997: XML
----------
+Digital Standard Runoff
+-----------------------
 
-.. note:: 1997 XML *Semantic*.
+.. code:: roff
 
-  Extensible Markup Language
+    .TITLE A simpler DSR example
+    .CHAPTER This is a chapter
 
-  wikipedia: "XML is an application profile of SGML"
+    This is the first paragraph.
+    .LIST
+    .LIST ELEMENT;This is a list element. We have *bold\* and
+    &underline\&.
+    .LIST ELEMENT;This is another list element. I like
+    interrobangs ?%!
+    .END LIST
 
-  No example because there is no "default" XML - a schema is needed.
-
-  A simpler subset of SGML, which makes parsers easier to write. Other SGML
-  based tools (TEI, Docbook, HTML itself) have generally moved towards using
-  XML rather than SGML in their specification.
-
-  XML was compiled by a working group of eleven members,[30] supported by a
-  (roughly) 150-member Interest Group.
-
-  **If this is kept** it needs to be a very brief slide. On the other hand,
-  I think it is useful as a marker, given how XML is important to the SGML
-  world.
+.. note:: I'm not sure anyone else is interested in DSR, and I don't think
+   it gives any extra information over talking about the roffs in general.
+   Perhaps mention it in passing.
 
 ----
 
@@ -127,10 +124,13 @@ To get it down to 40 minutes
 To get it down to (maybe) 25 minutes
 ====================================
 
+The original talk I gave at CamPUG had 26 slides, and was too long for the
+slot that PyCon UK gave me.
+
+For PyCon UK
+~~~~~~~~~~~~
 If 26 slides took 40 minutes, then that's about 1-and-a-half minutes per
-slide, and 25 minutes suggests 16 slides. Which is going to be interesting to
-do, as it means dropping 10 slides. And not talking longer per slide to make
-up for it(!).
+slide, and 25 minutes suggests 16 slides. So that's what I aimed for.
 
 Scaling back to 40 minutes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

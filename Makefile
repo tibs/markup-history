@@ -22,7 +22,7 @@ html:
 .PHONY: slides
 slides:
 	pandoc markup-history.rst -t beamer -o markup-history-4x3.pdf -V aspectratio:43
-	pandoc markup-history.rst -t beamer -o markup-history-16x9.pdf -V aspectratio:169
+	pandoc markup-history-wide.rst -t beamer -o markup-history-16x9.pdf -V aspectratio:169
 	pandoc notes-per-slide.rst -o notes-per-slide.pdf
 
 .PHONY: clean
@@ -34,8 +34,6 @@ clean:
 .PHONY: help
 help:
 	@echo 'make         same as: make html slides'
-	@echo 'make slides  create slideshow in slides/'
-	@echo 'make show    show slideshow on http://localhost:8000'
+	@echo 'make slides  create markup-history-[4x3|16x9].pdf and notes-per-slide.pdf'
 	@echo 'make html    create HTML files using rst2html'
-	@echo 'make clean   delete HTML files and slides/'
-	@echo 'make pandoc  make PDF slides using pandoc and LaTeX'
+	@echo 'make clean   delete HTML and PDF slides'

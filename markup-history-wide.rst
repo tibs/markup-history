@@ -78,24 +78,23 @@ Presentational or Semantic
 
 .. code:: sgml
 
-  <td> The Implication of SGML for the Preparation of
-  Scientific Publications
+  <td> The Implication of SGML for the Preparation of Scientific
+  Publications
   <au> Joan M. Smith
-  ...
-  <ab> The &SGML (SGML) is a draft international standard
-  for publishing.
+  <ad> <al> National Computing Centre, Oxford Road, Manchester M1 7ED
+  <ab> The &SGML (SGML) is a draft international standard for publishing.
   ...
   <h1>Introduction
   <p> The official title of SGML, currently, is ISO/DIS 8879,
-  <ci> Information Processing &end Text and Office Systems
-  &end &SGML (SGML) </ci>. <ref> ISO/DIS 8879 ... </ref>
+  <ci> Information Processing &end Text and Office Systems &end &SGML (SGML)
+  </ci>. <ref> ISO/DIS 8879 <ci> Information Processing &end Text and Office
+  Systems &end &SGML (SGML). ISO, Geneva (1985). </ref>
   ...
   <p>There are several points worthy of note here:
   <ul>
   <li> the normal publishing delay with ISO standards...
   ...
   </ul>
-
 
 ----
 
@@ -162,15 +161,14 @@ Presentational or Semantic
   .SUBTITLE "\*[2014]
   .INCLUDE  mission-statement-style.mom
   .PP
-  As the most widely deployed implementation of troff in use
-  today, groff holds an important place in the Unix universe.
-  Frequently and erroneously dismissed as a legacy program
-  for formatting Unix manuals (manpages), groff is in fact a
-  sophisticated system for producing high-quality typeset
-  material, from business correspondence to complex,
-  technical reports and plate-ready books. \*[BU3]With an
-  impressive record for backward compatibility, it continues
-  to evolve and play a leading role in the development of
+  As the most widely deployed implementation of troff in use today,
+  groff holds an important place in the Unix universe.  Frequently
+  and erroneously dismissed as a legacy program for formatting
+  Unix manuals (manpages), groff is in fact a sophisticated system
+  for producing high-quality typeset material, from business
+  correspondence to complex, technical reports and plate-ready books.
+  \*[BU3]With an impressive record for backward compatibility, it
+  continues to evolve and play a leading role in the development of
   free typesetting software.
 
 ----
@@ -187,13 +185,13 @@ Presentational or Semantic
 
   \beginlist
   \item{\blob} They aren't afraid to show a sense of wonder.
-  \item{\blob} They aren't `duty bound' to include love
-  interest for the sake of it.
-  \item{\blob} They are rarely cynical, rarely bitter---but
-  the best do not avoid tragedy and truth.
-  \item{\blob} They are willing to teach the simple lessons
-  of being human---which adult books so often scorn, but
-  which we all need to learn and relearn.
+  \item{\blob} They aren't `duty bound' to include love interest for the
+  sake of it.
+  \item{\blob} They are rarely cynical, rarely bitter---but the best do
+  not avoid tragedy and truth.
+  \item{\blob} They are willing to teach the simple lessons of being
+  human---which adult books so often scorn, but which we all need to
+  learn and relearn.
   \endlist
 
 ----
@@ -249,17 +247,17 @@ Presentational or Semantic
   <lg type="sestina">
   <lg type="sestet" rhyme="ababab">
   <l>I saw my soul at rest upon a
-     <rhyme label="a" xml:id="A">day</rhyme></l>
+                    <rhyme label="a" xml:id="A">day</rhyme></l>
   <l>As a bird sleeping in the nest of
-     <rhyme label="b" xml:id="B">night</rhyme>,</l>
+                    <rhyme label="b" xml:id="B">night</rhyme>,</l>
   <l>Among soft leaves that give the starlight
-     <rhyme label="a" xml:id="C">way</rhyme></l>
+                     <rhyme label="a" xml:id="C">way</rhyme></l>
   <l>To touch its wings but not its eyes with
-     <rhyme label="b" xml:id="D">light</rhyme>;</l>
+                     <rhyme label="b" xml:id="D">light</rhyme>;</l>
   <l>So that it knew as one in visions
-     <rhyme label="a" xml:id="E">may</rhyme>,</l>
+                     <rhyme label="a" xml:id="E">may</rhyme>,</l>
   <l>And knew not as men waking, of
-     <rhyme label="b" xml:id="F">delight</rhyme>.</l>
+                     <rhyme label="b" xml:id="F">delight</rhyme>.</l>
   </lg>
 
 ----
@@ -290,18 +288,18 @@ Presentational or Semantic
   <!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
   "http://www.oasis-open.org/docbook/xml/simple/1.0/sdocbook.dtd">
   <article>
-   <title>DocBook Tutorial</title>
-   <articleinfo>
-    <author>
-     <firstname>Adrian</firstname> <surname>Giurca</surname>
-    </author>
-    <date>April 5, 2005</date>
-   </articleinfo>
-   <section>
-    <title>What is DocBook ?</title>
-    <para>DocBook is an SGML dialect developed by O'Reilly
-    and HaL Computer Systems in 1991.</para>
-   </section>
+    <title>DocBook Tutorial</title>
+    <articleinfo>
+      <author>
+        <firstname>Adrian</firstname> <surname>Giurca</surname>
+      </author>
+      <date>April 5, 2005</date>
+    </articleinfo>
+    <section>
+      <title>What is DocBook ?</title>
+      <para>DocBook is an SGML dialect developed by O'Reilly and HaL
+        Computer Systems in 1991.</para>
+    </section>
   </article>
 
 ----
@@ -317,9 +315,8 @@ Presentational or Semantic
 
    A subheading
    ------------
-     **Bold words** and ~italic~ are supported.
-     _Underlined_words_ are also supported.
-     `Backquoted words` are not touched.
+     **Bold words** and ~italic~ are supported. _Underlined_words_ are
+     also supported. `Backquoted words` are not touched.
 
    > This text will be represented using a monospaced font.
 
@@ -343,8 +340,8 @@ Presentational or Semantic
 
     Indented text is monospaced.
 
-  We have ''emphasis'', '''bold''', '''''bold italic''''',
-  and a LinkToAnotherPage.
+  We have ''emphasis'', '''bold''', '''''bold italic''''', and a
+  LinkToAnotherPage.
 
   But we can A''''''voidMakingAWikiLink.
 
@@ -363,12 +360,11 @@ Presentational or Semantic
 
      This is a paragraph. Body text is indented.
 
-     - This is a list item. Words can be *emphasized*,
-     _underlined_, **strong** or 'inline' - yes, that's
-     using single quotes [1].
+     - This is a list item. Words can be *emphasized*, _underlined_,
+     **strong** or 'inline' - yes, that's using single quotes [1].
 
-     o This is a list item as well. List items must be
-     separated by a blank line from other entities.
+     o This is a list item as well. List items must be separated by
+     a blank line from other entities.
 
      This is a sub-heading
 
@@ -388,14 +384,12 @@ Presentational or Semantic
    =================
    This is a paragraph. Body text is not indented.
 
-     - This is a list item. Words can be *emphasized*,
-       **strong** or ``teletype`` - yes, that's paired
-       backquotes [1]_.
-     - This is a list item as well. We don't need blank
-       lines between list items. 
+     - This is a list item. Words can be *emphasized*, **strong** or
+       ``teletype`` - yes, that's paired backquotes [1]_.
+     - This is a list item as well. We don't need blank lines between
+       list items. 
 
-       This is more of the second list item. It is indented
-       appropriately.
+       This is more of the second list item. It is indented appropriately.
 
    This is a sub-heading
    ---------------------
@@ -415,14 +409,13 @@ Presentational or Semantic
   = This is a title heading
   This is a paragraph. Body text is not indented.
 
-  - This is a list item. Words can be _italic_, *bold* or
-   +mono+ - yes, that's paired plus-signs.
-  - This is a list item as well. We don't need blank lines
-    between list items.
+  - This is a list item. Words can be _italic_, *bold* or +mono+ - yes,
+    that's paired plus-signs.
+  - This is a list item as well. We don't need blank lines between list
+    items.
   +
-  This is more of the second list item. It is "`joined on`"
-  by the `+`.footnote:[Note the quotation marks around
-  _joined on_.]
+  This is more of the second list item. It is "`joined on`" by the
+  `+`.footnote:[Note the quotation marks around _joined on_.]
 
   == This is a sub-heading
   Sub-section body text is not indented either.
@@ -437,13 +430,13 @@ Presentational or Semantic
    # This is a heading
    This is a paragraph. Body text is not indented.
 
-   - This is a list item. Words can be *emphasized*,
-   **strong** or `inline` - that's single backquotes.
-   - This is a list item as well. We don't need blank lines
-   between list items.
+   - This is a list item. Words can be *emphasized*, **strong** or
+   `inline` - that's single backquotes.
+   - This is a list item as well. We don't need blank lines between
+   list items.
 
-       This is more of the second list item. It's first line
-     must be indented by 4 spaces or a tab.
+       This is more of the second list item. Its first line must be
+     indented by 4 spaces or a tab.
 
    ## This is a sub-heading
    Sub-section body text is not indented either.
