@@ -24,6 +24,11 @@ plain text.
 * Notes per slide (for the presenter) are separated out into `<notes-per-slide.rst>`_.
 * Extended notes (with links) are in `<markup-history-extended-notes.rst>`_.
 
+(Note that github will present the ``.rst`` files in rendered form as HTML,
+albeit using their own styling (which makes notes a bit odd). If you want
+to see the original reStructuredText source, you have to click on the "Raw"
+link at the top of the file's page.)
+
 Since this version of the talk uses PDF slides, which I produce via pandoc_
 and TeX_, I'm including the resultant PDF files in the repository. These
 will not always be as up-to-date as the source files, so check their
