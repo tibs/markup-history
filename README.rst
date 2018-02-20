@@ -12,7 +12,7 @@ A slideshow originally produced for `PyConUK 2017`_
 .. _TeX: https://www.ctan.org/starter
 
 * The current version of the slides is as (to be) presented `at Write the Docs
-Cambridge`_ in February 2018.
+  Cambridge`_ in February 2018.
 * The version presented at `PyConUK 2017`_ can be found at tag
   https://github.com/tibs/markup-history/tree/pycon-uk-2017
 * The earlier version given to CamPUG_ can be found at tag
