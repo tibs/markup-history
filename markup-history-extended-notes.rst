@@ -462,8 +462,26 @@ and an example of the list structure described:
   <item>Last item</item>
   </list>
 
-.. note:: Q: **Does this simple DTD say that the <item> elements here be
-   closed implicitly?**
+.. note:: SGML (like GML before it) allows the definition of elements that
+    were implicitly closed by another element - e.g., <li> and <p> in HTML.
+
+    In our example::
+
+        <!ELEMENT list - - (item)+ >
+
+    * The element being defined is ``list``.
+    * The two hyphens indicate that both the start tag ``<list>`` and the end tag
+      ``</list>`` for this element are required.
+    * The ``+`` means that there must be "at least one ``<item>`` element".
+
+    In::
+
+      <!ELEMENT item O O (#PCDATA, (list)*)  >
+
+    * The two ``O`` ("oh", not "zero") characters mean that both the start and end
+      tags can be omitted.
+    * The end of the specification tells us that an ``item`` may contain
+      ``PCDATA`` (text) or zero or more ``list`` elements.
 
 Sensibly, SGML also came with a "starter set", drafted by Joan Smith and
 Janet Vandore.
@@ -491,8 +509,7 @@ Figure 3 of the paper named in the example. The ellipses are mine.
   ...
   </ul>
 
-Note how SGML (like GML before it) allowed the definition of elements that
-were implicitly closed by another element - e.g., ``<li>`` and ``<p>``
+where:
 
   - ``<td>`` is the document title
   - ``<ad>`` is an address, <al> an address line
@@ -502,6 +519,7 @@ were implicitly closed by another element - e.g., ``<li>`` and ``<p>``
   - ``&SGML`` is an "entity reference" that expands to 'Standard Generalized
     Markup Language'. You may be familiar with entity references from things
     like ``&eacute;`` in HTML.
+  - ``<li>`` and ``<p>`` are implicitly closed by following elements.
 
 An SGML document must declares a DOCTYPE to say what DTD it is conforming to.
 The following example should look very familiar:
