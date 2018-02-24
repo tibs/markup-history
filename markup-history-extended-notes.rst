@@ -2098,7 +2098,6 @@ A very scattershot section.
 Karl Voit, 2017. Emacs org-mode considered as a general markup language
 
 .. _`Org-Mode Is One of the Most Reasonable Markup Language to Use for Text`: http://karl-voit.at/2017/09/23/orgmode-as-markup-only/
-  considered as markup
 
 Pollen_, a lightweight programmable markup written in Racket_, Matthew
 Butterick, 2017
