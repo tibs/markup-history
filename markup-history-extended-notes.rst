@@ -577,7 +577,7 @@ XML
 ---
 
 XML (Extensible Markup Language) was compiled by a working group of eleven
-members,[30] supported by a (roughly) 150-member Interest Group. It's
+members, supported by a (roughly) 150-member Interest Group. It's
 specification is managed by the W3C_.
 
 Whilst XML is not itself of direct interest as a markup language, it is
