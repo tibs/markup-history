@@ -448,7 +448,7 @@ Presentational or Semantic
    ## This is a sub-heading
    Sub-section body text is not indented either.
 
-   (No footnotes, but you (!) can include <tt>HTML</tt>.)
+   (No footnotes, but you can (!) include <tt>HTML</tt>.)
 
 ----
 

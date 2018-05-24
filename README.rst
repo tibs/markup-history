@@ -8,6 +8,9 @@ History
 * The current version of the slides is as presented at `Write the Docs
   Cambridge`_ in `February 2018`_. This is meant to be about 40-45 minutes
   long.
+  
+  I also gave this version of the talk at work in May 2018.
+
 * The version presented at `PyCon UK 2017`_ can be found at tag pycon-uk-2017_.
   You can see it on video_. This version was 30 minutes long.
 * The earlier version given to CamPUG_ in `October 2017`_ can be found at tag
