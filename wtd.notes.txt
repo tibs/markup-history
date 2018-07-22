@@ -1,0 +1,41 @@
+Notes for Write The Docs, Prague, 2018
+======================================
+
+This is the branch for working on the version of the talk for Write The Docs
+in Prague, 2018.
+
+25 minute talk
+
+Q: Leave out mention of StructuredText?
+
+  - Do non-Python people really care about it / need to know about it
+  - Does reStructuredText make sense without it?
+  - i.e., can I explaing reStructuredText enough with only a mention of it?
+
+Specialisms:
+
+- reStructuredText: readable first (cf: Python)
+
+  Refuses to be output format specific, refuses to try to do everything (doing
+  everything would compromise readability). Can't use ``_`` for
+  italics/emphasis because Python uses leading/trailing underscores, and want
+  to write about Python easily.  Similarly, can't treat ``<`` and ``>``
+  specially, because want to discuss XML and so on (and also things like
+  ``<name>`` to represent an abstract concept, which is a common sort of
+  notation).  - asciidoc: lightweight docbook, wants to be as complete as
+  reasonable - markdown: lightweight HTML
+
+Other notes:
+
+* Check I mention DITA in the notes. People seem to want to use markdown to
+  write it.
+
+* orgmode - no real specification, defined by its (Emacs) implementation.
+
+  (There is a bit of a spec, but it's incomplete?)
+
+* http://acroom.wikity.cc/wiki-wiki-hypercard/ -- on the influence of HyperCard
+  on wiki wiki
+
+
+.. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
