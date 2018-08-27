@@ -23,7 +23,7 @@ html:
 pdf:
 	pandoc markup-history.rst -t beamer -o markup-history-4x3.pdf -V aspectratio:43
 	pandoc markup-history-wide.rst -t beamer -o markup-history-16x9.pdf -V aspectratio:169
-	pandoc notes-per-slide.rst -o notes-per-slide.pdf
+	pandoc notes-per-slide.rst -o notes-per-slide.pdf -V papersize:a4
 
 .PHONY: clean
 clean:

@@ -37,5 +37,7 @@ Other notes:
 * http://acroom.wikity.cc/wiki-wiki-hypercard/ -- on the influence of HyperCard
   on wiki wiki
 
+* https://manpages.bsd.lv/history.html -- history of UNIX man pages
+
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
