@@ -39,5 +39,35 @@ Other notes:
 
 * https://manpages.bsd.lv/history.html -- history of UNIX man pages
 
+CommonMark is very explicit (!) about how HTML may be included into its
+documents: https://spec.commonmark.org/0.28/#html-block
+
+  Note that the CommonMark spec quotes the later purpose for markdown,
+  readability, and not its original purpose of being an easier way to write
+  HTML.
+
+The rules are bit complicated, but quite explicit, which is good, and appear
+always to require an opening ``<HTML-tag>`` and a closing matching ``<HTML-tag>``
+(where "``<HTML-tag>``" is my term - there must be a better way to describe
+that - entity?).
+
+  https://spec.commonmark.org/0.28/#raw-html explains exactly how it
+  recognises those ``<any-old-text>`` strings. It still means one has to
+  escape thing like <this> to use them in mark[whatever], though. So one
+  has to backtick escape it (https://spec.commonmark.org/0.28/#code-spans), or
+  use https://spec.commonmark.org/0.28/#backslash-escapes as in the example of
+  ``\<br/> not a tag``.
+
+Although it still has https://spec.commonmark.org/0.28/#entity-references but
+at least it's explicit that this is ``&`` plus an allowed entity reference
+name plus ``;``, which is reasonably deterministic (even if it relies on
+external documentation to say what entity references exist!).
+
+And finally, https://spec.commonmark.org/0.28/#textual-content says:
+
+  Any characters not given an interpretation by the above rules will be parsed
+  as plain textual content.
+
+which I still find itchy.
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
