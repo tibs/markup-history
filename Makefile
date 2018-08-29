@@ -19,11 +19,25 @@ html:
 # pair of resolutions.
 # We also make the notes-per-slide as PDF, because we can and it might be useful.
 .PHONY: pdf
-pdf:
-	pandoc markup-history.rst -t beamer -o markup-history-4x3.pdf -V aspectratio:43
-	pandoc markup-history-wide.rst -t beamer -o markup-history-16x9.pdf -V aspectratio:169
-	pandoc markup-history-short.rst -t beamer -o markup-history-short-4x3.pdf -V aspectratio:43
-	pandoc notes-per-slide.rst -o notes-per-slide.pdf -V papersize:a4
+pdf: slides notes
+
+.PHONY: slides
+slides: markup-history-4x3.pdf markup-history-16x9.pdf markup-history-short-4x3.pdf
+
+.PHONY: notes
+notes: notes-per-slide.pdf
+
+markup-history-4x3.pdf: markup-history.rst
+	pandoc $< -t beamer -o $@ -V aspectratio:43
+
+markup-history-16x9.pdf: markup-history-wide.rst
+	pandoc $< -t beamer -o $@ -V aspectratio:169
+
+markup-history-short-4x3.pdf: markup-history-short.rst
+	pandoc $< -t beamer -o $@ -V aspectratio:43
+
+notes-per-slide.pdf: notes-per-slide.rst
+	pandoc $< -o $@ -V papersize:a4
 
 .PHONY: clean
 clean:

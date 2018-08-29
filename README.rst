@@ -3,9 +3,13 @@ A history of markup languages
 
 This is a slideshow originally produced for `PyCon UK 2017`_
 
+This branch (writethedocs-prague-2018) is where I'm amending the slides for
+presentation at `Write the Docs Prague 2018`_, and also making such other
+improvements as I can't resist.
+
 History
 ~~~~~~~
-* The current version of the slides is as presented at `Write the Docs
+* The current version of the slides on master is as presented at `Write the Docs
   Cambridge`_ in `February 2018`_. This is meant to be about 40-45 minutes
   long.
   
@@ -61,6 +65,7 @@ Requirements to build the documents:
 
 and an appropriate ``make`` program if you want to use the Makefile.
 
+.. _`Write the Docs Prague 2018`: https://www.writethedocs.org/conf/prague/2018/
 .. _`PyCon UK 2017`: http://2017.pyconuk.org/
 .. _CamPUG: https://www.meetup.com/CamPUG/
 .. _`write the docs cambridge`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
