@@ -9,7 +9,7 @@ A history of markup languages
 
 By Tibs / Tony Ibbs
 
-This version for the Cambridge Write The Docs meetup, Feb 2018
+The slightly shorter version.
 
 Written using reStructuredText_.
 
@@ -291,8 +291,7 @@ Presentational or Semantic
      _underlined_, **strong** or 'inline' - yes, that's
      using single quotes [1].
 
-     o This is a list item as well. List items must be
-     separated by a blank line from other entities.
+     o This is a list item as well.
 
      This is a sub-heading
 
@@ -315,8 +314,7 @@ Presentational or Semantic
      - This is a list item. Words can be *emphasized*,
        **strong** or ``teletype`` - yes, that's paired
        backquotes [1]_.
-     - This is a list item as well. We don't need blank
-       lines between list items. 
+     - This is a list item as well.
 
        This is more of the second list item. It is indented
        appropriately.
@@ -342,8 +340,7 @@ Presentational or Semantic
 
   - This is a list item. Words can be _italic_, *bold* or
    +mono+ - yes, that's paired plus-signs.
-  - This is a list item as well. We don't need blank lines
-    between list items.
+  - This is a list item as well.
   +
   This is more of the second list item. It is "`joined on`"
   by the `+`.footnote:[Note the quotation marks around
@@ -368,10 +365,9 @@ Presentational or Semantic
 
    - This is a list item. Words can be *emphasized*,
    **strong** or `inline` - that's single backquotes.
-   - This is a list item as well. We don't need blank lines
-   between list items.
+   - This is a list item as well.
 
-       This is more of the second list item. It's first line
+       This is more of the second list item. Its first line
      must be indented by 4 spaces or a tab.
 
    ## This is a sub-heading

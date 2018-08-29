@@ -4,9 +4,23 @@ Notes per slide
 A history of markup languages
 =============================
 
-.. |TeX| replace:: TeX
+  By Tibs / Tony Ibbs
 
-.. |LaTeX| replace:: LaTeX
+  This version for the Cambridge Write The Docs meetup, Feb 2018
+
+  Written using reStructuredText_.
+
+  Converted to PDF slides using pandoc_ and beamer_.
+
+  Source and extended notes at https://github.com/tibs/markup-history
+
+.. _reStructuredText: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+.. _pandoc: https://pandoc.org
+.. _beamer: https://github.com/josephwright/beamer
+
+.. |TeX| replace:: :math:`\text{\TeX}`
+
+.. |LaTeX| replace:: :math:`\text{\LaTeX}`
 
 A summary of some of the more obvious bits of the history of document markup.
 
@@ -15,12 +29,16 @@ And only hitting the "high spots" for what I am talking about.
 However, the github repository has the source for these slides, and also a set
 of extended notes with links. I'll give the URL again at the end.
 
-.. raw:: latex
-
-   \newpage
+----
 
 Timeline
 --------
+
+  * 1960s TYPSET and RUNOFF, GML
+  * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
+  * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
+  * 1990s groff, HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
+  * 2000s reStructuredText, AsciiDoc, markdown
 
 I'm ignoring anything that isn't just text (so, music, mathematics, diagrams,
 bibliographies, indices, etc.).
@@ -36,12 +54,14 @@ use, in one form or another.
 Note: I'm not going to follow a strict linear sequence in time, but instead
 work partially by topic.
 
-.. raw:: latex
-
-   \newpage
+----
 
 The types of markup
 -------------------
+
+  Presentational or Semantic
+
+  ...but also lightweight, and maybe programmable
 
 *Presentational*: how the text should be presented, e.g., as a man page, on a
 screen, or on a typeset page.
@@ -76,12 +96,22 @@ language (wikipedia calls this "procedural" markup). For instance, |TeX|.
 
 Obviously a markup may span categories.
 
-.. raw:: latex
-
-   \newpage
+----
 
 1964: RUNOFF
 ------------
+
+  .. code:: roff
+
+    .LINE LENGTH 60
+    .LEFT MARGIN 0
+    .PARAGRAPH 5
+    Call us on our toll free number
+
+    .CENTER
+    1-800-555-5555
+
+    and we will respond as soon as convenient.
 
 1964 RUNOFF *Presentational*
 
@@ -101,18 +131,39 @@ In the 1980s/1990s I used Digital Standard Runoff, also a direct descendant.
 
 This example is (more or less) from the original TYPSET/RUNOFF documentation.
 
-.. raw:: latex
-
-   \newpage
+----
 
 1969: GML and 1986: SGML
 ------------------------
 
+**Not in the shorter version**
+
+  .. code:: sgml
+
+    <td> The Implication of SGML for the Preparation of
+    Scientific Publications
+    <au> Joan M. Smith
+    ...
+    <ab> The &SGML (SGML) is a draft international standard
+    for publishing.
+    ...
+    <h1>Introduction
+    <p> The official title of SGML, currently, is ISO/DIS 8879,
+    <ci> Information Processing &end Text and Office Systems
+    &end &SGML (SGML) </ci>. <ref> ISO/DIS 8879 ... </ref>
+    ...
+    <p>There are several points worthy of note here:
+    <ul>
+    <li> the normal publishing delay with ISO standards...
+    ...
+    </ul>
+
 1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
 
-GML (Charles Goldfarb, Edward Mosher, Raymond Lorie) at IBM. 
+1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie - note the initials
+of the surnames) at IBM. 
 
-[Standard] Generalised Markup Language.
+1986 [Standard] Generalised Markup Language.
 
 The example is actually SGML. It is transcribed from Figure 3 of the
 paper named. The ellipses are mine.
@@ -136,23 +187,28 @@ e.g., <li> and <p>
 - &SGML is an "entity reference" that expands to 'Standard Generalized
   Markup Language' - we're familiar with things like &eacute; from HTML.
 
-**Not in the shorter version**
+----
 
-.. raw:: latex
+SGML DTD
+--------
 
-   \newpage
+  *DTD for a list:*
 
-1969: GML / 1986: SGML
-----------------------
+  .. code:: DTD
 
-1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
+    <!--      ELEMENT MIN CONTENT             >
+    <!ELEMENT list    - - (item)+             >
+    <!ELEMENT item    O O (#PCDATA, (list)*)  >
 
-1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie - note the initials of the
-surnames) at IBM. 
+  *and such a list:*
 
-1986 [Standard] Generalised Markup Language.
+  .. code:: sgml
 
-A mechanism for *describing* markup languages.
+    <list>
+    <item>First item</item>
+    <item>Second item</item>
+    <item>Last item</item>
+    </list>
 
 SGML uses DTDs (Document Type Definitions) to describe the set of
 markup declarations that form a *document type* (e.g., SGML itself, XML,
@@ -160,9 +216,6 @@ HTML).
 
 Shown is a DTD fragment for defining a simple list, and an example of the
 list structure described.
-
-Sensibly, SGML came with a "starter set" drafted by Joan Smith and
-Janet Vandore.
 
 SGML allows the definition of elements that were implicitly closed by
 another element - e.g., <li> and <p> in HTML.
@@ -185,12 +238,14 @@ In::
 * The end of the specification tells us that an ``item`` may contain
   ``PCDATA`` (text) or zero or more ``list`` elements.
 
-.. raw:: latex
-
-   \newpage
+----
 
 1997: XML
 ---------
+
+**Not in the shorter version**
+
+   "XML is an application profile of SGML"
 
 1997 XML (Extensible Markup Language) *Semantic*.
 
@@ -207,14 +262,28 @@ It's a simpler subset of SGML, which makes parsers easier to write.
 Other SGML based tools (TEI, Docbook, HTML itself) have generally moved
 towards using XML rather than SGML in their specification.
 
-**Not in the shorter version**
-
-.. raw:: latex
-
-   \newpage
+----
 
 1970s: roff, nroff, troff, groff
 --------------------------------
+
+  .. code:: roff
+
+    .TH CORRUPT 1
+    .SH NAME
+    corrupt \- modify files by randomly changing bits
+    .SH SYNOPSIS
+    .B corrupt
+    [\fB\-n\fR \fIBITS\fR]
+    [\fB\-\-bits\fR \fIBITS\fR]
+    .IR file ...
+    .SH DESCRIPTION
+    .B corrupt
+    modifies files by toggling a randomly chosen bit.
+    .SH OPTIONS
+    .TP
+    .BR \-n ", " \-\-bits =\fIBITS\fR
+    Set the number of bits to modify.  Default is one bit.
 
 1970s \*roff *Presentational*. Still in use (as 1990: groff)
 
@@ -232,12 +301,30 @@ Lars Wirzenius' `Writing manual pages`_
 
 .. _`Writing manual pages`: https://liw.fi/manpages/,
 
-.. raw:: latex
-
-   \newpage
+----
 
 1990: groff
 -----------
+
+**Not in the shorter version**
+
+  .. code:: roff
+
+    ..INCLUDE mission-statement-strings.mom
+    .TITLE    "\*[Groff-Mission-Statement]
+    .SUBTITLE "\*[2014]
+    .INCLUDE  mission-statement-style.mom
+    .PP
+    As the most widely deployed implementation of troff in use
+    today, groff holds an important place in the Unix universe.
+    Frequently and erroneously dismissed as a legacy program
+    for formatting Unix manuals (manpages), groff is in fact a
+    sophisticated system for producing high-quality typeset
+    material, from business correspondence to complex,
+    technical reports and plate-ready books. \*[BU3]With an
+    impressive record for backward compatibility, it continues
+    to evolve and play a leading role in the development of
+    free typesetting software.
 
 Some example groff (GNU troff) code.
 
@@ -245,14 +332,28 @@ Whilst the roff family are not strictly speaking programmable as such, their
 use of macros means that in practice they are as capable as systems such as
 |TeX| (although I don't think that DSLs like |LaTeX| exist as-such).
 
-**Not in the shorter version**
-
-.. raw:: latex
-
-   \newpage
+----
 
 1977/1978: |TeX|
 ----------------
+
+  .. code:: tex
+
+    \name{Name Redacted} wrote:
+
+    \beginletter
+    Thoughts on ``Why I like children's books'':
+
+    \beginlist
+    \item{\blob} They aren't afraid to show a sense of wonder.
+    \item{\blob} They aren't `duty bound' to include love
+    interest for the sake of it.
+    \item{\blob} They are rarely cynical, rarely bitter---but
+    the best do not avoid tragedy and truth.
+    \item{\blob} They are willing to teach the simple lessons
+    of being human---which adult books so often scorn, but
+    which we all need to learn and relearn.
+    \endlist
 
 1977/1978 |TeX|
 
@@ -270,12 +371,27 @@ commands starting with backslash were defined by my own macros.
 
 .. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
 
-.. raw:: latex
-
-   \newpage
+----
 
 1983: |LaTeX|
 -------------
+
+**Not in the shorter version**
+
+  .. code:: latex
+
+    \begin{center}
+    \rule{5in}{0.1mm}
+    \end{center}
+
+    \section*{Captain Competent strikes again}
+
+    The superhero is a familiar concept in comics, science
+    fiction and many other fields. However, I am more
+    interested in what might be called `the competent
+    hero'. This is a subtler form of protagonist---a
+    person who has attained {\em competence} in their
+    daily life.
 
 1983 |LaTeX| *Presentational*. Still in use.
 
@@ -292,14 +408,28 @@ This example is from the first edition of the same fanzine - all of the
 markup is provided for me by |LaTeX|, so I didn't need to define anything
 here.
 
-**Not in the shorter version**
-
-.. raw:: latex
-
-   \newpage
+----
 
 1980: Scribe
 ------------
+
+  .. code:: scribe
+
+      @Heading(The Beginning)
+      @Begin(Quotation)
+          Let's start at the very beginning, a @i(very good
+          place) to start
+      @End(Quotation)
+
+  *which can also be written:*
+
+  .. code:: scribe
+
+      @Heading(The Beginning)
+      @(Quotation
+          Let's start at the very beginning, a @i(very good
+          place) to start
+      )
 
 1980 Scribe *Presentational*
 
@@ -310,12 +440,28 @@ Similar systems still appear to exist.
 
 Note the two representations - the second one being more lisp-like.
 
-.. raw:: latex
-
-   \newpage
+----
 
 1987: TEI
 ---------
+
+  .. code:: XML
+
+    <lg type="sestina">
+    <lg type="sestet" rhyme="ababab">
+    <l>I saw my soul at rest upon a
+       <rhyme label="a" xml:id="A">day</rhyme></l>
+    <l>As a bird sleeping in the nest of
+       <rhyme label="b" xml:id="B">night</rhyme>,</l>
+    <l>Among soft leaves that give the starlight
+       <rhyme label="a" xml:id="C">way</rhyme></l>
+    <l>To touch its wings but not its eyes with
+       <rhyme label="b" xml:id="D">light</rhyme>;</l>
+    <l>So that it knew as one in visions
+       <rhyme label="a" xml:id="E">may</rhyme>,</l>
+    <l>And knew not as men waking, of
+       <rhyme label="b" xml:id="F">delight</rhyme>.</l>
+    </lg>
 
 1987 TEI *Semantic*. Still in use today.
 
@@ -336,12 +482,22 @@ them more obvious.)
 
 .. _`TEI by example`: http://teibyexample.org/examples/TBED04v00.htm
 
-.. raw:: latex
-
-   \newpage
+----
 
 1991: HTML
 ----------
+
+  .. code:: HTML
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>This is a title</title>
+      </head>
+      <body>
+        <p>Hello world!</p>
+      </body>
+    </html>
 
 1991 HTML *Presentational*. Still in use today (although rather altered).
 
@@ -362,12 +518,30 @@ Wikipedia says:
   that looks like an SGML document type declaration, ``<!DOCTYPE html>``, which
   triggers the standards-compliant rendering mode."
 
-.. raw:: latex
-
-   \newpage
+  ----
 
 1991: Docbook
 -------------
+
+  .. code:: XML
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.0//EN"
+    "http://www.oasis-open.org/docbook/xml/simple/1.0/sdocbook.dtd">
+    <article>
+     <title>DocBook Tutorial</title>
+     <articleinfo>
+      <author>
+       <firstname>Adrian</firstname> <surname>Giurca</surname>
+      </author>
+      <date>April 5, 2005</date>
+     </articleinfo>
+     <section>
+      <title>What is DocBook ?</title>
+      <para>DocBook is an SGML dialect developed by O'Reilly
+      and HaL Computer Systems in 1991.</para>
+     </section>
+    </article>
 
 1991 Docbook *Semantic*. Still in use today.
 
@@ -386,12 +560,30 @@ Before Docbook 5, an SGML language, defined by a DTD
 DocBook 5 is an XML language, formally defined by a RELAX NG schema with
 integrated Schematron rules.
 
-.. raw:: latex
-
-   \newpage
+----
 
 1991: setext
 ------------
+
+  .. code:: reST
+
+     This is the title. There can be only one.
+     =========================================
+       Body text must be indented by two spaces.
+
+     A subheading
+     ------------
+       **Bold words** and ~italic~ are supported.
+       _Underlined_words_ are also supported.
+       `Backquoted words` are not touched.
+
+     > This text will be represented using a monospaced font.
+
+     * This text will have a bullet mark before it.
+
+     .. Two dots introduce text that can be ignored.
+     .. Two dots alone mean the logical end of text.
+     ..
 
 1991 setext *Presentational*. Lightweight.
 
@@ -420,12 +612,27 @@ own purposes.
 
   (Links look very similar to one of the forms that reStructuredText supports)
 
-.. raw:: latex
-
-   \newpage
+  ----
 
 1994/1995: wikiwikiweb
 ----------------------
+
+  .. code:: wiki
+
+    Paragraphs are not indented.
+
+    * This is a list item
+    ** This is a sub-list item
+
+      Indented text is monospaced.
+
+    We have ''emphasis'', '''bold''', '''''bold italic''''',
+    and a LinkToAnotherPage.
+
+    But we can A''''''voidMakingAWikiLink.
+
+    No HTML, tables, headers, maths, scripts.
+    No links within a page.
 
 1994/1995 wikiwikiweb *Presentational*
 
@@ -456,12 +663,29 @@ Single quotes - this really distressed me when I first came across it:
 Later wiki formats appear not to have understood *why* the design decisions
 were taken.
 
-.. raw:: latex
-
-   \newpage
+----
 
 1996: StructuredText
 --------------------
+
+  .. code:: reST
+
+     This is a heading
+
+       This is a paragraph. Body text is indented.
+
+       - This is a list item. Words can be *emphasized*,
+       _underlined_, **strong** or 'inline' - yes, that's
+       using single quotes [1].
+
+       o This is a list item as well.
+
+       This is a sub-heading
+
+         Sub-section body text is indented even further. This
+         indented body text makes the sub-heading a heading.
+
+     .. [1] Or we could use ``backquotes``.
 
 1996 StructuredText *Presentational*. Lightweight.
 
@@ -482,7 +706,7 @@ Single quotes or doubled backquotes for "inline" text.
 Footnotes are fairly simple. Note the use of two dots to introduce the
 actual footnote.
 
-All block entities must be separated by blank lines.
+All block entities must be separated by blank lines. That includes list items.
 
 Note that "o" can be a list delimiter - regarded as a serious ambiguity.
 
@@ -492,12 +716,30 @@ Links are done as::
 
 i.e., quoted text followed by a colon and then a URL.
 
-.. raw:: latex
-
-   \newpage
+----
 
 2001/2002: reStructuredText
 ---------------------------
+
+  .. code:: reST
+
+     This is a heading
+     =================
+     This is a paragraph. Body text is not indented.
+
+       - This is a list item. Words can be *emphasized*,
+         **strong** or ``teletype`` - yes, that's paired
+         backquotes [1]_.
+       - This is a list item as well.
+
+         This is more of the second list item. It is indented
+         appropriately.
+
+     This is a sub-heading
+     ---------------------
+     Sub-section body text is not indented either.
+
+     .. [1] Note the indentation inside the list item.
 
 2001/2002 reStructuredText *Presentational*. Lightweight.
 
@@ -527,12 +769,28 @@ if a document is too complex for reStructuredText, use something like Docbook.
 Sphinx was first introduced as a means of using reStructuredText to write
 the Python documenation, instead of |LaTeX|.
 
-.. raw:: latex
-
-   \newpage
+----
 
 2002: Asciidoc
 --------------
+
+.. There doesn't seem to be a Pygments mode for AsciiDoc
+
+  .. code:: reST
+
+    = This is a title heading
+    This is a paragraph. Body text is not indented.
+
+    - This is a list item. Words can be _italic_, *bold* or
+     +mono+ - yes, that's paired plus-signs.
+    - This is a list item as well.
+    +
+    This is more of the second list item. It is "`joined on`"
+    by the `+`.footnote:[Note the quotation marks around
+    _joined on_.]
+
+    == This is a sub-heading
+    Sub-section body text is not indented either.
 
 2002 Asciidoc *Presentational*. Lightweight.
 
@@ -564,12 +822,27 @@ doesn't seem to be the normal convention (it's not what the current
 Asciidoctor documentation introduces, although https://asciidoclive.com
 still shows that style in its example).
 
-.. raw:: latex
-
-   \newpage
+----
 
 2004: markdown
 --------------
+
+  .. code:: markdown
+
+     # This is a heading
+     This is a paragraph. Body text is not indented.
+
+     - This is a list item. Words can be *emphasized*,
+     **strong** or `inline` - that's single backquotes.
+     - This is a list item as well.
+
+         This is more of the second list item. Its first line
+       must be indented by 4 spaces or a tab.
+
+     ## This is a sub-heading
+     Sub-section body text is not indented either.
+
+     (No footnotes, but you can (!) include <tt>HTML</tt>.)
 
 2004 markdown *Presentation*. Lightweight.
 
@@ -615,12 +888,22 @@ github-flavoured markdown is at least now based on CommonMark.
   the tidyness of that latter. I think there are many more surprises in how
   CommonMark "works".
 
-.. raw:: latex
-
-   \newpage
+----
 
 Fin
 ---
+
+  * 1960s TYPSET and RUNOFF, GML
+  * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
+  * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
+  * 1990s groff, HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
+  * 2000s reStructuredText, AsciiDoc, markdown
+
+  Written using reStructuredText_.
+
+  Converted to PDF slides using pandoc_ and beamer_.
+
+  Source and extended notes at https://github.com/tibs/markup-history
 
 Since this version of the talk is to be given to Write the Docs, I assume they
 already know about the Write the Docs website: http://www.writethedocs.org/

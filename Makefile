@@ -11,7 +11,6 @@ default: html pdf
 .PHONY: html
 html:
 	rst2html.py README.rst README.html
-	rst2html.py notes-per-slide.rst notes-per-slide.html
 	rst2html.py markup-history-extended-notes.rst markup-history-extended-notes.html
 
 # The available aspect ratio of slides (for beamer only) are 1610 for 16:10,
@@ -23,6 +22,7 @@ html:
 pdf:
 	pandoc markup-history.rst -t beamer -o markup-history-4x3.pdf -V aspectratio:43
 	pandoc markup-history-wide.rst -t beamer -o markup-history-16x9.pdf -V aspectratio:169
+	pandoc markup-history-short.rst -t beamer -o markup-history-short-4x3.pdf -V aspectratio:43
 	pandoc notes-per-slide.rst -o notes-per-slide.pdf -V papersize:a4
 
 .PHONY: clean

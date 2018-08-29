@@ -40,8 +40,6 @@ timestamps.
 * The 4x3 aspect ratio slides are `<markup-history-4x3.pdf>`_.
 * The 16x9 aspect ratio slides are `<markup-history-16x9.pdf>`_.
 * There is a PDF version of the notes per slide in `<notes-per-slide.pdf>`_.
-  Beware that it is set with the information for each slide on a separate (A4)
-  page.
 
 Making the PDF and HTML files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
