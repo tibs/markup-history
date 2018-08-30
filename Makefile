@@ -22,21 +22,24 @@ html:
 pdf: slides notes
 
 .PHONY: slides
-slides: markup-history-4x3.pdf markup-history-16x9.pdf markup-history-short-4x3.pdf
+slides: markup-history-long-4x3.pdf markup-history-long-16x9.pdf markup-history-short-4x3.pdf
 
 .PHONY: notes
-notes: notes-per-slide.pdf
+notes: notes-per-slide-long.pdf notes-per-slide-short.pdf
 
-markup-history-4x3.pdf: markup-history.rst
+markup-history-long-4x3.pdf: markup-history-long.rst
 	pandoc $< -t beamer -o $@ -V aspectratio:43
 
-markup-history-16x9.pdf: markup-history-wide.rst
+markup-history-long-16x9.pdf: markup-history-long-wide.rst
 	pandoc $< -t beamer -o $@ -V aspectratio:169
 
 markup-history-short-4x3.pdf: markup-history-short.rst
 	pandoc $< -t beamer -o $@ -V aspectratio:43
 
-notes-per-slide.pdf: notes-per-slide.rst
+notes-per-slide-long.pdf: notes-per-slide-long.rst
+	pandoc $< -o $@ -V papersize:a4
+
+notes-per-slide-short.pdf: notes-per-slide-short.rst
 	pandoc $< -o $@ -V papersize:a4
 
 .PHONY: clean
@@ -46,6 +49,6 @@ clean:
 .PHONY: help
 help:
 	@echo 'make         same as: make html slides'
-	@echo 'make pdf     create markup-history-[4x3|16x9].pdf and notes-per-slide.pdf'
+	@echo 'make pdf     create markup-history-*-[4x3|16x9].pdf and notes-per-slide-*.pdf'
 	@echo 'make html    create HTML files using rst2html'
 	@echo 'make clean   delete HTML files'

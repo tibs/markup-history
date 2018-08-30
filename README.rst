@@ -9,14 +9,18 @@ improvements as I can't resist.
 
 History
 ~~~~~~~
-* The current version of the slides on master is as presented at `Write the Docs
-  Cambridge`_ in `February 2018`_. This is meant to be about 40-45 minutes
+* The "short" version of the slides here is as will be presented at
+  `Write the Docs Prague 2018`_. It is meant to be about 25 minutes long.
+
+* The "long" version of the slides here is as presented at `Write the Docs
+  Cambridge`_ in `February 2018`_. It is meant to be about 40-45 minutes
   long.
   
   I also gave this version of the talk at work in May 2018.
 
 * The version presented at `PyCon UK 2017`_ can be found at tag pycon-uk-2017_.
   You can see it on video_. This version was 30 minutes long.
+
 * The earlier version given to CamPUG_ in `October 2017`_ can be found at tag
   campug-oct-2017_. It was about 45 minutes long.
 
@@ -38,12 +42,22 @@ link at the top of the file's page.)
 
 Since this version of the talk uses PDF slides, which I produce via pandoc_
 and TeX_, I'm including the resultant PDF files in the repository. These
-will not always be as up-to-date as the source files, so check their
+will not necessarily be as up-to-date as the source files, so check their
 timestamps.
 
-* The 4x3 aspect ratio slides are `<markup-history-4x3.pdf>`_.
-* The 16x9 aspect ratio slides are `<markup-history-16x9.pdf>`_.
-* There is a PDF version of the notes per slide in `<notes-per-slide.pdf>`_.
+There are two versions of the slides here - the shorter (about 25 minutes)
+version, and the longer (about 45 minutes) version.
+
+* Longer:
+
+  * The 4x3 aspect ratio slides are `<markup-history-long-4x3.pdf>`_.
+  * The 16x9 aspect ratio slides are `<markup-history-long-16x9.pdf>`_.
+  * There is a PDF version of the notes per slide in `<notes-per-slide-long.pdf>`_.
+
+* Shorter:
+
+  * The 4x3 aspect ratio slides are `<markup-history-short-4x3.pdf>`_.
+  * There is a PDF version of the notes per slide in `<notes-per-slide-short.pdf>`_.
 
 Making the PDF and HTML files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

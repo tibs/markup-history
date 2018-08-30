@@ -6,10 +6,13 @@
 A history of markup languages
 -----------------------------
 
-
 By Tibs / Tony Ibbs
 
-The slightly shorter version.
+.. The slightly shorter version.
+..
+.. This is intended to fit within 25 minutes.
+
+This version for the Write The Docs, Prague, 2018
 
 Written using reStructuredText_.
 
@@ -42,7 +45,7 @@ Timeline
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
 * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
+* 1990s HTML, setext, Docbook, WikiWikiWeb, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
 ----
@@ -277,31 +280,6 @@ Presentational or Semantic
 
 ----
 
-
-1996: StructuredText
---------------------
-
-.. code:: reST
-
-   This is a heading
-
-     This is a paragraph. Body text is indented.
-
-     - This is a list item. Words can be *emphasized*,
-     _underlined_, **strong** or 'inline' - yes, that's
-     using single quotes [1].
-
-     o This is a list item as well.
-
-     This is a sub-heading
-
-       Sub-section body text is indented even further. This
-       indented body text makes the sub-heading a heading.
-
-   .. [1] Or we could use ``backquotes``.
-
-----
-
 2001/2002: reStructuredText
 ---------------------------
 
@@ -384,7 +362,7 @@ Fin
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
 * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
-* 1990s HTML, setext, Docbook, WikiWikiWeb, StructuredText, XML
+* 1990s HTML, setext, Docbook, WikiWikiWeb, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
 Written using reStructuredText_.
@@ -393,6 +371,9 @@ Converted to PDF slides using pandoc_ and beamer_.
 
 Source and extended notes at https://github.com/tibs/markup-history
 
-You may also be interested in Write the Docs: http://www.writethedocs.org/
+.. Since this version is to give to Write the Docs people, I assume they know
+.. about the relevant website
+..
+.. You may also be interested in Write the Docs: http://www.writethedocs.org/
 
 .. vim: set filetype=rst tabstop=8 softtabstop=2 shiftwidth=2 expandtab:
