@@ -44,7 +44,7 @@ Timeline
 
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
+* 1980s |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
 * 1990s HTML, setext, Docbook, WikiWikiWeb, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 
@@ -122,49 +122,23 @@ Presentational or Semantic
 
 ----
 
-1977/1978: |TeX|
-----------------
+1977/1978: |TeX| / 1983: |LaTeX|
+--------------------------------
 
-.. code:: TeX
+.. code:: latex
 
-  \name{Name Redacted} wrote:
+    \begin{center}
+    \rule{5in}{0.1mm}
+    \end{center}
 
-  \beginletter
-  Thoughts on ``Why I like children's books'':
+    \section*{Captain Competent strikes again}
 
-  \beginlist
-  \item{\blob} They aren't afraid to show a sense of wonder.
-  \item{\blob} They aren't `duty bound' to include love
-  interest for the sake of it.
-  \item{\blob} They are rarely cynical, rarely bitter---but
-  the best do not avoid tragedy and truth.
-  \item{\blob} They are willing to teach the simple lessons
-  of being human---which adult books so often scorn, but
-  which we all need to learn and relearn.
-  \endlist
-
-----
-
-1980: Scribe
-------------
-
-.. code::
-
-    @Heading(The Beginning)
-    @Begin(Quotation)
-        Let's start at the very beginning, a @i(very good
-        place) to start
-    @End(Quotation)
-
-*which can also be written:*
-
-.. code::
-
-    @Heading(The Beginning)
-    @(Quotation
-        Let's start at the very beginning, a @i(very good
-        place) to start
-    )
+    The superhero is a familiar concept in comics, science
+    fiction and many other fields. However, I am more
+    interested in what might be called `the competent
+    hero'. This is a subtler form of protagonist---a
+    person who has attained {\em competence} in their
+    daily life.
 
 ----
 
@@ -361,7 +335,7 @@ Fin
 
 * 1960s TYPSET and RUNOFF, GML
 * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-* 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
+* 1980s |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
 * 1990s HTML, setext, Docbook, WikiWikiWeb, XML
 * 2000s reStructuredText, AsciiDoc, markdown
 

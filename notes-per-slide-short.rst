@@ -36,7 +36,7 @@ Timeline
 
   * 1960s TYPSET and RUNOFF, GML
   * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-  * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
+  * 1980s |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
   * 1990s groff, HTML, setext, Docbook, WikiWikiWeb, XML
   * 2000s reStructuredText, AsciiDoc, markdown
 
@@ -136,62 +136,6 @@ This example is (more or less) from the original TYPSET/RUNOFF documentation.
 1969: GML and 1986: SGML
 ------------------------
 
-**Not in the shorter version**
-
-  .. code:: sgml
-
-    <td> The Implication of SGML for the Preparation of
-    Scientific Publications
-    <au> Joan M. Smith
-    ...
-    <ab> The &SGML (SGML) is a draft international standard
-    for publishing.
-    ...
-    <h1>Introduction
-    <p> The official title of SGML, currently, is ISO/DIS 8879,
-    <ci> Information Processing &end Text and Office Systems
-    &end &SGML (SGML) </ci>. <ref> ISO/DIS 8879 ... </ref>
-    ...
-    <p>There are several points worthy of note here:
-    <ul>
-    <li> the normal publishing delay with ISO standards...
-    ...
-    </ul>
-
-1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
-
-1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie - note the initials
-of the surnames) at IBM. 
-
-1986 [Standard] Generalised Markup Language.
-
-The example is actually SGML. It is transcribed from Figure 3 of the
-paper named. The ellipses are mine.
-
-The GML starter set was a set of macros for IBM Script.
-
-A mechanism for *describing* markup languages. Use of the DTD.
-
-Sensibly, SGML came with a "starter set" drafted by Joan Smith and
-Janet Vandore.
-
-Note how SGML allowed the
-definition of elements that were implicitly closed by another element -
-e.g., <li> and <p>
-
-- <td> is the document title
-- <ad> is an address, <al> an address line
-- <ab> is the abstract
-- <ci> indicates a citation, which rendered as italics in the resulting paper.
-- <ref> marks up a Reference, collected for the section at the end of the document.
-- &SGML is an "entity reference" that expands to 'Standard Generalized
-  Markup Language' - we're familiar with things like &eacute; from HTML.
-
-----
-
-SGML DTD
---------
-
   *DTD for a list:*
 
   .. code:: DTD
@@ -210,6 +154,21 @@ SGML DTD
     <item>Last item</item>
     </list>
 
+
+1969 GML, 1986 SGML *Semantic* and *"meta"* (DTDs)
+
+1969 GML (Charles Goldfarb, Edward Mosher, Raymond Lorie - note the initials
+of the surnames) at IBM. 
+
+1986 [Standard] Generalised Markup Language.
+
+The GML starter set was a set of macros for IBM Script.
+
+A mechanism for *describing* markup languages. Use of the DTD.
+
+Sensibly, SGML came with a "starter set" drafted by Joan Smith and
+Janet Vandore.
+
 SGML uses DTDs (Document Type Definitions) to describe the set of
 markup declarations that form a *document type* (e.g., SGML itself, XML,
 HTML).
@@ -217,7 +176,7 @@ HTML).
 Shown is a DTD fragment for defining a simple list, and an example of the
 list structure described.
 
-SGML allows the definition of elements that were implicitly closed by
+SGML allows the definition of elements that are implicitly closed by
 another element - e.g., <li> and <p> in HTML.
 
 In our example::
@@ -237,30 +196,6 @@ In::
   tags can be omitted.
 * The end of the specification tells us that an ``item`` may contain
   ``PCDATA`` (text) or zero or more ``list`` elements.
-
-----
-
-1997: XML
----------
-
-**Not in the shorter version**
-
-   "XML is an application profile of SGML"
-
-1997 XML (Extensible Markup Language) *Semantic*.
-
-XML was compiled by a working group of eleven members,[30] supported by a
-(roughly) 150-member Interest Group.
-
-No example because there is no "default" XML - a schema is needed.
-
-XML was compiled by a working group of eleven members, supported by a
-(roughly) 150-member Interest Group.
-
-It's a simpler subset of SGML, which makes parsers easier to write.
-
-Other SGML based tools (TEI, Docbook, HTML itself) have generally moved
-towards using XML rather than SGML in their specification.
 
 ----
 
@@ -301,82 +236,17 @@ Lars Wirzenius' `Writing manual pages`_
 
 .. _`Writing manual pages`: https://liw.fi/manpages/,
 
-----
-
-1990: groff
------------
-
-**Not in the shorter version**
-
-  .. code:: roff
-
-    ..INCLUDE mission-statement-strings.mom
-    .TITLE    "\*[Groff-Mission-Statement]
-    .SUBTITLE "\*[2014]
-    .INCLUDE  mission-statement-style.mom
-    .PP
-    As the most widely deployed implementation of troff in use
-    today, groff holds an important place in the Unix universe.
-    Frequently and erroneously dismissed as a legacy program
-    for formatting Unix manuals (manpages), groff is in fact a
-    sophisticated system for producing high-quality typeset
-    material, from business correspondence to complex,
-    technical reports and plate-ready books. \*[BU3]With an
-    impressive record for backward compatibility, it continues
-    to evolve and play a leading role in the development of
-    free typesetting software.
-
-Some example groff (GNU troff) code.
-
 Whilst the roff family are not strictly speaking programmable as such, their
 use of macros means that in practice they are as capable as systems such as
 |TeX| (although I don't think that DSLs like |LaTeX| exist as-such).
 
 ----
 
-1977/1978: |TeX|
-----------------
+1977/1978: |TeX| / 1983: |LaTeX|
+--------------------------------
 
-  .. code:: tex
-
-    \name{Name Redacted} wrote:
-
-    \beginletter
-    Thoughts on ``Why I like children's books'':
-
-    \beginlist
-    \item{\blob} They aren't afraid to show a sense of wonder.
-    \item{\blob} They aren't `duty bound' to include love
-    interest for the sake of it.
-    \item{\blob} They are rarely cynical, rarely bitter---but
-    the best do not avoid tragedy and truth.
-    \item{\blob} They are willing to teach the simple lessons
-    of being human---which adult books so often scorn, but
-    which we all need to learn and relearn.
-    \endlist
-
-1977/1978 |TeX|
-
-*Presentational with semantic leanings*. Programmable. Still in use.
-
-Designed and mostly written by Donald Knuth.
-
-Driven by the need to guarantee accurate typesetting of mathematics.
-
-In serious use of |TeX|, one starts by defining lots of useful
-commands - although `the TeXbook`_ has many useful ideas one can copy.
-
-In this example, `\item` is a standard definition, but all of the other
-commands starting with backslash were defined by my own macros.
-
-.. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
-
-----
-
-1983: |LaTeX|
--------------
-
-**Not in the shorter version**
+The example is |LaTeX|, because that is more likely to be familiar to the
+audience, and most likely what they would use in preference to |TeX| itself.
 
   .. code:: latex
 
@@ -393,6 +263,21 @@ commands starting with backslash were defined by my own macros.
     person who has attained {\em competence} in their
     daily life.
 
+
+1977/1978 |TeX|
+
+*Presentational with semantic leanings*. Programmable. Still in use.
+
+Designed and mostly written by Donald Knuth.
+
+Driven by the need to guarantee accurate typesetting of mathematics.
+
+In serious use of |TeX|, one starts by defining lots of useful
+commands - although `the TeXbook`_ has many useful ideas one can copy.
+
+.. _`The TeXbook`: http://www.ctex.org/documents/shredder/src/texbook.pdf
+
+
 1983 |LaTeX| *Presentational*. Still in use.
 
 Leslie Lamport.
@@ -404,41 +289,9 @@ I used to write plain |TeX|, but most people actually use |LaTeX|,
 which dates from about 1983/1984. |LaTeX| is probably still dominant in
 scientific and mathematical publishing.
 
-This example is from the first edition of the same fanzine - all of the
-markup is provided for me by |LaTeX|, so I didn't need to define anything
+This example is from the first edition of a fanzine I used to edit - all of
+the markup is provided for me by |LaTeX|, so I didn't need to define anything
 here.
-
-----
-
-1980: Scribe
-------------
-
-  .. code:: scribe
-
-      @Heading(The Beginning)
-      @Begin(Quotation)
-          Let's start at the very beginning, a @i(very good
-          place) to start
-      @End(Quotation)
-
-  *which can also be written:*
-
-  .. code:: scribe
-
-      @Heading(The Beginning)
-      @(Quotation
-          Let's start at the very beginning, a @i(very good
-          place) to start
-      )
-
-1980 Scribe *Presentational*
-
-Described in Brian Reid's 1980 doctoral dissertation at Carnegie Mellon
-University. Lisp based.
-
-Similar systems still appear to exist.
-
-Note the two representations - the second one being more lisp-like.
 
 ----
 
@@ -849,7 +702,7 @@ Fin
 
   * 1960s TYPSET and RUNOFF, GML
   * 1970s roff, runoff, nroff/troff, |TeX| in SAIL
-  * 1980s Scribe, |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
+  * 1980s |TeX| in WEB/Pascal, |LaTeX|, SGML, TEI
   * 1990s groff, HTML, setext, Docbook, WikiWikiWeb, XML
   * 2000s reStructuredText, AsciiDoc, markdown
 
