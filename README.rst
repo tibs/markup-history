@@ -1,15 +1,11 @@
 A history of markup languages
 =============================
 
-This is a slideshow originally produced for `PyCon UK 2017`_
-
-This branch (writethedocs-prague-2018) is where I'm amending the slides for
-presentation at `Write the Docs Prague 2018`_, and also making such other
-improvements as I can't resist.
+This is a slideshow originally produced for `PyCon UK 2017`_.
 
 History
 ~~~~~~~
-* The "short" version of the slides here is as will be presented at
+* The "short" version of the slides here is as presented at
   `Write the Docs Prague 2018`_. It is meant to be about 25 minutes long.
 
 * The "long" version of the slides here is as presented at `Write the Docs
