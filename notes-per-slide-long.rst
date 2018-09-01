@@ -746,21 +746,26 @@ David Goodger had a professional background in SGML.
 
 Original mailing of the idea to the Doc-Sig was in Nov 2000
 
-* Readable is the main aim.
-* Output agnostic.
-* Well specified, allowing other implementations which behave in the same way.
-* Note that < and > are not special - Guido wanted to be able to discuss XML
-  and suchlike without quoting stuff.
+* Readability is the main aim.
+* Output agnosticism is an important secondary aim.
 
 Clearly influenced by setext and StructuredText, but with more rigor.
 
-Body text isn't indented (what makes sense for programming languages is
-irritating for text), but things must line up when appropriate (see the
-lists).
+It is well specified, allowing other implementations which behave in the same way.
 
-"o" is not allowed as a list delimiter, as it is too ambiguous.
+* < and > are not special - Guido wanted to be able to discuss XML
+  and suchlike without quoting stuff.
+* Similarly, it's not possible for underscores to be significant, as leading
+  and trailing underscores have meaning in Python.
+* Perhaps in part because of that, there is no way to specify underlined text,
+  which is a Good Thing.
 
-NB: no way to specify underlined text, which is a Good Thing.
+In contrast to StructuredText:
+
+* Body text isn't indented (what makes sense for programming languages is
+  irritating for text), but things must line up when appropriate (see the
+  lists).
+* "o" is not allowed as a list delimiter, as it is too ambiguous.
 
 Consciously designed to allow doing certain things but not others - basically,
 if a document is too complex for reStructuredText, use something like Docbook.
@@ -847,7 +852,7 @@ still shows that style in its example).
 
 John Gruber, collaborating with Aaron Swartz on the syntax
 
-*So* nearly a wonderful success.
+*So* nearly wonderful.
 
 Yes, I know headings can be underline as well ("setext" style, as it terms
 it), but I've never seen anyone actually doing that.
@@ -872,20 +877,13 @@ github-flavoured markdown is at least now based on CommonMark.
 
 .. _CommonMark: http://commonmark.org/
 
-  The Common Mark spec is at http://spec.commonmark.org/. It is clearly aimed
-  to be a rigourous specification, which is excellent. Note that it calls
-  the underlined heading style "setext headings", which is nice. It still
-  retains the ability to embed HTML in a document, which is not so nice.
+(The CommonMark specification is rigorous, and well written, but inevitable
+very long, which rather undoes the perceived "simplicity" of markdown. Also,
+it is only really atttempting to specify the common ground of the markdown
+variants, and thus does not, for instance, include table.  
 
-  The CommonMark specification is also an interesting summary of the problems
-  and incompatibilities of the different implementations, and tries to explain
-  *why* they have made the choices they have made. It is worth reading
-  (although quite long).
-
-  However, by the time we've got the rigour of a CommonMark, the complexity of
-  the language seems to me to be at least that of reStructuredText, without
-  the tidyness of that latter. I think there are many more surprises in how
-  CommonMark "works".
+Note that it calls the underlined heading style "setext headings", which is
+nice.)
 
 ----
 

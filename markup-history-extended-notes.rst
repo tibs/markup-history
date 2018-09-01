@@ -983,6 +983,24 @@ Interesting links:
 .. _`The TEI and XML`: http://books.openedition.org/oep/680
 .. _`The TEI By Example Project`: http://teibyexample.org/
 
+DITA
+====
+
+:2001/2004 DITA: *Semantic* and *Presentational*, still in use.
+
+DITA, the "Darwin Information Typing Architecture", appears to be a semantic
+(maps and topics) technical documentation format, with a basic vocabulary
+modeled on HTML. A quick look around for information about it suggested that
+people are keen to write markdown and then convert to DITA, rather than
+writing it directly.
+
+* `Wikipedia on DITA`_
+* `What is DITA?` at xml.com. This suggests that "DITA's closest peer is
+  DocBook, which is also designed primarily for technical documentation".
+
+.. _`Wikipedia on DITA`: https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture
+.. _`What is DITA?`: https://www.xml.com/articles/2017/01/19/what-dita/
+
 
 Postscript
 ==========
@@ -1194,7 +1212,9 @@ first came across it):
 - 5 = emphasised bold (2+3)
 - 6 are used to stop a CamelCased word from being a WikiLink
 
-Like most wiki formats, the markup is specified by example, with no real rigour.
+Like most wiki formats, specified by example, with no real rigour. However,
+I suspect this may have been done deliberately in this case, to encourage
+learning by exploration.
 
 I think that newlines within a paragraph are ignored, but it's hard  to
 tell from the documentation, and the original Wikiwikiweb is now frozen.
@@ -1245,11 +1265,14 @@ Some links:
   supported. It really did use differing numbers of single quotes to mean
   different sorts of markup. And inline meaningful tabs. Which is why I don't
   want to talk about it.
+* `Wiki Wiki Hypercard`_ is an interesting note on the influence of
+  HyperCard on WikiWikiWeb
 
 .. _WikiWikiWeb: http://wiki.c2.com/
 .. _`Wikipedia on Wiki`: https://en.wikipedia.org/wiki/Wiki
 .. _`Wikipedia on WikiWikiWeb`: https://en.wikipedia.org/wiki/WikiWikiWeb.
 .. _`Text formatting rules`: http://wiki.c2.com/?TextFormattingRules
+.. _`Wiki Wiki Hypercard`: http://acroom.wikity.cc/wiki-wiki-hypercard
 
 
 Programming language internal documentation
@@ -1969,20 +1992,46 @@ Hopefully CommonMark_ will improve the situation - for instance,
 github-flavoured markdown is at least now based on CommonMark.
 
 .. _CommonMark: http://commonmark.org/
+.. _`CommonMark specification`: http://spec.commonmark.org/
 
-  The Common Mark spec is at http://spec.commonmark.org/. It is clearly aimed
-  to be a rigourous specification, which is excellent. Note that it calls
-  the underlined heading style "setext headings", which is nice. It still
-  retains the ability to embed HTML in a document, which is not so nice.
+The `CommonMark specification`_ is rigorous, and well written, but inevitable
+very long, which rather undoes the perceived "simplicity" of markdown. Also,
+it is only really atttempting to specify the common ground of the markdown
+variants, and thus does not, for instance, include table.  
 
-  The CommonMark specification is also an interesting summary of the problems
-  and incompatibilities of the different implementations, and tries to explain
-  *why* they have made the choices they have made. It is worth reading
-  (although quite long).
+Note that it calls the underlined heading style "setext headings", which is
+nice.
 
-  However, by the time we've got the rigour of a CommonMark, the complexity of
-  the language seems to me to be at least that of reStructuredText, without
-  the tidyness of that latter.
+  CommonMark is very explicit (!) about how HTML may be included into its
+  documents: https://spec.commonmark.org/0.28/#html-block
+
+    Note that the CommonMark spec quotes the later purpose for markdown,
+    readability, and not its original purpose of being an easier way to write
+    HTML.
+
+  The rules are bit complicated, but quite explicit, which is good, and appear
+  always to require an opening ``<HTML-tag>`` and a closing matching ``<HTML-tag>``
+  (where "``<HTML-tag>``" is my term - there must be a better way to describe
+  that - entity?).
+
+    https://spec.commonmark.org/0.28/#raw-html explains exactly how it
+    recognises those ``<any-old-text>`` strings. It still means one has to
+    escape thing like <this> to use them in mark[whatever], though. So one
+    has to backtick escape it (https://spec.commonmark.org/0.28/#code-spans), or
+    use https://spec.commonmark.org/0.28/#backslash-escapes as in the example of
+    ``\<br/> not a tag``.
+
+  Although it still has https://spec.commonmark.org/0.28/#entity-references but
+  at least it's explicit that this is ``&`` plus an allowed entity reference
+  name plus ``;``, which is reasonably deterministic (even if it relies on
+  external documentation to say what entity references exist!).
+
+  And finally, https://spec.commonmark.org/0.28/#textual-content says:
+
+    Any characters not given an interpretation by the above rules will be parsed
+    as plain textual content.
+
+  which I still find itchy.
 
 Markdown claims to be both easy-to-read and easy-to-write - i.e., the
 `original introduction to markdown`_ said:
@@ -2099,8 +2148,13 @@ Karl Voit, 2017. Emacs org-mode considered as a general markup language
 
 .. _`Org-Mode Is One of the Most Reasonable Markup Language to Use for Text`: http://karl-voit.at/2017/09/23/orgmode-as-markup-only/
 
+I don't really discuss org-mode as a markup format because it is so
+Emacs-specific. It appears to be defined by its usage, without separating out
+in a clear fashion the underlying text representation.
+
 Pollen_, a lightweight programmable markup written in Racket_, Matthew
-Butterick, 2017
+Butterick, 2017. I admit to finding this quite interesting - in some ways it
+can be seen as a re-imagining of |TeX|.
 
 .. _Pollen: http://docs.racket-lang.org/pollen/
 .. _Racket: https://racket-lang.org/
