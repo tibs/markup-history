@@ -240,11 +240,11 @@ around 1970.
 The example is a (fake) man page, using the ``man`` macro package from
 Lars Wirzenius' `Writing manual pages`_
 
-* .TH = title
-* .SH = sub-heading
-* .B = bold
+* ``.TH`` = title
+* ``.SH`` = sub-heading
+* ``.B`` = bold
 * other font usages (e.g., normal font and underlining) are indicated by the
-  \\f sequences.
+  ``\f`` sequences.
 
 .. _`Writing manual pages`: https://liw.fi/manpages/,
 

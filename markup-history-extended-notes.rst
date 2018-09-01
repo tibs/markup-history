@@ -231,7 +231,7 @@ layout and pagination, including right justification.
 
 This example is (more or less) from the original TYPSET/RUNOFF documentation:
 
-.. code:: roff
+.. code:: groff
 
   .LINE LENGTH 60
   .LEFT MARGIN 0
@@ -253,7 +253,7 @@ for instance in and out of bold case.
 The following is an example of Digital Standard Runoff (DSR), showing that the
 name had an enduring meaning. I used to use DSR on VMS in the 1980s/90s.
 
-.. code:: roff
+.. code:: groff
 
     .TITLE A simpler DSR example
     .CHAPTER This is a chapter
@@ -284,7 +284,7 @@ even though the roff program itself is not.
 The example given here (from Lars Wirzenius' `Writing manual pages`_)
 is a (fake) man page, using the ``man`` macro package:
 
-.. code:: roff
+.. code:: groff
 
   .TH CORRUPT 1
   .SH NAME
@@ -309,7 +309,7 @@ sequences.
 Today, the dominant roff program is probably ``groff``, or GNU roff. Here is
 an example of groff:
 
-.. code:: roff
+.. code:: groff
 
   ..INCLUDE  mission-statement-strings.mom
   .TITLE    "\*[Groff-Mission-Statement]
@@ -1941,7 +1941,8 @@ the fact that the original author does not wish these to be corrected.
 
 However, despite this, it has been immensely successful, suggesting that there
 is a clear niche for a markup format at just about its (perceived) level of
-complexity.
+complexity, and I myself recommend its use when reStructuredText is not
+appropriate.
 
 Here is the equivalent of our setext example:
 
