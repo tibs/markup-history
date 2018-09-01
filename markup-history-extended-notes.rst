@@ -162,6 +162,7 @@ A timeline
 * 2000 Digital Creations begins development of StructuredTextNG
 * 2000 First draft of reStructuredText spec posted to Doc-Utils SIG (Goodger)
 * 2001-2002 reStructuredText and Docutils
+* 2001-2005 DITA
 * 2002 PEP 287 "reStructuredText Standard Docstring Format"
 * 2002 AsciiDoc (Rackham)
 * 2004 markdown (Gruber and Swartz)
@@ -236,7 +237,7 @@ layout and pagination, including right justification.
 
 This example is (more or less) from the original TYPSET/RUNOFF documentation:
 
-.. code:: Groff
+.. code:: roff
 
   .LINE LENGTH 60
   .LEFT MARGIN 0
@@ -258,7 +259,7 @@ for instance in and out of bold case.
 The following is an example of Digital Standard Runoff (DSR), showing that the
 name had an enduring meaning. I used to use DSR on VMS in the 1980s/90s.
 
-.. code:: Groff
+.. code:: roff
 
     .TITLE A simpler DSR example
     .CHAPTER This is a chapter
@@ -289,7 +290,7 @@ even though the roff program itself is not.
 The example given here (from Lars Wirzenius' `Writing manual pages`_)
 is a (fake) man page, using the ``man`` macro package:
 
-.. code:: Groff
+.. code:: roff
 
   .TH CORRUPT 1
   .SH NAME
@@ -314,7 +315,7 @@ sequences.
 Today, the dominant roff program is probably ``groff``, or GNU roff. Here is
 an example of groff:
 
-.. code:: Groff
+.. code:: roff
 
   ..INCLUDE  mission-statement-strings.mom
   .TITLE    "\*[Groff-Mission-Statement]
@@ -986,25 +987,6 @@ Interesting links:
 .. _`The TEI and XML`: http://books.openedition.org/oep/680
 .. _`The TEI By Example Project`: http://teibyexample.org/
 
-DITA
-====
-
-:2001/2004 DITA: *Semantic* and *Presentational*, still in use.
-
-DITA, the "Darwin Information Typing Architecture", appears to be a semantic
-(maps and topics) technical documentation format, with a basic vocabulary
-modeled on HTML. A quick look around for information about it suggested that
-people are keen to write markdown and then convert to DITA, rather than
-writing it directly.
-
-* `Wikipedia on DITA`_
-* `What is DITA?` at xml.com. This suggests that "DITA's closest peer is
-  DocBook, which is also designed primarily for technical documentation".
-
-.. _`Wikipedia on DITA`: https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture
-.. _`What is DITA?`: https://www.xml.com/articles/2017/01/19/what-dita/
-
-
 Postscript
 ==========
 
@@ -1098,7 +1080,6 @@ Some links:
 .. _`A Brief History of Markup Languages`: http://taxodiary.com/2012/12/a-brief-history-of-markup-languages/
 .. _`The Evolution of Web Documents`: https://www.xml.com/pub/a/w3j/s3.connolly.html
 
-
 Docbook
 =======
 
@@ -1177,6 +1158,66 @@ Some links:
 .. _`The DocBook Project`: http://docbook.sourceforge.net/
 .. _`DocBook.org`: http://docbook.org/
 .. _`Overview of the DocBook format`: https://workaround.org/docbook/
+
+DITA
+====
+
+:2001/2005 DITA: *Semantic* and *Presentational*, still in use.
+
+DITA, the "Darwin Information Typing Architecture", appears to be a semantic
+(maps and topics) technical documentation format, with a basic vocabulary
+modeled on HTML. A quick look around for information about it suggested that
+people are keen to write markdown and then convert to DITA, rather than
+writing it directly.
+
+An example from `DITA for the impatient`_:
+
+.. code:: xml
+
+  <topic id="docbook_or_dita">
+    <title>DITA or DocBook?</title>
+
+    <shortdesc>Both DITA and DocBook are both mature, feature rich, document types,
+    so which one to choose?</shortdesc>
+
+    <body>
+      <p>DocBook 5 is a mature document type. It is well-documented (DocBook:
+      The Definitive Guide, DocBook XSL: The Complete Guide), featuring decent
+      XSL stylesheets allowing conversion to a variety of formats, based on the
+      best schema technologies: RELAX NG and Schematron.</p>
+
+      <p>DITA concepts (topics, maps, specialization, etc) have an immediate
+      appeal to the technical writer, making this document type more attractive
+      than DocBook. However the DocBook vocabulary is comprehensive and very
+      well thought out. So choose DITA if its technical vocabulary is
+      sufficiently expressive for your needs or if, anyway, you intend to
+      specialize DITA.</p>
+    </body>
+
+    <related-links>
+      <link format="html" href="http://www.docbook.org/" scope="external">
+        <linktext>DocBook 5</linktext>
+      </link>
+
+      <link format="html"
+            href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=dita"
+            scope="external">
+        <linktext>DITA</linktext>
+      </link>
+    </related-links>
+  </topic>
+
+* `Wikipedia on DITA`_
+* `What is DITA?` at xml.com. This suggests that "DITA's closest peer is
+  DocBook, which is also designed primarily for technical documentation".
+* `DITA for the impatient`_
+* `DITA: Specializations (task, concept, reference)`_ gives a flavour of
+  what DITA is about.
+
+.. _`Wikipedia on DITA`: https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture
+.. _`What is DITA?`: https://www.xml.com/articles/2017/01/19/what-dita/
+.. _`DITA for the impatient`: http://www.xmlmind.com/tutorials/DITA/
+.. _`DITA: Specializations (task, concept, reference)`: https://idratherbewriting.com/specializations/
 
 Wikiwikiweb
 ===========
