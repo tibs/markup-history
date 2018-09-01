@@ -8,9 +8,6 @@ By Tibs / Tony Ibbs
    with links which I hope will be useful, and perhaps act as a start on
    finding out more about markup languages.
 
-   The examples in this document may not match those in the slides, since
-   I change the slides over time with each time I use them.
-
 .. We can represent TeX and LaTeX as simple text:
 
 .. |TeX| replace:: TeX
@@ -106,12 +103,12 @@ Computer Science project, in 1981. This would have been a Cambridge written
 format that ran on the local mainframe.
 
 Later on, at work, I came across DEC's RUNOFF, which became Digital Standard
-Runoff (DSR). I wrote a partial bibliography of Joan Aiken, in the 1980s,
-using this, but unfortunately no longer have the original sources, as I
-converted it to HTML.
+Runoff (DSR). In the 1980s I wrote a partial bibliography of Joan Aiken using
+DSR, but unfortunately no longer have the original sources, as I converted it
+to HTML.
 
 HTML I wrote almost from its inception - back then it was quite common to
-write HTML by hand (it was a much simpler thing that it is today).
+write HTML by hand (it was a much simpler thing than it is today).
 
 I first wrote |TeX| at work as well, and introduced the use of |LaTeX| for our
 in-house API documentation. Personally, I preferred |TeX| to |LaTeX|, but
@@ -134,8 +131,8 @@ A timeline
 * 1964 TYPSET and RUNOFF
 * 1967 William Tunincliffe: "The separation of the information content of
   documents from their format". Goldfarb credits him with starting the generic
-  coding movement (i.e., the idea of using descriptive tags like
-  "heading" rather than "format-17") with this presentation given at a meeting of the
+  coding movement (i.e., the idea of using descriptive tags like "heading"
+  rather than "format-17") with this presentation given at a meeting of the
   Canadian Government Printing Office in September 1967
 * 1969 GML (Goldfarb, Mosher, Lorie) at IBM
 * "1970s" roff, script, runoff, document
@@ -201,8 +198,6 @@ These are some interesting general links.
 .. _`An informal look into the history of digital typography`: http://www.tug.org/tug2016/walden-digital.pdf
 .. _`From boiling lead and black art\: An essay on the history of mathematical typography`: http://www.practicallyefficient.com/2017/10/13/from-boiling-lead-and-black-art.html
 
-
-
 * `Wikipedia on docstrings`_. My memory is that Python docstrings were
   inspired by the existence of docstrings in Emacs Lisp. This wikipedia page
   gives examples from several different programming languages.
@@ -220,7 +215,6 @@ These are some interesting general links.
   proposes, but the answer is definitely still valuable.
   
 .. _`SGML and PDF--Why We Need Both`: https://quod.lib.umich.edu/j/jep/3336451.0003.406?view=text;rgn=main
-
 
 RUNOFF and its descendants
 ==========================
@@ -413,7 +407,6 @@ GML
 
 GML stood for Generalized Markup Language, but also for the initials of the
 surnames of its inventors (Charles Goldfarb, Edward Mosher, Raymond Lorie).
-surnames).
 
 It was intended to be a mechanism for *describing* markup languages, rather
 than a markup language itself.
@@ -1257,8 +1250,8 @@ first came across it):
 - 6 are used to stop a CamelCased word from being a WikiLink
 
 Like most wiki formats, specified by example, with no real rigour. However,
-I suspect this may have been done deliberately in this case, to encourage
-learning by exploration.
+I suspect this may have been done deliberately, to encourage learning by
+exploration.
 
 I think that newlines within a paragraph are ignored, but it's hard  to
 tell from the documentation, and the original Wikiwikiweb is now frozen.
@@ -1276,28 +1269,28 @@ Later wiki formats appear not to have understood *why* the design decisions
 were taken, and have mostly had ungainly markups. The adoption of (some form
 of) markdown in many current wikis is thus a good thing.
 
-  (One of my pet hates with wiki markups is treating a list as composed only
-  of single-block list items - i.e., there can be no internal block structure
-  to a list in most wikis. That means you cannot, for instance, do:
+(One of my pet hates with wiki markups is treating a list as composed only
+of single-block list items - i.e., there can be no internal block structure
+to a list in most wikis. That means you cannot, for instance, do:
 
-  .. code::
+.. code::
 
-      * This is a list item
+    * This is a list item
 
-         Which is continued into a second paragraph.
+       Which is continued into a second paragraph.
 
-         And contains an example:
+       And contains an example:
 
-         {example}
-         Some example text.
-         {/example}
+       {example}
+       Some example text.
+       {/example}
 
-    Such a restriction made sense in the original wikiwikweb, where the idea
-    was to keep the text structure very simple, but it doesn't fare well when
-    trying to discuss technical matters, which is what many modern wikis are
-    used for. Thus users end up forcing the formatting to give something that
-    *looks like* the semantics they want, even to the extent of "drawing"
-    list item enumeration markers by hand.)
+Such a restriction made sense in the original wikiwikweb, where the idea
+was to keep the text structure very simple, but it doesn't fare well when
+trying to discuss technical matters, which is what many modern wikis are
+used for. Thus users end up forcing the formatting to give something that
+*looks like* the semantics they want, even to the extent of "drawing"
+list item enumeration markers by hand.)
 
 Some links:
 
@@ -1676,7 +1669,7 @@ StructuredText, but with more rigor.
 The main aims of reStructuredText are to be:
 
 * readable
-* output agnostic.
+* output agnostic
 * well specified
   
 Being readable means that the actual marked up text, as written, is a first
@@ -1736,6 +1729,9 @@ for grouping, for instance in specifying links:
   `Section One`_.
 
   .. _`This is a link to something external`: http://docutils.sourceforge.net/docs/user/rst/quickref.html
+
+Being able to name links but put the URL outside the actual text is part of
+reStructuredText's attempt to foster readability.
 
 Given its intended use in the Python world, where ``__init__`` is a thing, the
 underscore character is *not* overloaded for any special purpose.
@@ -2013,21 +2009,23 @@ does start a numbered list item, so would need to be written as::
 
   1986\. What a great season.
 
-The problems of markdown are, in the end, two:
+The problems of markdown are, in the end:
 
-* Firstly, it allows embedded HTML (although not specifying *what* HTML), and
-  that means that, in order to keep writing it reasonably simple, it has to
-  try to "guess" an author's intent when they use characters that might
-  conceivably be HTML and not plain text.
-* Secondly, the amibiguous specification means that different implementations
-  have different interpretations of markdown.
-
-That last point is made worse by the fact that markdown as originally
-specified is generally regarded as being a little *too* unambitious, and thus
-most of the implementations also include (often incompatible) extensions.
+* The amibiguous specification means that different implementations
+  have different interpretations of markdown. Bugs in the original
+  implementation mean that it's not possible to refer to that for
+  arbitration.
+* Markdown as originally specified is generally regarded as being a little
+  *too* unambitious, and thus most of the implementations also include (often
+  incompatible) extensions.
 
 Thus it's not really sufficient to say one is using markdown, one has also to
 say which dialect (e.g., github markdown) one is using.
+
+Personally, I also think it is a problem that it allows embedded HTML
+(although not specifying *what* HTML), and that means that, in order to keep
+writing it reasonably simple, it has to try to "guess" an author's intent when
+they use characters that might conceivably be HTML and not plain text.
 
 .. note:: Would markdown be hurt **in any real way** by just removing the
    ability to embed HTML?
@@ -2038,7 +2036,7 @@ github-flavoured markdown is at least now based on CommonMark.
 .. _CommonMark: http://commonmark.org/
 .. _`CommonMark specification`: http://spec.commonmark.org/
 
-The `CommonMark specification`_ is rigorous, and well written, but inevitable
+The `CommonMark specification`_ is rigorous, and well written, but inevitably
 very long, which rather undoes the perceived "simplicity" of markdown. Also,
 it is only really atttempting to specify the common ground of the markdown
 variants, and thus does not, for instance, include table.  

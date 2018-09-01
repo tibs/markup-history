@@ -503,8 +503,8 @@ own purposes.
 The first wiki, invented by Ward Cunningham
 
 Like most wiki formats, specified by example, with no real rigour. However,
-I suspect this may have been done deliberately in this case, to encourage
-learning by exploration.
+I suspect this may have been done deliberately, to encourage learning by
+exploration.
 
 I think that newlines within a paragraph are ignored, but it's hard  to
 tell.
@@ -694,13 +694,13 @@ github-flavoured markdown is at least now based on CommonMark.
 
 .. _CommonMark: http://commonmark.org/
 
-(The CommonMark specification is rigorous, and well written, but inevitable
+(The CommonMark specification is rigorous, and well written, but inevitably
 very long, which rather undoes the perceived "simplicity" of markdown. Also,
 it is only really atttempting to specify the common ground of the markdown
 variants, and thus does not, for instance, include table.  
 
 Note that it calls the underlined heading style "setext headings", which is
-nice.
+nice.)
 
 ----
 
