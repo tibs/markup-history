@@ -11,7 +11,11 @@ default: html pdf
 .PHONY: html
 html:
 	rst2html.py README.rst README.html
-	rst2html.py markup-history-extended-notes.rst markup-history-extended-notes.html
+	# github's rendering of reStructuredText uses Linguist to syntax
+	# highlight code. Unfortunately, it knows the name "roff" for roff
+	# style code, whilst pygments, used by rst2html.py, does not recognise
+	# that name. So we shall make do by converting on the fly...
+	sed -e 's/:: roff/:: groff/' markup-history-extended-notes.rst | rst2html.py > markup-history-extended-notes.html
 
 # The available aspect ratio of slides (for beamer only) are 1610 for 16:10,
 # 169 for 16:9, 149 for 14:9, 141 for 1.41:1, 54 for 5:4, 43 for 4:3 which is

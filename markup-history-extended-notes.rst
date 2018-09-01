@@ -231,7 +231,7 @@ layout and pagination, including right justification.
 
 This example is (more or less) from the original TYPSET/RUNOFF documentation:
 
-.. code:: groff
+.. code:: roff
 
   .LINE LENGTH 60
   .LEFT MARGIN 0
@@ -253,7 +253,7 @@ for instance in and out of bold case.
 The following is an example of Digital Standard Runoff (DSR), showing that the
 name had an enduring meaning. I used to use DSR on VMS in the 1980s/90s.
 
-.. code:: groff
+.. code:: roff
 
     .TITLE A simpler DSR example
     .CHAPTER This is a chapter
@@ -284,7 +284,7 @@ even though the roff program itself is not.
 The example given here (from Lars Wirzenius' `Writing manual pages`_)
 is a (fake) man page, using the ``man`` macro package:
 
-.. code:: groff
+.. code:: roff
 
   .TH CORRUPT 1
   .SH NAME
@@ -309,7 +309,7 @@ sequences.
 Today, the dominant roff program is probably ``groff``, or GNU roff. Here is
 an example of groff:
 
-.. code:: groff
+.. code:: roff
 
   ..INCLUDE  mission-statement-strings.mom
   .TITLE    "\*[Groff-Mission-Statement]
@@ -336,6 +336,7 @@ Interesting links:
 * `Wikipedia on nroff`_ ("newer roff")
 * `Wikipedia on troff`_ ("typesetter roff")
 * `Wikipedia on groff`_ ("GNU troff")
+* A repository of `Historical documents from classical RUNOFF and files using the RUNOFF language`_
 * The `OpenVMS Digital Standard Runoff Reference Manual`_ from May 1993.
 * The manpage ``ROFF(7)``: `roff - concepts and history
   of roff typesetting`_, part of the `groff`_ distribution. It has an overview
@@ -364,6 +365,7 @@ Interesting links:
 
 .. _`Wikipedia on TYPSET and RUNOFF`: https://en.wikipedia.org/wiki/TYPSET_and_RUNOFF
 .. _CTSS: https://en.wikipedia.org/wiki/Compatible_Time-Sharing_System
+.. _`Historical documents from classical RUNOFF and files using the RUNOFF language`: https://github.com/bwarken/RUNOFF_historical/
 .. _`Wikipedia on Runoff`: https://en.wikipedia.org/wiki/Runoff_(program)
 .. _`Wikipedia on roff`: https://en.wikipedia.org/wiki/Roff_(computer_program)
 .. _`Wikipedia on nroff`: https://en.wikipedia.org/wiki/Nroff
