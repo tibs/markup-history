@@ -62,7 +62,7 @@ Presentational or Semantic
 1964: RUNOFF
 ------------
 
-.. code:: Groff
+.. code:: roff
 
   .LINE LENGTH 60
   .LEFT MARGIN 0
@@ -76,8 +76,8 @@ Presentational or Semantic
 
 ----
 
-1969: GML / 1986: SGML / 1997: XML
-----------------------------------
+1969: GML / 1986: SGML
+----------------------
 
 *DTD for a list:*
 
@@ -326,7 +326,7 @@ Presentational or Semantic
 
    Sub-section body text is not indented either.
 
-   (No footnotes, but you (!) can include <tt>HTML</tt>.)
+   (No footnotes. But <tt>HTML</tt> is allowed.)
 
 ----
 

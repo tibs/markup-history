@@ -133,8 +133,8 @@ This example is (more or less) from the original TYPSET/RUNOFF documentation.
 
 ----
 
-1969: GML and 1986: SGML
-------------------------
+1969: GML / 1986: SGML
+----------------------
 
   *DTD for a list:*
 
@@ -197,6 +197,18 @@ In::
 * The end of the specification tells us that an ``item`` may contain
   ``PCDATA`` (text) or zero or more ``list`` elements.
 
+XML
+~~~
+
+In 1997 XML arrives.
+
+   "XML is an application profile of SGML"
+
+It's a simpler subset of SGML, which makes parsers easier to write.
+
+Other SGML based tools (TEI, Docbook, HTML itself) have generally moved
+towards using XML rather than SGML in their specification.
+
 ----
 
 1970s: roff, nroff, troff, groff
@@ -245,9 +257,6 @@ use of macros means that in practice they are as capable as systems such as
 1977/1978: |TeX| / 1983: |LaTeX|
 --------------------------------
 
-The example is |LaTeX|, because that is more likely to be familiar to the
-audience, and most likely what they would use in preference to |TeX| itself.
-
   .. code:: latex
 
     \begin{center}
@@ -263,6 +272,8 @@ audience, and most likely what they would use in preference to |TeX| itself.
     person who has attained {\em competence} in their
     daily life.
 
+The example is |LaTeX|, because that is more likely to be familiar to the
+audience, and most likely what they would use in preference to |TeX| itself.
 
 1977/1978 |TeX|
 
@@ -491,7 +502,9 @@ own purposes.
 
 The first wiki, invented by Ward Cunningham
 
-Like most wiki formats, specified by example, with no real rigour.
+Like most wiki formats, specified by example, with no real rigour. However,
+I suspect this may have been done deliberately in this case, to encourage
+learning by exploration.
 
 I think that newlines within a paragraph are ignored, but it's hard  to
 tell.
@@ -649,7 +662,7 @@ still shows that style in its example).
      ## This is a sub-heading
      Sub-section body text is not indented either.
 
-     (No footnotes, but you can (!) include <tt>HTML</tt>.)
+     (No footnotes. But <tt>HTML</tt> is allowed.)
 
 2004 markdown *Presentation*. Lightweight.
 

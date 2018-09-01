@@ -249,9 +249,6 @@ In::
 
 1997 XML (Extensible Markup Language) *Semantic*.
 
-XML was compiled by a working group of eleven members,[30] supported by a
-(roughly) 150-member Interest Group.
-
 No example because there is no "default" XML - a schema is needed.
 
 XML was compiled by a working group of eleven members, supported by a
@@ -638,7 +635,9 @@ own purposes.
 
 The first wiki, invented by Ward Cunningham
 
-Like most wiki formats, specified by example, with no real rigour.
+Like most wiki formats, specified by example, with no real rigour. However,
+I suspect this may have been done deliberately in this case, to encourage
+learning by exploration.
 
 I think that newlines within a paragraph are ignored, but it's hard  to
 tell.
@@ -842,7 +841,7 @@ still shows that style in its example).
      ## This is a sub-heading
      Sub-section body text is not indented either.
 
-     (No footnotes, but you can (!) include <tt>HTML</tt>.)
+     (No footnotes. But <tt>HTML</tt> is allowed.)
 
 2004 markdown *Presentation*. Lightweight.
 

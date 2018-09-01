@@ -444,7 +444,7 @@ SGML DTD
    ## This is a sub-heading
    Sub-section body text is not indented either.
 
-   (No footnotes, but you can (!) include <tt>HTML</tt>.)
+   (No footnotes. But <tt>HTML</tt> is allowed.)
 
 ----
 
