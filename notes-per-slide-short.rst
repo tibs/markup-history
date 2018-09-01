@@ -6,7 +6,7 @@ A history of markup languages
 
   By Tibs / Tony Ibbs
 
-  This version for the Cambridge Write The Docs meetup, Feb 2018
+  This version for Write The Docs, Prague, 2018.
 
   Written using reStructuredText_.
 
