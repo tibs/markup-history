@@ -8,6 +8,9 @@ By Tibs / Tony Ibbs
    with links which I hope will be useful, and perhaps act as a start on
    finding out more about markup languages.
 
+   The examples in this document may not match those in the slides, since
+   I change the slides over time with each time I use them.
+
 .. We can represent TeX and LaTeX as simple text:
 
 .. |TeX| replace:: TeX
