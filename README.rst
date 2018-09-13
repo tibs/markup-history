@@ -6,7 +6,9 @@ This is a slideshow originally produced for `PyCon UK 2017`_.
 History
 ~~~~~~~
 * The "short" version of the slides here is as presented at
-  `Write the Docs Prague 2018`_. It is meant to be about 25 minutes long.
+  `Write the Docs Prague 2018`_. It is meant to be about 30 minutes long.
+  You can see it `as recorded at WtD Prague 2018`_. This verson *was* 30
+  minutes long.
 
 * The "long" version of the slides here is as presented at `Write the Docs
   Cambridge`_ in `February 2018`_. It is meant to be about 40-45 minutes
@@ -15,7 +17,7 @@ History
   I also gave this version of the talk at work in May 2018.
 
 * The version presented at `PyCon UK 2017`_ can be found at tag pycon-uk-2017_.
-  You can see it on video_. This version was 30 minutes long.
+  You can see it `as recorded at PyCon UK 2017`_. This version was 30 minutes long.
 
 * The earlier version given to CamPUG_ in `October 2017`_ can be found at tag
   campug-oct-2017_. It was about 45 minutes long.
@@ -81,7 +83,8 @@ and an appropriate ``make`` program if you want to use the Makefile.
 .. _`write the docs cambridge`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
 .. _`February 2018`: https://www.meetup.com/Write-The-Docs-Cambridge/events/246750191/
 .. _`October 2017`: https://www.meetup.com/CamPUG/events/tpcsxlywnbfb/
-.. _video: https://www.youtube.com/watch?v=qQMXPXzrE_s
+.. _`as recorded at PyCon UK 2017`: https://www.youtube.com/watch?v=qQMXPXzrE_s
+.. _`as recorded at WtD Prague 2018`: https://www.youtube.com/watch?v=P-7hwjocEpM&list=PLZAeFn6dfHplRZcYDQjST22bAVeeWML4d&t=0s&index=22
 .. _campug-oct-2017: https://github.com/tibs/markup-history/tree/campug-oct-2017
 .. _pycon-uk-2017: https://github.com/tibs/markup-history/tree/pycon-uk-2017
 .. _pandoc: https://pandoc.org/
