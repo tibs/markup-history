@@ -75,8 +75,9 @@ For what the Makefile can do, use::
 
 Requirements to build the documents:
 
-* pandoc_ and TeX_ (on mac, BasicTeX should be enough)
-* docutils_ (for reStructuredText_)
+* pandoc_ and TeX_ (on mac, BasicTeX should be enough). Not needed if you're
+  just going to do ``make html``.
+* docutils_ (for reStructuredText_).
 
 and an appropriate ``make`` program if you want to use the Makefile.
 
