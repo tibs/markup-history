@@ -5,16 +5,19 @@ This is a slideshow originally produced for `PyCon UK 2017`_.
 
 History
 ~~~~~~~
-* The "short" version of the slides here is as presented at
+* The version presented at `Write the Docs Prague 2018`_ can be found at tag
+  WriteTheDocs_Prague_2018_
+
+  The "short" version of the slides is as actually presented at 
   `Write the Docs Prague 2018`_. It is meant to be about 30 minutes long.
   You can see it `as recorded at WtD Prague 2018`_. This verson *was* 30
   minutes long.
 
-* The "long" version of the slides here is as presented at `Write the Docs
+  The "long" version of the slides here is as presented at `Write the Docs
   Cambridge`_ in `February 2018`_. It is meant to be about 40-45 minutes
   long.
   
-  I also gave this version of the talk at work in May 2018.
+  I also gave this longer version of the talk at work in May 2018.
 
 * The version presented at `PyCon UK 2017`_ can be found at tag pycon-uk-2017_.
   You can see it `as recorded at PyCon UK 2017`_. This version was 30 minutes long.
@@ -87,6 +90,7 @@ and an appropriate ``make`` program if you want to use the Makefile.
 .. _`as recorded at WtD Prague 2018`: https://www.youtube.com/watch?v=P-7hwjocEpM&list=PLZAeFn6dfHplRZcYDQjST22bAVeeWML4d&t=0s&index=22
 .. _campug-oct-2017: https://github.com/tibs/markup-history/tree/campug-oct-2017
 .. _pycon-uk-2017: https://github.com/tibs/markup-history/tree/pycon-uk-2017
+.. _WriteTheDocs_Prague_2018: https://github.com/tibs/markup-history/tree/WriteTheDocs_Prague_2018
 .. _pandoc: https://pandoc.org/
 .. _docutils: http://docutils.sourceforge.net/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
