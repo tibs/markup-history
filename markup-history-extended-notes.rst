@@ -2151,6 +2151,10 @@ Other links:
     decides that actually the best hope is actually Creole_. Unfortunately, I
     don't think there's been much adoption of Creole.
 
+In 2017, GitHub produced announced `A formal spec for GitHub Flavored
+Markdown`_, which can be found at `GitHub Flavored Markdown Spec`_. Sensibly,
+it's an extension of CommonMark_.
+
 .. _atx: http://www.aaronsw.com/2002/atx/
 .. _Textile: http://www.booked.net/textism.html
 .. _Grutatxt: http://triptico.com/software/grutatxt.html
@@ -2166,6 +2170,8 @@ Other links:
 .. _`beyond markdown, part 1`: https://medium.com/the-bower/beyond-markdown-part-1-2300665659f7
 .. _`Why Markdown is not my favourite language`: http://www.wilfred.me.uk/blog/2012/07/30/why-markdown-is-not-my-favourite-language/
 .. _Creole: http://www.wikicreole.org/
+.. _`A formal spec for GitHub Flavored Markdown`: https://github.blog/2017-03-14-a-formal-spec-for-github-flavored-markdown/
+.. _`GitHub Flavored Markdown Spec`: https://github.github.com/gfm/
 
 Some more comparisons
 =====================
