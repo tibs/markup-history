@@ -2224,6 +2224,15 @@ background.
 .. _`Mathematical Markup Language (MathML™) 1.01 Specification`: https://www.w3.org/TR/REC-MathML/
 .. _`Introduction`: https://www.w3.org/TR/REC-MathML/chapter1.html
 
+HAML_ (HTML Abstract Markup Language) is an attempt to make "beautiful HTML
+markup". It is especially used in the Ruby on Rails world. One of the
+maintainers is `Takashi Kokubun`_ from Arm Treasure Data, who has also written
+hamlit_, which is a high performance implementation.
+
+.. _HAML: http://haml.info/
+.. _`Takashi Kokubun`: https://github.com/k0kubun
+.. _hamlit: https://github.com/k0kubun/hamlit
+
 Fin
 ===
 
